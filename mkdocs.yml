@@ -3,6 +3,7 @@ site_name: SwiftWing 产品介绍 文档
 site_description: SwiftWing 产品介绍 文档
 site_author: SwiftWing 团队
 site_url: https://swiftwing001.github.io/SwiftWing-Product-Introduction/
+copyright: Copyright © 2026 深圳市牧空创新科技有限公司
 
 theme:
   name: readthedocs
