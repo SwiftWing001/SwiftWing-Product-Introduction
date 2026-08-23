@@ -27,10 +27,18 @@ nav:
       - 连接飞控使用: mlrs/产品介绍/mLRS连接飞控使用.md
       - 蓝牙使用教程: mlrs/产品介绍/蓝牙使用教程.md
     - 迅翼Elrs:
-      - 快速上手: elrs/elrs接收机快速上手.md
-      - 硬件接口介绍: elrs/硬件接口介绍.md
-      - 固件刷写: elrs/固件刷写.md
-      - 飞控配置: elrs/飞控配置.md
+      - 产品介绍: elrs/elrs使用说明.md
+      - 硬件接口介绍: elrs/硬件接口介绍.md  
+      - 快速上手: elrs/elrs接收机快速上手.md  
+      - 使用CRSF、SBUS:
+        - CRSF、SBUS飞控配置: elrs/飞控配置.md  
+        - 固件刷写: elrs/固件刷写.md  
+      - 使用MAVLINK回传:
+        - mavlink使用说明: elrs/mavlink使用说明.md  
+        - mavlink到手使用: elrs/elrs接收机mavlink到手使用.md  
+        - mavlink固件刷写: elrs/mavlink固件刷写.md  
+        - mavlink遥控器设置: elrs/mavlink遥控器设置.md  
+        - mavlink飞控配置: elrs/mavlink飞控配置.md    
       
 
 
