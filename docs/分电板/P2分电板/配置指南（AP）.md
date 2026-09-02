@@ -6,6 +6,10 @@
   <strong>注意： 短接S2焊盘需修改</strong><br>
 </div>
 
+<div style="background-color: #ffcccc; color: red; margin: 10px 0; padding: 15px;border: 1px solid #ebccd1; border-radius: 20px ;">
+  <strong>注意： 电流计仅支持经典 CAN，不支持 CAN FD 模式</strong><br>
+</div>
+
 * 启用电压电流检测需配置 P1分电板相关的控制器参数。将控制器连接至MissionPlanner地面站，在全部参数表中设置以下参数，写入后重启控制器：
 
 ![1787474019634](image/配置指南（AP）/1787474019634.png)
