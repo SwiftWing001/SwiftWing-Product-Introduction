@@ -85,17 +85,9 @@
                 </li>
                 <li class="toctree-l2 current"><a class="reference internal current" href="#">查看及更改参数</a>
     <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#_1">所需材料</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_2">所需材料</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_2">准备工作</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_3">常用指令</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#tx">Tx 模块参数</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#rx">Rx 接收器参数</a>
-    </li>
-        </ul>
+    <li class="toctree-l3"><a class="reference internal" href="#radiomaster-pocket">准备工作(以RadioMaster Pocket为例)</a>
     </li>
     </ul>
                 </li>
@@ -163,8 +155,92 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="1-mlrs">1. 终端输入指令修改 mLRS 参数</h2>
-<h3 id="_1">所需材料</h3>
+                <h2 id="_1">方法一、遥控器脚本修改参数（推荐）</h2>
+<h3 id="_2">所需材料</h3>
+<table>
+<thead>
+<tr>
+<th>材料</th>
+<th>说明</th>
+<th>推荐型号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mlrs高频头</td>
+<td>用于连接 mLRS 模块到电脑</td>
+<td>mlrs高频头</td>
+</tr>
+<tr>
+<td>读卡器</td>
+<td>读取遥控器SD卡内置脚本</td>
+<td>读卡器</td>
+</tr>
+<tr>
+<td>nano接口遥控器</td>
+<td>给 mLRS 模块供电</td>
+<td>遥控器</td>
+</tr>
+<tr>
+<td>mlrs接收机</td>
+<td>用于接收指令</td>
+<td>mlrs接收机</td>
+</tr>
+</tbody>
+</table>
+<h3 id="radiomaster-pocket">准备工作(以RadioMaster Pocket为例)</h3>
+<ul>
+<li>
+<p><strong>准备所需mlrs脚本</strong>（<a href="https://www.olliw.eu/mlrsflasher">下载地址</a>），按遥控器型号选择对应文件：</p>
+</li>
+<li>
+<p><code>mLRS.lua</code>：EdgeTx/OpenTx 彩屏遥控器（480×272/480×320），如 Jumper T16、T15，Radiomaster TX16S</p>
+</li>
+<li><code>mLRS-bw.lua</code>：EdgeTx/OpenTx 黑白屏遥控器，如 FrSky Taranis X9E、Radiomaster Zorro</li>
+<li><code>mlrs.lua</code> + <code>main.lua</code> + <code>icon.png</code>（位于 Ethos 文件夹）：Ethos 系统遥控器，如 FrSky X18、X20</li>
+</ul>
+<p><img alt="1789005922478" src="../image/mLRS%E6%9F%A5%E7%9C%8B%E5%8F%8A%E6%9B%B4%E6%94%B9%E5%8F%82%E6%95%B0/1789005922478.png" /></p>
+<ol>
+<li>取出遥控器SD卡，将SD卡插入事先准备好的读卡器，读取SD卡内置脚本。</li>
+</ol>
+<p><img alt="1789004654369" src="../image/mLRS%E6%9F%A5%E7%9C%8B%E5%8F%8A%E6%9B%B4%E6%94%B9%E5%8F%82%E6%95%B0/1789004654369.png" /></p>
+<ol>
+<li>
+<p><strong>EdgeTX/OpenTX</strong>:仅将一个Lua文件复制到 <code>/SCRIPTS/TOOLS/</code></p>
+<p><strong>Ethos</strong>:将所有文件复制到 <code>/scripts/mLRS/</code> </p>
+</li>
+</ol>
+<p><img alt="1789004832453" src="../image/mLRS%E6%9F%A5%E7%9C%8B%E5%8F%8A%E6%9B%B4%E6%94%B9%E5%8F%82%E6%95%B0/1789004832453.png" /></p>
+<p><img alt="1789004881423" src="../image/mLRS%E6%9F%A5%E7%9C%8B%E5%8F%8A%E6%9B%B4%E6%94%B9%E5%8F%82%E6%95%B0/1789004881423.png" /></p>
+<p><strong>脚本位置</strong></p>
+<p><img alt="1789004988857" src="../image/mLRS%E6%9F%A5%E7%9C%8B%E5%8F%8A%E6%9B%B4%E6%94%B9%E5%8F%82%E6%95%B0/1789004988857.png" /></p>
+<ol>
+<li>拷贝完成后将SD卡插入遥控器，上电即可生效</li>
+<li>点击遥控器SYS按键，进入系统菜单</li>
+</ol>
+<p><img alt="1789007362920" src="../image/mLRS%E6%9F%A5%E7%9C%8B%E5%8F%8A%E6%9B%B4%E6%94%B9%E5%8F%82%E6%95%B0/1789007362920.png" /></p>
+<ol>
+<li>拨动滚轮下滑，选择"mLRS.bw"脚本，轻按滚轮进入脚本界面</li>
+</ol>
+<p><img alt="1789008013046" src="../image/mLRS%E6%9F%A5%E7%9C%8B%E5%8F%8A%E6%9B%B4%E6%94%B9%E5%8F%82%E6%95%B0/1789008013046.png" /></p>
+<ol>
+<li>可通过拨动滚轮键，选择修改查看当前参数</li>
+</ol>
+<div style="background-color: #ffcccc; color: red; margin: 10px 0; padding: 15px;border: 1px solid #ebccd1; border-radius: 20px ;">
+  <strong>注意：事先将高频头和接收机对频好并通电才可通过遥控器完成两端参数修改</strong><br>
+</div>
+
+<p><img alt="1789008375532" src="../image/mLRS%E6%9F%A5%E7%9C%8B%E5%8F%8A%E6%9B%B4%E6%94%B9%E5%8F%82%E6%95%B0/1789008375532.png" /></p>
+<ul>
+<li>通过轻按滚轮键选中需要修改的参数，拨动滚轮键修改需要的参数值</li>
+</ul>
+<p><img alt="1789009380333" src="../image/mLRS%E6%9F%A5%E7%9C%8B%E5%8F%8A%E6%9B%B4%E6%94%B9%E5%8F%82%E6%95%B0/1789009380333.png" /></p>
+<ol>
+<li>修改参数后，记得点击"Save"按钮保存参数，会出现“正在保存参数”提示弹窗</li>
+</ol>
+<p><img alt="1789009222482" src="../image/mLRS%E6%9F%A5%E7%9C%8B%E5%8F%8A%E6%9B%B4%E6%94%B9%E5%8F%82%E6%95%B0/1789009222482.png" /></p>
+<h2 id="mlrs">方法二、终端输入指令修改 mLRS 参数</h2>
+<h3 id="_3">所需材料</h3>
 <table>
 <thead>
 <tr>
@@ -196,7 +272,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_2">准备工作</h3>
+<h3 id="_4">准备工作</h3>
 <ul>
 <li>
 <p><strong>连接方式</strong>：</p>
@@ -232,7 +308,7 @@
 <blockquote>
 <p><strong>新手提示</strong>：TX 和 RX 是交叉连接的（适配器 TX → 模块 RX，适配器 RX → 模块 TX），这是串口通信的基本规则。</p>
 </blockquote>
-<h3 id="_3">常用指令</h3>
+<h3 id="_5">常用指令</h3>
 <ul>
 <li><strong>查看所有参数</strong>：<code>pl;</code></li>
 <li><strong>查看特定参数</strong>：<code>p 参数名;</code>（参数名中的空格用下划线替代，例如 <code>p tx_power;</code>）</li>
