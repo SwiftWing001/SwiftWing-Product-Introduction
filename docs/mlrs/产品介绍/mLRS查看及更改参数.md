@@ -1,4 +1,70 @@
-## 1. 终端输入指令修改 mLRS 参数
+## 方法一、遥控器脚本修改参数（推荐）
+
+### 所需材料
+| 材料           | 说明                     | 推荐型号  |
+| -------------- | ------------------------ | --------- |
+| mlrs高频头 | 用于连接 mLRS 模块到电脑 | mlrs高频头     |
+| 读卡器      | 读取遥控器SD卡内置脚本    | 读卡器 |
+| nano接口遥控器         | 给 mLRS 模块供电         | 遥控器    |
+| mlrs接收机   | 用于接收指令             | mlrs接收机     |
+
+### 准备工作(以RadioMaster Pocket为例)
+
+- **准备所需mlrs脚本**（[下载地址](https://www.olliw.eu/mlrsflasher)），按遥控器型号选择对应文件：
+
+  - `mLRS.lua`：EdgeTx/OpenTx 彩屏遥控器（480×272/480×320），如 Jumper T16、T15，Radiomaster TX16S
+  - `mLRS-bw.lua`：EdgeTx/OpenTx 黑白屏遥控器，如 FrSky Taranis X9E、Radiomaster Zorro
+  - `mlrs.lua` + `main.lua` + `icon.png`（位于 Ethos 文件夹）：Ethos 系统遥控器，如 FrSky X18、X20
+
+![1789005922478](image/mLRS查看及更改参数/1789005922478.png)
+
+1. 取出遥控器SD卡，将SD卡插入事先准备好的读卡器，读取SD卡内置脚本。
+
+![1789004654369](image/mLRS查看及更改参数/1789004654369.png)
+
+2. **EdgeTX/OpenTX**:仅将一个Lua文件复制到 `/SCRIPTS/TOOLS/`
+
+    **Ethos**:将所有文件复制到 `/scripts/mLRS/` 
+
+![1789004832453](image/mLRS查看及更改参数/1789004832453.png)
+
+![1789004881423](image/mLRS查看及更改参数/1789004881423.png)
+ 
+**脚本位置**
+
+![1789004988857](image/mLRS查看及更改参数/1789004988857.png)
+
+3. 拷贝完成后将SD卡插入遥控器，上电即可生效
+4. 点击遥控器SYS按键，进入系统菜单
+
+![1789007362920](image/mLRS查看及更改参数/1789007362920.png)
+
+5. 拨动滚轮下滑，选择"mLRS.bw"脚本，轻按滚轮进入脚本界面
+
+![1789008013046](image/mLRS查看及更改参数/1789008013046.png)
+
+6. 可通过拨动滚轮键，选择修改查看当前参数
+
+<div style="background-color: #ffcccc; color: red; margin: 10px 0; padding: 15px;border: 1px solid #ebccd1; border-radius: 20px ;">
+  <strong>注意：事先将高频头和接收机对频好并通电才可通过遥控器完成两端参数修改</strong><br>
+</div>
+
+![1789008375532](image/mLRS查看及更改参数/1789008375532.png)
+
+* 通过轻按滚轮键选中需要修改的参数，拨动滚轮键修改需要的参数值
+
+![1789009380333](image/mLRS查看及更改参数/1789009380333.png)
+
+7. 修改参数后，记得点击"Save"按钮保存参数，会出现“正在保存参数”提示弹窗
+
+
+![1789009222482](image/mLRS查看及更改参数/1789009222482.png)
+
+
+
+
+
+## 方法二、终端输入指令修改 mLRS 参数
 
 ### 所需材料
 
