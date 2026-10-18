@@ -24,6 +24,12 @@ nav:
     - 迅翼MS4525DO空速计:
       - 概述: 空速/1_迅翼MS4525DO空速计.md
       - 使用说明: 空速/使用说明.md
+    - SwiftWing A2 DroneCAN空速模块:
+      - 概述: CAN空速计/0_SwiftWing_A2_DroneCAN空速模块.md
+      - 使用说明: CAN空速计/使用说明.md
+      - 配置指南（AP）: CAN空速计/配置指南（AP）.md
+      - 配置指南（PX4）: CAN空速计/配置指南（PX4）.md
+      - DroneCAN GUI Tool使用: CAN空速计/DroneCAN_GUI_Tool使用.md
     - 迅翼Mlrs:
       - 快速上手指南: mlrs/产品介绍/mLRS快速上手指南.md
       - 硬件功能: mlrs/产品介绍/硬件功能.md
