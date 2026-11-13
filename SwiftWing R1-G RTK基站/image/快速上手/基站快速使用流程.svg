@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="760" viewBox="0 0 900 760" role="img" aria-labelledby="title desc">
+  <title id="title">SwiftWing R1-G RTK 基站快速使用流程</title>
+  <desc id="desc">固定天线，首次通过主板USB配置。开启SW1并确认供电后拔掉主板数据线，日常优先UDP。检查QGC接收及飞控转发、温控风扇，结束作业后关机。供电板USB接PD电源可供电并补电，RTCM仍用UDP；主板USB保留配置及备用RTCM功能。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#61758a"/>
+    </marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", "PingFang SC", sans-serif; fill: #20364a; text-anchor: middle; }
+      .title { font-size: 28px; font-weight: 700; }
+      .node { font-size: 23px; font-weight: 700; }
+      .detail { font-size: 19px; }
+      .small { font-size: 17px; fill: #4f6578; }
+      .line { fill: none; stroke: #61758a; stroke-width: 2.5; stroke-linejoin: round; }
+      .panel { fill: #eef6fd; stroke: #81afd3; stroke-width: 1.8; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="898" height="758" rx="20" fill="#ffffff" stroke="#dce6ef"/>
+  <text x="450" y="43" class="title">基站快速使用</text>
+  <text x="450" y="68" class="small">主板 USB 用于配置，日常首选 UDP</text>
+
+  <rect x="165" y="86" width="570" height="57" rx="12" class="panel"/>
+  <text x="450" y="122" class="node">① 接好 ANT1，固定基站位置</text>
+  <path d="M450 143 V162" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="165" y="171" width="570" height="73" rx="12" class="panel"/>
+  <text x="450" y="201" class="node">② 首次用 USB 配置基站</text>
+  <text x="450" y="229" class="detail">保存建站与局域网设置；已配置可跳过</text>
+  <path d="M450 244 V262" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="165" y="272" width="570" height="83" rx="12" fill="#eef9f3" stroke="#7db99a" stroke-width="1.8"/>
+  <text x="450" y="302" class="node" style="fill:#217351">③ 开 SW1 → 确认供电 → 拔数据 USB</text>
+  <text x="450" y="329" class="detail">日常首选 UDP，QGC 监听 13320</text>
+  <text x="450" y="349" class="small">基站与 QGC 接入同一局域网</text>
+  <path d="M450 355 V373" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="165" y="383" width="570" height="66" rx="12" class="panel"/>
+  <text x="450" y="411" class="node">④ QGC 实收 → 注入飞控</text>
+  <text x="450" y="437" class="detail">有效帧增加，再检查移动端定位</text>
+  <path d="M450 449 V467" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="165" y="477" width="570" height="66" rx="12" class="panel"/>
+  <text x="450" y="505" class="node">⑤ 查看板温与风扇</text>
+  <text x="450" y="531" class="detail">配置为达到 35 °C 开启，降至 30 °C 关闭</text>
+  <path d="M450 543 V561" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="165" y="571" width="570" height="66" rx="12" fill="#f4f7fa" stroke="#a3b4c5" stroke-width="1.8"/>
+  <text x="450" y="599" class="node">⑥ 作业结束 → 关闭 SW1</text>
+  <text x="450" y="625" class="small">完全关机还需断开主板 USB / 带电 CAN</text>
+
+  <rect x="50" y="662" width="800" height="76" rx="12" fill="#fff7e9" stroke="#d8b469" stroke-width="1.5"/>
+  <text x="450" y="692" class="detail">低电补电：12 V 档 PD → 供电板 USB-C，保持 SW1 开启</text>
+  <text x="450" y="719" class="small">供电稳定后仍用 UDP；主板 USB 也支持配置、调试和备用 RTCM</text>
+</svg>

@@ -1,0 +1,27 @@
+/* Limit wrapping changes to the RTK manuals. */
+.rst-content .rtk-guide ~ .wy-table-responsive table,
+.rst-content .rtk-guide ~ table {
+  width: 100%;
+  table-layout: auto;
+}
+
+.rst-content .rtk-guide ~ .wy-table-responsive table th,
+.rst-content .rtk-guide ~ .wy-table-responsive table td,
+.rst-content .rtk-guide ~ table th,
+.rst-content .rtk-guide ~ table td {
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.rst-content .rtk-guide ~ .wy-table-responsive table code,
+.rst-content .rtk-guide ~ table code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.rst-content .rtk-guide ~ .wy-table-responsive table th,
+.rst-content .rtk-guide ~ table th,
+.rst-content .rtk-guide ~ .wy-table-responsive table td:first-child code,
+.rst-content .rtk-guide ~ table td:first-child code {
+  white-space: nowrap;
+}

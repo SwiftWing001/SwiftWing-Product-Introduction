@@ -1,0 +1,259 @@
+{
+  "capture_date": "2026-11-13",
+  "source": "本机SwiftWing QGC、0.1.24基站网页实机素材及用户补充的基站图标与移动端航向截图；各图说明分别标注来源。",
+  "qgc_version": "Windows 0.1.0 build8",
+  "base_firmware": "0.1.24",
+  "scope": "截图用于操作位置和各自采样状态说明；裁剪与灰块遮盖未改写参数或解状态。使用教程已移除复杂PX4诊断，用户补充的航向图已加入移动端章节。",
+  "images": [
+    {
+      "file": "qgc-usb-base.png",
+      "description": "QGC USB基站识别与后台入口",
+      "width": 1250,
+      "height": 540,
+      "redacted": true
+    },
+    {
+      "file": "qgc-base-rtcm.png",
+      "description": "QGC实收RTCM与基站就绪状态",
+      "width": 1150,
+      "height": 280,
+      "redacted": false
+    },
+    {
+      "file": "qgc-network-settings.png",
+      "description": "已存网络、SSID和UDP目标设置",
+      "width": 1150,
+      "height": 530,
+      "redacted": true
+    },
+    {
+      "file": "qgc-base-survey-ports.png",
+      "description": "AUTO路由、基站编号、测量时长与端口",
+      "width": 1150,
+      "height": 405,
+      "redacted": false
+    },
+    {
+      "file": "qgc-base-parameters.png",
+      "description": "基站测量、端口、温控与出口参数",
+      "width": 1150,
+      "height": 750,
+      "redacted": false
+    },
+    {
+      "file": "qgc-rtcm-output-save.png",
+      "description": "差分出口、注入飞控与应用保存入口",
+      "width": 1150,
+      "height": 365,
+      "redacted": false
+    },
+    {
+      "file": "qgc-rtcm-relay.png",
+      "description": "QGC有效RTCM接收与注入已连接飞控",
+      "width": 1150,
+      "height": 405,
+      "redacted": false
+    },
+    {
+      "file": "qgc-udp-input.png",
+      "description": "UDP RTCM输入开关、13320端口和校验开关",
+      "width": 1650,
+      "height": 195,
+      "redacted": false
+    },
+    {
+      "file": "qgc-usb-devices.png",
+      "description": "同一QGC内同时识别基站和移动端USB设备",
+      "width": 1100,
+      "height": 210,
+      "redacted": true
+    },
+    {
+      "file": "qgc-rover-usb.png",
+      "description": "移动端USB管理链路及已连接的网页后台入口",
+      "width": 1250,
+      "height": 590,
+      "redacted": true
+    },
+    {
+      "file": "qgc-rover-heading-baseline.png",
+      "description": "移动端更新频率、安装偏角、AUTO航向协议、50cm已存基线和10cm容差",
+      "width": 1150,
+      "height": 425,
+      "redacted": false
+    },
+    {
+      "file": "qgc-rover-can-save.png",
+      "description": "移动端CAN自动节点、1Mbps速率、自动RTCM来源与应用保存/重新读取入口",
+      "width": 1150,
+      "height": 435,
+      "redacted": false
+    },
+    {
+      "file": "qgc-udp-status.png",
+      "description": "基站HTTP管理与UDP差分接入；飞控刚连接时GPS尚未更新，此图不作移动端最终状态证明",
+      "width": 320,
+      "height": 375,
+      "redacted": true
+    },
+    {
+      "file": "qgc-udp-base-panel.png",
+      "description": "基站HTTP管理状态及USB差分未接入提示，UDP数据是否接收另查实时来源",
+      "width": 1150,
+      "height": 180,
+      "redacted": true
+    },
+    {
+      "file": "qgc-analyze-entry.png",
+      "description": "QGC主菜单中的Analyze分析工具入口",
+      "width": 247,
+      "height": 245,
+      "redacted": false
+    },
+    {
+      "file": "qgc-inspector-gps.png",
+      "description": "MAVLink检测GPS_RAW_INT：13颗卫星、fix_type=6、yaw=0；已隐藏经纬度",
+      "width": 1200,
+      "height": 720,
+      "redacted": true
+    },
+    {
+      "file": "web-base-overview.png",
+      "description": "0.1.24基站网页总览与当前角色，未修改角色",
+      "width": 1265,
+      "height": 890,
+      "redacted": true
+    },
+    {
+      "file": "web-base-status.png",
+      "description": "0.1.24基站差分就绪、帧完整性与UDP输出；当前QGC反馈未确认，不作为飞控实收证明",
+      "width": 1265,
+      "height": 660,
+      "redacted": true
+    },
+    {
+      "file": "web-base-parameters.png",
+      "description": "基站网页站号、120秒测量、UDP出口、13320端口与保存读取按钮",
+      "width": 965,
+      "height": 542,
+      "redacted": false
+    },
+    {
+      "file": "web-base-device.png",
+      "description": "网页温控50/45度、蜂鸣器及重新读取入口",
+      "width": 1265,
+      "height": 793,
+      "redacted": true
+    },
+    {
+      "file": "web-base-network-state.png",
+      "description": "网页实际UDP路由、已保存Wi-Fi与自动选网入口；现场网络和地址遮盖",
+      "width": 965,
+      "height": 650,
+      "redacted": true
+    },
+    {
+      "file": "web-base-network-save.png",
+      "description": "网页SSID、密码、UDP目标、DHCP、AUTO和保存并连接按钮；未执行保存",
+      "width": 965,
+      "height": 600,
+      "redacted": true
+    },
+    {
+      "file": "web-base-tools.png",
+      "description": "网页UM982工具中的只读定位/航向诊断入口；未发原始指令或执行恢复",
+      "width": 1265,
+      "height": 844,
+      "redacted": true
+    },
+    {
+      "file": "web-base-logs.png",
+      "description": "网页日志记录状态、会话选择与下载按钮；仅查看未停止、导出或清空",
+      "width": 1265,
+      "height": 1050,
+      "redacted": true
+    },
+    {
+      "file": "web-base-upgrade.png",
+      "description": "网页应用镜像选择和上传入口；维护关闭，未选择镜像或升级",
+      "width": 1265,
+      "height": 730,
+      "redacted": true
+    },
+    {
+      "file": "qgc-rtk-indicator-unknown.png",
+      "description": "用户提供：红框和箭头标记顶部基站图标，UDP有效差分但设备身份未确认；飞控13颗卫星、固定解，目标反馈未确认",
+      "width": 329,
+      "height": 439,
+      "redacted": false
+    },
+    {
+      "file": "qgc-rover-gps-yaw.png",
+      "description": "用户补充的GPS_RAW_INT截图：yaw=35183（351.83度）、卫星24、fix_type=3；仅遮盖现场经纬度",
+      "width": 1244,
+      "height": 1328,
+      "redacted": true,
+      "qgc_build": "用户截图为SwiftWingRTK Daily，具体构建号未从截图确认"
+    },
+    {
+      "file": "qgc-rover-fc-heading.png",
+      "description": "用户补充的GLOBAL_POSITION_INT截图：hdg=35222（352.22度）；仅遮盖现场经纬度",
+      "width": 1337,
+      "height": 1293,
+      "redacted": true,
+      "qgc_build": "用户截图为SwiftWingRTK Daily，具体构建号未从截图确认"
+    },
+    {
+      "file": "qgc-generic-rtcm-input.png",
+      "description": "通用串口RTCM输入、有效帧与飞控注入；未连接第三方设备",
+      "width": 1047,
+      "height": 704,
+      "redacted": false,
+      "capture_date": "2026-11-13",
+      "scope": "本机B8操作入口截图；未接入第三方设备或服务，未修改设备参数"
+    },
+    {
+      "file": "qgc-rtcm-input-types.png",
+      "description": "通用输入选择Serial、TCP client、UDP listener；未改变选项或启动读取",
+      "width": 1047,
+      "height": 205,
+      "redacted": false,
+      "capture_date": "2026-11-13",
+      "scope": "本机B8操作入口截图；未接入第三方设备或服务，未修改设备参数"
+    },
+    {
+      "file": "qgc-ntrip-server.png",
+      "description": "NTRIP服务器、端口与账号入口；字段留空，未连接服务",
+      "width": 428,
+      "height": 302,
+      "redacted": false,
+      "capture_date": "2026-11-13",
+      "scope": "本机B8操作入口截图；未接入第三方设备或服务，未修改设备参数"
+    },
+    {
+      "file": "qgc-ntrip-mountpoint.png",
+      "description": "NTRIP挂载点与Browse入口；未填写或连接",
+      "width": 443,
+      "height": 92,
+      "redacted": false,
+      "capture_date": "2026-11-13",
+      "scope": "本机B8操作入口截图；未接入第三方设备或服务，未修改设备参数"
+    },
+    {
+      "file": "qgc-ntrip-gga.png",
+      "description": "GGA位置来源和发送间隔；保持现有Auto与5秒，未发送位置",
+      "width": 428,
+      "height": 172,
+      "redacted": false,
+      "capture_date": "2026-11-13",
+      "scope": "本机B8操作入口截图；未接入第三方设备或服务，未修改设备参数"
+    }
+  ],
+  "rover_firmware": "0.1.24",
+  "usb_capture_note": "移动端截图为已有参数的只读采集：200ms、AUTO、50cm、10cm。未修改或保存设备/飞控参数。USB识别与参数显示不作为CAN接入或导航验收证明。",
+  "udp_capture_note": "用户已将基站改为UDP、移动端断开USB仅连接飞控CAN。仅读取QGC遥测及PX4单次诊断，未改设备或飞控参数。GPS_RAW_INT采样13星、固定解、yaw=0；随后PX4主题14星、固定解、heading=NaN。处于室内，不据此验收航向；融合查询未采集完整。",
+  "flight_controller": "PX4 FMU v6C，PX4 v1.17.0；本次仅作室内数据查看示例",
+  "web_capture_note": "2026-11-13只读采集总览、差分、设备设置、网络读取、诊断入口、日志状态与升级入口。未改参数、角色、网络，未发UM982原始命令、未导出/清空日志或升级。现场设备身份、网络名称及地址均作遮盖。",
+  "user_supplied_indicator_note": "用户提供的图标与弹窗截图原样用于功能说明，没有为本次文档修改操作设备或改写读数。图标颜色与字段依据QGC B8源码核对。",
+  "user_supplied_heading_note": "2026-11-13用户补充GPS_RAW_INT.yaw=35183与GLOBAL_POSITION_INT.hdg=35222两次截图，换算351.83/352.22度，相差约0.39度；非同步截图，不据此作动态误差或融合来源验收。GPS图fix_type=3为3D单点，与有效双天线航向分别判断。"
+}

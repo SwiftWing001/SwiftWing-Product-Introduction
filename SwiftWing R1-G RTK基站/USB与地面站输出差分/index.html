@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SwiftWing 团队" /><link rel="canonical" href="https://swiftwing001.github.io/SwiftWing-Product-Introduction/SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/USB%E4%B8%8E%E5%9C%B0%E9%9D%A2%E7%AB%99%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>USB与地面站输出差分 - SwiftWing 产品介绍 文档</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/rtk.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "USB\u4e0e\u5730\u9762\u7ad9\u8f93\u51fa\u5dee\u5206";
+        var mkdocs_page_input_path = "SwiftWing R1-G RTK\u57fa\u7ad9\\USB\u4e0e\u5730\u9762\u7ad9\u8f93\u51fa\u5dee\u5206.md";
+        var mkdocs_page_url = "/SwiftWing-Product-Introduction/SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/USB%E4%B8%8E%E5%9C%B0%E9%9D%A2%E7%AB%99%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> SwiftWing 产品介绍 文档
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">主页</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">产品介绍</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >SwiftWing R1 RTK 移动端</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/">产品介绍</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">快速上手</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E7%A1%AC%E4%BB%B6%E5%AE%89%E8%A3%85/">硬件安装与天线基线</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/QGC%E9%85%8D%E7%BD%AE%E7%A7%BB%E5%8A%A8%E7%AB%AF/">QGC配置移动端</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/PX4%E9%A3%9E%E6%8E%A7%E5%8F%82%E6%95%B0/">PX4飞控参数</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/ArduPilot%E9%A3%9E%E6%8E%A7%E5%8F%82%E6%95%B0/">ArduPilot（APM）飞控参数</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E5%B7%AE%E5%88%86%E4%B8%8EWi-Fi%E5%90%8E%E5%8F%B0/">差分、卫星与网页后台</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E8%B5%B7%E9%A3%9E%E5%89%8D%E6%A3%80%E6%9F%A5/">航向确认与起飞前检查</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E6%97%A5%E5%BF%97%E4%B8%8E%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">日志与常见问题</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >SwiftWing R1-G RTK 基站</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../SwiftWing%20R1-G%20RTK%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/">产品介绍</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">快速上手</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E5%8A%9F%E8%83%BD%E4%B8%8E%E6%8E%A5%E5%8F%A3/">硬件功能与接口</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E4%BE%9B%E7%94%B5%E4%B8%8E%E5%85%85%E7%94%B5/">供电与充电</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../QGC%E5%9C%B0%E9%9D%A2%E7%AB%99%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/">QGC地面站参数修改</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/">设备网页后台</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E5%9F%BA%E7%AB%99%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%8F%82%E6%95%B0/">基站模式与参数</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">USB与地面站输出差分</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#udpusb">日常使用 UDP，USB 用于配置与备用</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usb-rtcm">配置 / 调试时，临时用 USB 获取 RTCM</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usb_1">一、基站 USB 自动接入</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_1">二、转发飞控与反馈绑定</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#swiftwing">三、SwiftWing 基站搭配其他厂家移动端</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1">1. 先按移动端接口选路线</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#2">2. 按顺序接入并检查</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#3-tcp-udp">3. 对方设备能直接接收原始 TCP / UDP 时</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#4">4. 使用其他地面站软件时</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/">Wi-Fi与TCP输出差分</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E6%97%A5%E5%BF%97%E5%8D%87%E7%BA%A7%E4%B8%8E%E6%81%A2%E5%A4%8D/">日志升级与恢复</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E8%AF%A6%E7%BB%86%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">详细使用说明与排查</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >迅翼 P1无人机分电板</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E5%88%86%E7%94%B5%E6%9D%BF/P1%E5%88%86%E7%94%B5%E6%9D%BF/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">使用说明</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E5%88%86%E7%94%B5%E6%9D%BF/P1%E5%88%86%E7%94%B5%E6%9D%BF/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97%EF%BC%88AP%EF%BC%89/">配置指南（AP）</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E5%88%86%E7%94%B5%E6%9D%BF/P1%E5%88%86%E7%94%B5%E6%9D%BF/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97%EF%BC%88PX4%EF%BC%89/">配置指南（PX4）</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >迅翼 P2无人机分电板</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E5%88%86%E7%94%B5%E6%9D%BF/P2%E5%88%86%E7%94%B5%E6%9D%BF/0_P2%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%88%86%E7%94%B5%E6%9D%BF/">概述</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E5%88%86%E7%94%B5%E6%9D%BF/P2%E5%88%86%E7%94%B5%E6%9D%BF/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">使用说明</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E5%88%86%E7%94%B5%E6%9D%BF/P2%E5%88%86%E7%94%B5%E6%9D%BF/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97%EF%BC%88AP%EF%BC%89/">配置指南（AP）</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E5%88%86%E7%94%B5%E6%9D%BF/P2%E5%88%86%E7%94%B5%E6%9D%BF/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97%EF%BC%88PX4%EF%BC%89/">配置指南（PX4）</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >迅翼 MS4525DO空速计</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E7%A9%BA%E9%80%9F/1_%E8%BF%85%E7%BF%BCMS4525DO%E7%A9%BA%E9%80%9F%E8%AE%A1/">概述</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E7%A9%BA%E9%80%9F/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">使用说明</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >迅翼 A2 DroneCAN DLVR-L10D空速计</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../CAN%E7%A9%BA%E9%80%9F%E8%AE%A1/0_SwiftWing_A2_DroneCAN%E7%A9%BA%E9%80%9F%E6%A8%A1%E5%9D%97/">概述</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../CAN%E7%A9%BA%E9%80%9F%E8%AE%A1/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">使用说明</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../CAN%E7%A9%BA%E9%80%9F%E8%AE%A1/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97%EF%BC%88AP%EF%BC%89/">配置指南（AP）</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../CAN%E7%A9%BA%E9%80%9F%E8%AE%A1/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97%EF%BC%88PX4%EF%BC%89/">配置指南（PX4）</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../CAN%E7%A9%BA%E9%80%9F%E8%AE%A1/DroneCAN_GUI_Tool%E4%BD%BF%E7%94%A8/">DroneCAN GUI Tool使用</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >迅翼 Mlrs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../mlrs/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/mLRS%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/">快速上手指南</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../mlrs/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/%E7%A1%AC%E4%BB%B6%E5%8A%9F%E8%83%BD/">硬件功能</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../mlrs/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/mLRS%E6%9F%A5%E7%9C%8B%E5%8F%8A%E6%9B%B4%E6%94%B9%E5%8F%82%E6%95%B0/">查看及更改参数</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../mlrs/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/mLRS%E8%BF%9E%E6%8E%A5%E9%A3%9E%E6%8E%A7%E4%BD%BF%E7%94%A8/">连接飞控使用</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../mlrs/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/%E8%93%9D%E7%89%99%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">蓝牙使用教程</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >迅翼 Elrs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../elrs/elrs%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">产品介绍</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../elrs/%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E4%BB%8B%E7%BB%8D/">硬件接口介绍</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../elrs/elrs%E6%8E%A5%E6%94%B6%E6%9C%BA%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">快速上手</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >使用CRSF、SBUS</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../elrs/%E9%A3%9E%E6%8E%A7%E9%85%8D%E7%BD%AE/">CRSF、SBUS飞控配置</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../elrs/%E5%9B%BA%E4%BB%B6%E5%88%B7%E5%86%99/">固件刷写</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >使用MAVLINK回传</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../elrs/mavlink%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">mavlink使用说明</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../elrs/elrs%E6%8E%A5%E6%94%B6%E6%9C%BAmavlink%E5%88%B0%E6%89%8B%E4%BD%BF%E7%94%A8/">mavlink到手使用</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../elrs/mavlink%E5%9B%BA%E4%BB%B6%E5%88%B7%E5%86%99/">mavlink固件刷写</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../elrs/mavlink%E9%81%A5%E6%8E%A7%E5%99%A8%E8%AE%BE%E7%BD%AE/">mavlink遥控器设置</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../elrs/mavlink%E9%A3%9E%E6%8E%A7%E9%85%8D%E7%BD%AE/">mavlink飞控配置</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">SwiftWing 产品介绍 文档</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">产品介绍</li>
+          <li class="breadcrumb-item">SwiftWing R1-G RTK 基站</li>
+      <li class="breadcrumb-item active">USB与地面站输出差分</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="rtk-guide" aria-hidden="true"></div>
+
+<h1 id="usb">通过 USB 与地面站输出差分</h1>
+<p>使用本项目 <strong>SwiftWing QGC 0.1.0 build8</strong> 的自动识别能力，把基站差分接入地面站。这里接的是 <strong>RTK 主板原生 USB</strong>，不是供电板的充电 USB。</p>
+<p><a id="link-comparison"></a></p>
+<h2 id="udpusb">日常使用 UDP，USB 用于配置与备用</h2>
+<p>下面比较的是 <strong>QGC 从基站接收 RTCM</strong>的方式。推荐 <strong>主板 USB 完成首次配置，日常优先无线 UDP</strong>；USB 同时支持 RTCM，可作调试或无线暂不可用时的备用。使用电池还是充电器供电，不决定差分必须走哪条路线。</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>Wi-Fi UDP 无线（日常首选）</th>
+<th>主板 USB（配置与备用）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推荐场景</td>
+<td>日常作业、灵活放置基站</td>
+<td>首次配置、调试、无线备用</td>
+</tr>
+<tr>
+<td>RTCM 接线</td>
+<td>基站与 QGC 主机在同一局域网，无需数据线</td>
+<td>电脑数据线接 RTK 主板 USB-C</td>
+</tr>
+<tr>
+<td>基站供电</td>
+<td>开启 SW1，电池或供电板 USB 输入经 XT30 供电</td>
+<td>可由电脑 USB 给主板供电</td>
+</tr>
+<tr>
+<td>电池补电</td>
+<td>接供电板 USB-C，供电稳定后仍可用 UDP</td>
+<td>另接供电板 USB-C；主板数据 USB 不充电池</td>
+</tr>
+<tr>
+<td>QGC 设置</td>
+<td>开启 UDP RTCM 输入，监听 13320；基站目标填 QGC 主机地址</td>
+<td>AUTO 下有效 USB 会话会优先 USB</td>
+</tr>
+<tr>
+<td>网络要求</td>
+<td>需要可互通的局域网，不要求互联网</td>
+<td>获取 USB RTCM 不需要局域网</td>
+</tr>
+<tr>
+<td>RTCM 内容</td>
+<td>同一基站生成的 RTCM3，传输方式不单独提高精度</td>
+<td>同一基站生成的 RTCM3</td>
+</tr>
+<tr>
+<td>配置后操作</td>
+<td>确认供电后拔掉主板数据 USB，检查 UDP 实收</td>
+<td>需要时临时保留使用，日常恢复 UDP</td>
+</tr>
+</tbody>
+</table>
+<p>原始 TCP 适合需要由接收端主动连接基站的集成方案，默认 2101；普通外场先选 UDP。它仍是无线网络链路，不提供电源，配置步骤见<a href="../Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/#tcp-output">TCP 输出</a>。</p>
+<h3 id="usb-rtcm">配置 / 调试时，临时用 USB 获取 RTCM</h3>
+<ol>
+<li>电脑用数据线接 <strong>主板 USB-C</strong>，让主板得到供电。</li>
+<li>若同时需要给电池补电，匹配的 <strong>12 V 档 PD 充电器</strong>另接 <strong>供电板 USB-C</strong>；主板仅由电脑 USB 工作时，SW1 可关闭。</li>
+<li>打开 QGC，选择对应基站，确认 AUTO 路由及当前 USB 来源。</li>
+<li>等有效帧持续增加，再勾选注入已连接飞控并检查移动端。</li>
+</ol>
+<p>主板的数据线和供电板的充电线可以同时连接。充电口不枚举数据，主板 USB 也不会反向替电池充电；两口作用见<a href="../%E4%BE%9B%E7%94%B5%E4%B8%8E%E5%85%85%E7%94%B5/#charging">供电与充电</a>。</p>
+<p>配置完毕，开启 SW1 并确认供电，再拔主板数据线回到 UDP。<strong>基站低电时也可由供电板 USB 供电、补电并继续使用 UDP，不需要按电量切换 RTCM 传输方式。</strong></p>
+<h2 id="usb_1">一、基站 USB 自动接入</h2>
+<ol>
+<li>RTK 主板原生 USB 接电脑，关闭占用其配置/RTCM 串口的软件。一个物理 USB 提供两个接口，QGC 按身份区分，不按 COM 号大小猜测。</li>
+<li>选择正确的 <strong>SwiftWing R1-G RTK</strong>，核对硬件短码、完整序列号和固件。基站与移动端可同时连接，配置选择与基站数据会话分开。</li>
+<li>路由设 AUTO 并保存，等待 QGC USB 会话生效。观察 <strong>QGC 正在接收此设备的有效 RTCM</strong> 和 <strong>QGC 实收：…帧 · CRC 错误… · 帧龄…ms</strong>。</li>
+<li>仅显示 <strong>USB RTCM 已连接，等待有效差分</strong> 时，查基站角色、ANT1、测量和 RTCM 就绪，不把它当接收成功。虚拟 USB 波特率不等于 UM982 内部串口速率，不因等待提示就改接收机串口波特率。</li>
+</ol>
+<p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-base-rtcm.png"><img alt="实机 USB 差分有效帧、CRC 与基站就绪" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-base-rtcm.png" /></a></p>
+<p>读图顺序：<strong>QGC 实收帧数与帧龄 → CRC 错误 → 基站 RTCM 已就绪</strong>。此图是基站侧状态，不能用上方的基站定位文字代替移动端的 RTK 解状态。</p>
+<p>AUTO 基于有效 QGC 会话使用 USB；插着电源线、Windows 有 COM、VBUS 有电或 DTR 拉起，都不能替代此会话。USB 优先时 Wi-Fi 可关闭省电，旧 Wi-Fi 和地址配置仍保留。QGC USB 续租停止约 10 秒或 USB 断开后，基站恢复 UDP 路径；需要 UDP 同时验证时参见 <a href="../Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/">Wifi 输出差分</a>。</p>
+<p>管理口输出配置协议，不能当原始 RTCM 使用。RTCM 口用于输出，往该口写入的数据不会作为设备的差分输入。主机打开接口时应正确设置 DTR；部分通用串口软件需另行启用该选项。</p>
+<p>未知 UDP/TCP 差分在 QGC 中可显示通用有效 RTCM 状态，但不能借另一个 USB 设备的产品名/IP 冒充来源。</p>
+<p>日常可直接点击顶部<strong>三脚架形基站图标</strong>查看实时状态。尚未收到有效差分时，已识别的 USB 基站也会显示红色图标并提供配置入口；完整颜色、弹窗和按钮说明见<a href="../QGC%E5%9C%B0%E9%9D%A2%E7%AB%99%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/#rtk-indicator">基站图标功能</a>。</p>
+<h2 id="_1">二、转发飞控与反馈绑定</h2>
+<p>连接所需飞控，勾选 <strong>将 QGC 收到的差分注入已连接飞控</strong>。手动输入区对应选项名为 <strong>将当前差分输入注入所有已连接飞控</strong>。首次联调只连接本轮目标飞控，避免无意向其他飞控注入。</p>
+<p><strong>绑定当前飞控反馈</strong> 只选择本页及基站状态所用的返回反馈目标，不限制差分只发送给它。切换活动飞控也不会自动改变已绑定反馈；换机时重新核对或 <strong>解除绑定</strong>。反馈固定仅表示该目标的新鲜 GPS 固定报告，不等于精度和航向验收。</p>
+<p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rtcm-relay.png"><img alt="实机 QGC 有效差分接收与注入所有已连接飞控" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rtcm-relay.png" /></a></p>
+<p>当前实机处于 <strong>Receiving valid RTCM3</strong>，有效帧和帧龄可见，注入飞控选项已勾选。输入读取中时部分来源字段不可编辑；不要为了查看选项而停止正在使用的差分。</p>
+<p>机载使用 <strong>SwiftWing 移动端</strong>时，PX4 经典 1.17 需启用 CAN GPS 并设置 <code>UAVCAN_PUB_RTCM=1</code>，ArduPilot 按<a href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">移动端教程</a>配置 DroneCAN GPS、航向和杆臂。机载使用 <strong>其他厂家移动端</strong>时改按下节选择 CAN / 串口路线。经 QGC 和飞控转发时，基站本身不需要再接飞控 CAN。</p>
+<p><a id="third-party-rover"></a></p>
+<h2 id="swiftwing">三、SwiftWing 基站搭配其他厂家移动端</h2>
+<h3 id="1">1. 先按移动端接口选路线</h3>
+<p>基站提供 RTCM3 差分，不要求机载也使用 SwiftWing；前提是对方接收机、飞控驱动及中间链路都支持所用数据。</p>
+<table>
+<thead>
+<tr>
+<th>机载移动端</th>
+<th>前置条件</th>
+<th>差分怎样到达</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>其他厂家 DroneCAN GPS</td>
+<td>对方支持标准 DroneCAN RTCM 接收，飞控支持该型号；CAN 速率、终端和供电按其手册核对</td>
+<td>SwiftWing 基站 → QGC → MAVLink → 飞控 → DroneCAN → 第三方移动端</td>
+</tr>
+<tr>
+<td>其他厂家串口 GPS</td>
+<td>飞控支持该型号的定位协议，并支持向该 GPS 串口注入 RTCM；线序、电平、波特率正确</td>
+<td>SwiftWing 基站 → QGC → MAVLink → 飞控 → GPS 串口 → 第三方移动端</td>
+</tr>
+<tr>
+<td>只有定位输出、不能接收 RTCM 的普通 GPS</td>
+<td>不满足 RTK 差分接收条件</td>
+<td>增加地面基站不会让它获得 RTK 功能</td>
+</tr>
+</tbody>
+</table>
+<p>“有 CAN 插头”不等于支持 DroneCAN RTCM；其他 CAN 协议需厂家网关或驱动。“飞控能显示串口 GPS 位置”也不保证该驱动已支持差分回传，接收条件须由具体型号与飞控版本确认。</p>
+<h3 id="2">2. 按顺序接入并检查</h3>
+<ol>
+<li><strong>先配本基站</strong>：按<a href="../%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">快速上手</a>前四步完成建站和 QGC 接收；日常仍优先 UDP，USB 用于配置和备用。默认参考 / 观测输出为 <code>1006 / 1033 / 1074 / 1084 / 1094 / 1124</code>，需核对第三方移动端能使用所需星座和频点；对方要求的额外报文不在默认列表时，不能直接认为已满足。</li>
+<li><strong>再配第三方移动端与飞控</strong>：用厂家工具保存其接收机设置，按该厂家的飞控教程选 CAN 或串口 GPS 驱动。SwiftWing 的 <code>RTK_ROLE</code>、<code>CAN_HDG_PROFILE</code>、<code>HDG_LEN_CM</code>和网页菜单不用于配置第三方设备；串口 GPS 不照抄 DroneCAN 的 <code>GPS1_TYPE=9</code>。</li>
+<li><strong>连接目标飞控</strong>：通过 USB / 遥测接入 QGC，只保留本轮目标；勾选 <strong>将 QGC 收到的差分注入已连接飞控</strong>。CAN 路线还要确认飞控向 CAN 转发 RTCM；例如本手册适用的经典 PX4 使用 <code>UAVCAN_PUB_RTCM=1</code>，此参数不用于串口 GPS 的差分出口。</li>
+</ol>
+<p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rtcm-relay.png"><img alt="QGC收到基站差分后注入已连接飞控的开关位置" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rtcm-relay.png" /></a></p>
+<ol start="4">
+<li><strong>确认第三方移动端收到</strong>：在其厂家状态工具或飞控支持的诊断中查看 RTCM 接收 / 差分龄；不要尝试用 SwiftWing 移动端网页读它。飞控通过哪个接口连接 GPS，就检查该接口的注入链路。</li>
+<li><strong>确认目标 GPS 解状态</strong>：在 QGC 查看对应的 <code>GPS_RAW_INT</code> / <code>GPS2_RAW</code>，核对卫星数及 <code>fix_type</code>（5=RTK Float，6=RTK Fixed）。多 GPS 时选中第三方移动端对应实例；基站图标绿色只说明相应差分接收状态。</li>
+<li><strong>需要航向时另行配置</strong>：第三方移动端必须自身具备双天线或其他航向能力，并与飞控协议兼容。基线、偏角、航向来源及检查方式按该厂家手册处理，不能因为收到本基站差分就套用 SwiftWing 的航向参数。</li>
+</ol>
+<p>图中是既有 SwiftWing 实机差分素材，用于说明 QGC 注入入口，不代表图内接收端是某款第三方设备。仅看到有效 RTCM 计数仍不能代替接收机 Fixed 检查。</p>
+<p><a id="direct-network-rover"></a></p>
+<h3 id="3-tcp-udp">3. 对方设备能直接接收原始 TCP / UDP 时</h3>
+<p>这类设备可按接口条件跳过 QGC / 飞控的差分转发；先查厂家是否明确支持<strong>原始 RTCM3 网络输入</strong>，不能只看它有 Wi-Fi 或 NTRIP 菜单。</p>
+<table>
+<thead>
+<tr>
+<th>对方设备具备什么能力</th>
+<th>本基站怎样设置</th>
+<th>对方怎样设置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原始 TCP RTCM 客户端</td>
+<td>按<a href="../Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/#tcp-output">TCP 输出</a>保存手动路由并启用 TCP；确认本基站实际 LAN IP，默认端口 2101</td>
+<td>连接本基站实际 IP:2101，按原始 RTCM3 流读取；当前最多两个 TCP 客户端</td>
+</tr>
+<tr>
+<td>原始 UDP RTCM 监听</td>
+<td>按<a href="../Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/">UDP 设置</a>将目标改为<strong>对方接收设备实际 IPv4</strong>与约定端口；仅用 UDP 时为 mask=1，若保留主板 USB 管理则用手动路由</td>
+<td>在约定接口 / 端口接收原始 RTCM3；需要可互通局域网</td>
+</tr>
+<tr>
+<td>只有 NTRIP 客户端</td>
+<td>本基站 2101 是原始 TCP 服务，不提供账号或挂载点</td>
+<td>不能把本基站当 NTRIP Caster；使用 QGC / 飞控路线，或另行部署并配置合适的 NTRIP 中转</td>
+</tr>
+</tbody>
+</table>
+<p>改用直接 UDP 后，目标不再是 QGC 电脑；不能要求 QGC 仍必然收到同一份数据。只把设备接到同一路由器不会自动接收差分。若对方直接连接其接收机专用差分串口，还需使用厂家支持的网络 / 电台转换设备及正确电平，不能把 RTK 主板调试 UART0 当成外部 RTCM 透传口。</p>
+<h3 id="4">4. 使用其他地面站软件时</h3>
+<p>先确认该软件能接收本基站的<strong>原始 RTCM3</strong>。可选其支持的 UDP / 原始 TCP 输入；支持手动读取 USB RTCM 的软件，还需按本基站<a href="../../RTK%E9%80%9A%E7%94%A8/%E6%8E%A5%E5%8F%A3%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%B7%AE%E5%88%86%E9%93%BE%E8%B7%AF/">接口定义</a>选 CDC1，并确保输出路由实际启用 USB。第三方软件不具备 SwiftWing QGC 的应用会话时，AUTO 不会只因打开 COM 就切到 USB，需用 SwiftWing 工具预先保存 **手动路由 + USB 出口（mask=4）**并释放端口。</p>
+<p>SwiftWing USB 自动配对与参数页不能推定其他地面站也支持；不支持原始输入时，使用本手册的 SwiftWing QGC 路线。避免两个软件争用同一串口或同时给同一飞控注入不同来源。</p>
+<p>飞控端原理可参考 <a href="https://docs.px4.io/main/en/advanced/rtk_gps">PX4 RTCM 转发</a>与 <a href="https://ardupilot.org/copter/docs/common-rtk-correction.html">ArduPilot RTK 差分接入</a>。以上按接口能力说明使用逻辑，具体第三方型号仍需确认，不代表已经逐台实测。</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../%E5%9F%BA%E7%AB%99%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%8F%82%E6%95%B0/" class="btn btn-neutral float-left" title="基站模式与参数"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/" class="btn btn-neutral float-right" title="Wi-Fi与TCP输出差分">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2026 深圳市牧空创新科技有限公司</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../%E5%9F%BA%E7%AB%99%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%8F%82%E6%95%B0/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

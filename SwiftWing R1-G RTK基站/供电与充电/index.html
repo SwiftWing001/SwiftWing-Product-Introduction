@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SwiftWing 团队" /><link rel="canonical" href="https://swiftwing001.github.io/SwiftWing-Product-Introduction/SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/%E4%BE%9B%E7%94%B5%E4%B8%8E%E5%85%85%E7%94%B5/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>供电与充电 - SwiftWing 产品介绍 文档</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/rtk.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u4f9b\u7535\u4e0e\u5145\u7535";
+        var mkdocs_page_input_path = "SwiftWing R1-G RTK\u57fa\u7ad9\\\u4f9b\u7535\u4e0e\u5145\u7535.md";
+        var mkdocs_page_url = "/SwiftWing-Product-Introduction/SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/%E4%BE%9B%E7%94%B5%E4%B8%8E%E5%85%85%E7%94%B5/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> SwiftWing 产品介绍 文档
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">主页</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">产品介绍</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >SwiftWing R1 RTK 移动端</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/">产品介绍</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">快速上手</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E7%A1%AC%E4%BB%B6%E5%AE%89%E8%A3%85/">硬件安装与天线基线</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/QGC%E9%85%8D%E7%BD%AE%E7%A7%BB%E5%8A%A8%E7%AB%AF/">QGC配置移动端</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/PX4%E9%A3%9E%E6%8E%A7%E5%8F%82%E6%95%B0/">PX4飞控参数</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/ArduPilot%E9%A3%9E%E6%8E%A7%E5%8F%82%E6%95%B0/">ArduPilot（APM）飞控参数</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E5%B7%AE%E5%88%86%E4%B8%8EWi-Fi%E5%90%8E%E5%8F%B0/">差分、卫星与网页后台</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E8%B5%B7%E9%A3%9E%E5%89%8D%E6%A3%80%E6%9F%A5/">航向确认与起飞前检查</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E6%97%A5%E5%BF%97%E4%B8%8E%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">日志与常见问题</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >SwiftWing R1-G RTK 基站</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../SwiftWing%20R1-G%20RTK%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/">产品介绍</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">快速上手</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E5%8A%9F%E8%83%BD%E4%B8%8E%E6%8E%A5%E5%8F%A3/">硬件功能与接口</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">供电与充电</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#usb">一、先接对两个 USB</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_2">二、按步骤充电</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#pd2s">PD、2S 均衡和过充保护分别做什么</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sw1">三、SW1 电源开关怎么用</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">四、充电、使用与存放时间参考</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">五、温度检测与风扇散热</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_5">六、低压报警与后台读数</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pcb">附录：供电 PCB 待机实测记录</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_6">附录：充电与整机续航实测</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1">1. 白色飞线版本充电</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#2">2. 基站与风扇持续运行</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#3">3. 还需补齐的电源验证</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_7">器件参考</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../QGC%E5%9C%B0%E9%9D%A2%E7%AB%99%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/">QGC地面站参数修改</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/">设备网页后台</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E5%9F%BA%E7%AB%99%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%8F%82%E6%95%B0/">基站模式与参数</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../USB%E4%B8%8E%E5%9C%B0%E9%9D%A2%E7%AB%99%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/">USB与地面站输出差分</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/">Wi-Fi与TCP输出差分</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E6%97%A5%E5%BF%97%E5%8D%87%E7%BA%A7%E4%B8%8E%E6%81%A2%E5%A4%8D/">日志升级与恢复</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E8%AF%A6%E7%BB%86%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">详细使用说明与排查</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >迅翼 P1无人机分电板</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E5%88%86%E7%94%B5%E6%9D%BF/P1%E5%88%86%E7%94%B5%E6%9D%BF/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">使用说明</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E5%88%86%E7%94%B5%E6%9D%BF/P1%E5%88%86%E7%94%B5%E6%9D%BF/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97%EF%BC%88AP%EF%BC%89/">配置指南（AP）</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E5%88%86%E7%94%B5%E6%9D%BF/P1%E5%88%86%E7%94%B5%E6%9D%BF/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97%EF%BC%88PX4%EF%BC%89/">配置指南（PX4）</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >迅翼 P2无人机分电板</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E5%88%86%E7%94%B5%E6%9D%BF/P2%E5%88%86%E7%94%B5%E6%9D%BF/0_P2%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%88%86%E7%94%B5%E6%9D%BF/">概述</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E5%88%86%E7%94%B5%E6%9D%BF/P2%E5%88%86%E7%94%B5%E6%9D%BF/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">使用说明</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E5%88%86%E7%94%B5%E6%9D%BF/P2%E5%88%86%E7%94%B5%E6%9D%BF/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97%EF%BC%88AP%EF%BC%89/">配置指南（AP）</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E5%88%86%E7%94%B5%E6%9D%BF/P2%E5%88%86%E7%94%B5%E6%9D%BF/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97%EF%BC%88PX4%EF%BC%89/">配置指南（PX4）</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >迅翼 MS4525DO空速计</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E7%A9%BA%E9%80%9F/1_%E8%BF%85%E7%BF%BCMS4525DO%E7%A9%BA%E9%80%9F%E8%AE%A1/">概述</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../%E7%A9%BA%E9%80%9F/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">使用说明</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >迅翼 A2 DroneCAN DLVR-L10D空速计</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../CAN%E7%A9%BA%E9%80%9F%E8%AE%A1/0_SwiftWing_A2_DroneCAN%E7%A9%BA%E9%80%9F%E6%A8%A1%E5%9D%97/">概述</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../CAN%E7%A9%BA%E9%80%9F%E8%AE%A1/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">使用说明</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../CAN%E7%A9%BA%E9%80%9F%E8%AE%A1/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97%EF%BC%88AP%EF%BC%89/">配置指南（AP）</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../CAN%E7%A9%BA%E9%80%9F%E8%AE%A1/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97%EF%BC%88PX4%EF%BC%89/">配置指南（PX4）</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../CAN%E7%A9%BA%E9%80%9F%E8%AE%A1/DroneCAN_GUI_Tool%E4%BD%BF%E7%94%A8/">DroneCAN GUI Tool使用</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >迅翼 Mlrs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../mlrs/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/mLRS%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/">快速上手指南</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../mlrs/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/%E7%A1%AC%E4%BB%B6%E5%8A%9F%E8%83%BD/">硬件功能</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../mlrs/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/mLRS%E6%9F%A5%E7%9C%8B%E5%8F%8A%E6%9B%B4%E6%94%B9%E5%8F%82%E6%95%B0/">查看及更改参数</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../mlrs/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/mLRS%E8%BF%9E%E6%8E%A5%E9%A3%9E%E6%8E%A7%E4%BD%BF%E7%94%A8/">连接飞控使用</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../mlrs/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/%E8%93%9D%E7%89%99%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">蓝牙使用教程</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >迅翼 Elrs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../elrs/elrs%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">产品介绍</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../elrs/%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E4%BB%8B%E7%BB%8D/">硬件接口介绍</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../elrs/elrs%E6%8E%A5%E6%94%B6%E6%9C%BA%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">快速上手</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >使用CRSF、SBUS</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../elrs/%E9%A3%9E%E6%8E%A7%E9%85%8D%E7%BD%AE/">CRSF、SBUS飞控配置</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../elrs/%E5%9B%BA%E4%BB%B6%E5%88%B7%E5%86%99/">固件刷写</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >使用MAVLINK回传</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../elrs/mavlink%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">mavlink使用说明</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../elrs/elrs%E6%8E%A5%E6%94%B6%E6%9C%BAmavlink%E5%88%B0%E6%89%8B%E4%BD%BF%E7%94%A8/">mavlink到手使用</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../elrs/mavlink%E5%9B%BA%E4%BB%B6%E5%88%B7%E5%86%99/">mavlink固件刷写</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../elrs/mavlink%E9%81%A5%E6%8E%A7%E5%99%A8%E8%AE%BE%E7%BD%AE/">mavlink遥控器设置</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../elrs/mavlink%E9%A3%9E%E6%8E%A7%E9%85%8D%E7%BD%AE/">mavlink飞控配置</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">SwiftWing 产品介绍 文档</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">产品介绍</li>
+          <li class="breadcrumb-item">SwiftWing R1-G RTK 基站</li>
+      <li class="breadcrumb-item active">供电与充电</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div class="rtk-guide" aria-hidden="true"></div>
+
+<h1 id="_1">基站供电、充电与温控</h1>
+<p>本页介绍选配 2S 18650 供电板及 V1.0 RTK 主板。完整操作顺序先看<a href="../%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">快速上手流程</a>，本页用于查电源、充电时间、续航和风扇设置。</p>
+<p><strong>日常优先 UDP，无需按电量切换差分路线。</strong> 电池可给基站供电；接供电板 USB-C、开启 SW1 后，也可经 XT30 给主板供电并给电池补电。主板 USB 用于配置，也支持备用 RTCM。</p>
+<p>两只 18650 串联为 2S；两节 2200 mAh 串联后仍为 2200 mAh，电压相加，不是 4400 mAh。实体连接为 <strong>供电板 SYS_SW_OUT → RTK 主板 XT30</strong>。</p>
+<pre><code class="language-text">2S 18650 → 供电板电源选择 → SW1 船型开关 → SYS_SW_OUT → RTK 的 XT30
+供电板充电 USB → CH224A 快充协商 / TP5100 充电 → 电池及负载供电路径
+RTK 主板数据 USB → 电脑 QGC（与供电板充电 USB 分开）
+</code></pre>
+<h2 id="usb">一、先接对两个 USB</h2>
+<table>
+<thead>
+<tr>
+<th>接口</th>
+<th>用途</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>供电板 USB-C</td>
+<td>PD 输入、2S 电池充电、经 SW1 向基站供电</td>
+<td>接匹配充电器；SW1 开启才能向主板 XT30 供电，不传 QGC 数据</td>
+</tr>
+<tr>
+<td>RTK 主板 USB-C</td>
+<td>QGC 配置、USB RTCM、5 V 供电</td>
+<td>接电脑数据线；不会给 2S 电池充电</td>
+</tr>
+<tr>
+<td>RTK 主板 XT30</td>
+<td>接供电板开关后输出</td>
+<td>走主板降压路径，不是 USB/CAN 的 5 V 脚</td>
+</tr>
+<tr>
+<td>RTK 的 CAN_5V</td>
+<td>外部 5 V 输入</td>
+<td>不能接 2S 电池或快充 12 V</td>
+</tr>
+<tr>
+<td>FAN+ / FAN-</td>
+<td>受控风扇回路</td>
+<td>FAN- 不能再搭到 GND，否则绕过温控</td>
+</tr>
+</tbody>
+</table>
+<p><strong>日常边充边用 UDP：PD 充电器 → 供电板 USB-C → 开启 SW1 → XT30 → RTK 主板</strong>，同时由 Wi-Fi 向 QGC 发送 RTCM。主板 USB 数据线可以拔掉。</p>
+<p>仅在需要 USB 配置 / 临时有线取数且同时补电时，才同时接 <strong>电脑 → 主板 USB-C；PD 充电器 → 供电板 USB-C</strong>两根线。只接主板 USB 时主板可工作，但电池没有在充电。</p>
+<p><a id="charging"></a></p>
+<h2 id="_2">二、按步骤充电</h2>
+<ol>
+<li><strong>仅充电收纳</strong>时关闭 SW1；<strong>边充边用基站</strong>时开启 SW1，使充电口输入经 XT30 给主板供电，差分仍优先走 UDP。SW1 关闭不会切断电池充电支路。</li>
+<li>选择与设计匹配、明确支持 <strong>12 V 档位</strong>的 PD 快充电源和线材，接供电板 USB-C。只有 PD 字样、但没有所需档位的电源不能保证匹配。</li>
+<li>查看供电板充电指示：输入红灯表示输入侧有电，充电红灯表示正在充电，绿灯通常表示充电完成 / 待机；输入灯亮不单独证明已协商到 12 V。</li>
+<li>确认供电稳定、需要作业时按<a href="../%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/#choose-link">UDP 操作步骤</a>使用；补电本身不要求改用主板 USB 获取差分。仅收纳时保持 SW1 关闭。</li>
+</ol>
+<h3 id="pd2s">PD、2S 均衡和过充保护分别做什么</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>对使用者的作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PD 快充输入</td>
+<td>CH224A 设计请求 12 V，供后级充电电路使用；不是让快充电压进入电脑或 CAN 的 5 V 口</td>
+</tr>
+<tr>
+<td>2S 充电</td>
+<td>TP5100 按两节串联电池充电，正常目标总压约 8.4 V；普通 5 V 输入不能保证该降压方案充满 2S</td>
+</tr>
+<tr>
+<td>两节被动均衡</td>
+<td>HY2213 支路在充电末段对较高电压电芯进行有限电流泄放，减小单节差异；仍需使用匹配电芯</td>
+</tr>
+<tr>
+<td>过充保护</td>
+<td>HY2120 配合保护 MOS 对单节过压等异常条件提供保护；保护阈值不是日常充电目标</td>
+</tr>
+</tbody>
+</table>
+<p>以上为该供电板的电路功能，分别依据充电及保护器件设计。[P1][P2][P4][P5] 充电绿灯和总压约 8.4 V 不能单独证明两节已完全均衡；单节明显不一致时先核查电池和充电状态，历史测量边界保留在下方实测记录中。</p>
+<p>RTK 主板 XT30 经过反接保护、降压和电源选择供主板使用。[P3] 不把原始 2S 电压或快充 12 V 接到 USB / CAN 的 5 V 针。</p>
+<h2 id="sw1">三、SW1 电源开关怎么用</h2>
+<ul>
+<li><strong>开启 SW1</strong>：供电板向主板 XT30 供电，适用于电池工作或接供电板 USB 边充边用。</li>
+<li><strong>关闭 SW1</strong>：断开该 XT30 负载支路，适用于结束作业或单独充电。</li>
+<li><strong>关了仍在运行</strong>：检查主板 USB 或带电 CAN 是否还提供外电。完全关机需要结束作业并移除这些外电。</li>
+</ul>
+<p>充电、保护、均衡和低压报警电路仍接电池，SW1 关闭不是物理隔离电芯，仍有待机消耗。该电路提供边充边用路径，但没有据此承诺外电插拔完全不重启；切换供电后要重新看差分接收。</p>
+<p><a id="operating-time"></a></p>
+<h2 id="_3">四、充电、使用与存放时间参考</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>已有记录</th>
+<th>应怎样安排</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上电运行</td>
+<td>历史基站加风扇样机约 4.5 小时至 7.03 V 低压报警</td>
+<td>可提前约 4 小时检查电量并准备补电，不把 4.5 小时当额定或保底续航</td>
+</tr>
+<tr>
+<td>电池充电</td>
+<td>白色飞线版两轮约 83 / 91 分钟至绿灯</td>
+<td>不是从完全没电充到满，不能承诺所有版本的 0%～100% 时间</td>
+</tr>
+<tr>
+<td>无负载存放</td>
+<td>供电 PCB 单独连接 2S 2200 mAh，约 7 天后仍有电；开关版 8.34 → 8.08 V</td>
+<td>只是无负载参考；该次 SW1 保持开启，并未测出严格关闭开关后的待机上限</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关机后能放多久：目前不能可靠标成固定几个月。</strong> 已有数据支持无负载一周以上的观察记录，缺少 SW1 关闭状态的静态电流与完整放电测试。收纳后按周检查电量，长期停用按电池说明隔离电芯；不要只关开关就长期搁置。</p>
+<p>电池容量、老化、温度、无线状态和风扇运行时间都会影响续航。完整测量条件和原始读数在本页附录，不能用电压下降速度直接线性推算待机天数。</p>
+<p><a id="cooling"></a></p>
+<h2 id="_4">五、温度检测与风扇散热</h2>
+<ol>
+<li>打开基站网页 <strong>设备设置</strong>，或在 QGC 基站弹窗查看 <strong>温度 / 风扇</strong>。检测值来自主板 NTC，是 RTK 板温，不是电池温度。</li>
+<li>将基站温控设置为 <strong><code>FAN_ON_C=35</code>、<code>FAN_OFF_C=30</code></strong>，保存后按下表工作。已有设备需修改并保存，不能把手册更新当作设备阈值已改变。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>板温（本手册设置）</th>
+<th>风扇动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>达到或超过 35 °C</td>
+<td>开启散热</td>
+</tr>
+<tr>
+<td>高于 30 °C、低于 35 °C</td>
+<td>保持此前状态，避免反复启停</td>
+</tr>
+<tr>
+<td>降至 30 °C 或以下</td>
+<td>关闭风扇</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>填写 <strong>FAN_ON_C=35 / FAN_OFF_C=30</strong>后点 <strong>应用并保存</strong>，再点 <strong>重新读取</strong>；关闭温度必须低于开启温度。例如风扇在 36 °C 时开启，降到 33 °C 时继续转，降到 30 °C 才停止。</li>
+</ol>
+<p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/web-base-device.png"><img alt="在设备设置中查看板温并调整风扇开启停止温度" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/web-base-device.png" /></a></p>
+<p>图中是此前拍摄的旧阈值，仅作界面位置说明；本教程使用 <strong>35 °C 开启、30 °C 关闭</strong>，修改后以实际读回值确认。</p>
+<ol start="4">
+<li>实物风扇接 <strong>FAN+ / FAN−</strong>，FAN− 不再接 GND；确认转动和通风正常。页面“开启”是控制输出，没有转速反馈。</li>
+</ol>
+<p>基站温度采样异常时，固件会要求风扇开启；先检查温度检测和风扇连接。移动端不使用基站风扇策略。</p>
+<h2 id="_5">六、低压报警与后台读数</h2>
+<p>LM393/TL431 分压设计报警点约 7.0 V，用户实测在 7.03 V 附近开始响。间歇响转长鸣的时间规律不能由本网表直接认定为固件定时策略；这是供电板硬件蜂鸣器，和 RTK 主板蜂鸣器不同，RTK 的 <code>BEEP_ENABLE</code> 不控制它。</p>
+<p>网表没有将电池总压、两节电压、充电状态或电量计接到 ESP32。QGC 的 USB/CAN 5 V 检测不是 2S 电池遥测，不能显示电池百分比或证明已充满。低压报警后应结束作业并补电，不把保护器件最终断电当作正常续航终点。</p>
+<h2 id="pcb">附录：供电 PCB 待机实测记录</h2>
+<p>用户确认：两组均为相同容量的 2S 2200 mAh 电池，<strong>只接供电 PCB，没有 RTK 和风扇</strong>。带船型开关版测试时开关保持开启，用户用于模拟关断 RTK 后的 PCB 自身消耗；这不是负载运行，也不是实测 SW1 开/关两状态电流完全相同。</p>
+<table>
+<thead>
+<tr>
+<th>时间（2026 年）</th>
+<th>船型开关版 / V</th>
+<th>无开关版 / V</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11-05 起始：11:45 / 11:47</td>
+<td>8.34（已充满）</td>
+<td>7.79</td>
+</tr>
+<tr>
+<td>11-05 18:09</td>
+<td>8.28</td>
+<td>7.77</td>
+</tr>
+<tr>
+<td>11-06 09:18</td>
+<td>8.25</td>
+<td>7.75</td>
+</tr>
+<tr>
+<td>11-07 15:49</td>
+<td>8.21</td>
+<td>7.71</td>
+</tr>
+<tr>
+<td>11-09 20:20</td>
+<td>8.17</td>
+<td>7.66</td>
+</tr>
+<tr>
+<td>11-10 09:09</td>
+<td>8.16</td>
+<td>7.64</td>
+</tr>
+<tr>
+<td>11-11 10:30</td>
+<td>8.12</td>
+<td>7.60</td>
+</tr>
+<tr>
+<td>11-12 09:32</td>
+<td>8.08</td>
+<td>7.57</td>
+</tr>
+<tr>
+<td>11-12 15:11</td>
+<td>8.08</td>
+<td>7.56</td>
+</tr>
+</tbody>
+</table>
+<p>船型开关版历时 171 小时 26 分，电压下降 0.26 V，平均约 1.52 mV/h；无开关版 171 小时 24 分，下降 0.23 V，约 1.34 mV/h。两组起始电压/SOC 不同，不能据 0.03 V 差值判断开关版更耗电。</p>
+<p>从 11 月 6 日 09:18 到 11 月 12 日 15:11，船型版下降 0.17 V、无开关版 0.19 V。早期充后松弛和电压-SOC 非线性都会影响斜率，不能把单一线性斜率外推到全部续航。</p>
+<p><strong>仅有电压和标称 2200 mAh 不能可靠算待机 mA/mW。</strong> 需要测电池侧静态电流，或记录同起始 SOC 到相同终止条件的实际 mAh/Wh。本记录支持「长期无负载电压缓慢下降」，不证明零漏电、固定待机功耗或整机续航。</p>
+<p>关 SW1 仍保留的充电、保护、均衡、参考/比较器及报警电路均可能消耗电量。这里的平均电压下降不能分离这些支路，也不能直接归因于开关本身。</p>
+<h2 id="_6">附录：充电与整机续航实测</h2>
+<h3 id="1">1. 白色飞线版本充电</h3>
+<table>
+<thead>
+<tr>
+<th>记录</th>
+<th>开始 → 绿灯时间</th>
+<th>总压变化 / V</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-11-10</td>
+<td>09:24 → 10:55，共 91 分钟</td>
+<td>7.74 → 8.42</td>
+</tr>
+<tr>
+<td>2026-11-11</td>
+<td>10:31 → 11:54，共 83 分钟</td>
+<td>7.18 → 8.41</td>
+</tr>
+</tbody>
+</table>
+<p>第一轮充满时单节为 4.21 V、4.21 V，和为 8.42 V，与总压一致。第二轮用户确认同时测得 4.117 V、4.23 V、总压 8.41 V，无笔误：单节差 113 mV，和 8.347 V 与总压差 63 mV。原始记录保持，不擅自修成 4.18 V。</p>
+<p>这三个读数需要核查测量点是否同一电池端点、参考地、接触/线缆压降及仪表；同时核查充电截止和均衡支路。总压接近 8.4 V 及绿灯均不能证明两节都在目标电压或已均衡。</p>
+<p>网表采用 HY2120-LB 保护、HY2213-BB3A 均衡支路；器件保护阈值不是正常充电目标，也不是均衡已完成的证据。4.23 V 不一定触发保护，但不能据「没保护」认定本次充电合格。[P4][P5]</p>
+<p>船型开关版、无开关版没有提供独立充电测试数据；白色飞线版结果不代替另外两版验收。两次也不是 0% 到 100% 充电，不能由 83/91 分钟推算容量、充电电流或承诺充满时间。</p>
+<h3 id="2">2. 基站与风扇持续运行</h3>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>时长</th>
+<th>总压变化 / V</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一段</td>
+<td>1.5 小时</td>
+<td>8.42 → 8.05</td>
+</tr>
+<tr>
+<td>第二段</td>
+<td>17:50 → 20:50，3 小时</td>
+<td>8.05 → 7.03</td>
+</tr>
+</tbody>
+</table>
+<p>按两段连续相接计算，到开始低压报警约 <strong>4.5 小时</strong>；7.03 V 时开始嘀声，约两分钟后长鸣。断电后翌日 10:10 回升 7.18 V，是卸载后的电压恢复，不能当作重新充入电量或续航恢复。</p>
+<p>该次为基站加散热风扇持续运行，未记录精确电池侧电流/Wh、链路模式、温度和无线信号条件。它是本次实测结果，不是所有电池、USB/UDP/TCP 模式或风扇温控策略的保证续航。标称容量不能直接给出已测平均功耗。</p>
+<h3 id="3">3. 还需补齐的电源验证</h3>
+<p>负载下充电与温升、外电插拔是否重启、两节均衡与截止、低压报警回差、保护动作及实际待机电流仍需各自测量。约 7 V 报警与本次 7.03 V 读数相近，但短响到长鸣的「两分钟」不写成精确定时功能。</p>
+<h2 id="_7">器件参考</h2>
+<ul>
+<li><a href="https://www.wch-ic.com/downloads/CH224DS1_PDF.html">P1：WCH CH224 系列官方手册入口</a></li>
+<li><a href="https://www.toppwr.com/eproduct/view.php?id=482">P2：TopPower TP5100 官方产品资料</a></li>
+<li><a href="https://www.ti.com/lit/ds/symlink/tps54302.pdf">P3：TI TPS54302 官方数据手册</a></li>
+<li><a href="https://www.hycontek.com/wp-content/uploads/DS-HY2120_EN.pdf">P4：HYCON HY2120 官方保护芯片手册</a></li>
+<li><a href="https://www.hycontek.com/hy_battery/DS-HY2213_EN.pdf">P5：HYCON HY2213 官方均衡芯片手册</a></li>
+<li><a href="https://docs.px4.io/v1.17/en/dronecan/index">PX4 v1.17 DroneCAN 说明</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../%E7%A1%AC%E4%BB%B6%E5%8A%9F%E8%83%BD%E4%B8%8E%E6%8E%A5%E5%8F%A3/" class="btn btn-neutral float-left" title="硬件功能与接口"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../QGC%E5%9C%B0%E9%9D%A2%E7%AB%99%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/" class="btn btn-neutral float-right" title="QGC地面站参数修改">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2026 深圳市牧空创新科技有限公司</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../%E7%A1%AC%E4%BB%B6%E5%8A%9F%E8%83%BD%E4%B8%8E%E6%8E%A5%E5%8F%A3/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../QGC%E5%9C%B0%E9%9D%A2%E7%AB%99%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
