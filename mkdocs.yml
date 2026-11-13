@@ -8,9 +8,37 @@ copyright: Copyright © 2026 深圳市牧空创新科技有限公司
 theme:
   name: readthedocs
 
+extra_css:
+  - stylesheets/rtk.css
+
+markdown_extensions:
+  - sane_lists
+
 nav:
   - 主页: index.md
   - 产品介绍:
+    - SwiftWing R1 RTK 移动端:
+      - 产品介绍: SwiftWing_R1_RTK_移动端/产品介绍.md
+      - 快速上手: SwiftWing_R1_RTK_移动端/快速上手.md
+      - 硬件安装与天线基线: SwiftWing_R1_RTK_移动端/硬件安装.md
+      - QGC配置移动端: SwiftWing_R1_RTK_移动端/QGC配置移动端.md
+      - PX4飞控参数: SwiftWing_R1_RTK_移动端/PX4飞控参数.md
+      - ArduPilot（APM）飞控参数: SwiftWing_R1_RTK_移动端/ArduPilot飞控参数.md
+      - 差分、卫星与网页后台: SwiftWing_R1_RTK_移动端/差分与Wi-Fi后台.md
+      - 航向确认与起飞前检查: SwiftWing_R1_RTK_移动端/起飞前检查.md
+      - 日志与常见问题: SwiftWing_R1_RTK_移动端/日志与常见问题.md
+    - SwiftWing R1-G RTK 基站:
+      - 产品介绍: SwiftWing R1-G RTK基站/SwiftWing R1-G RTK产品介绍.md
+      - 快速上手: SwiftWing R1-G RTK基站/快速上手.md
+      - 硬件功能与接口: SwiftWing R1-G RTK基站/硬件功能与接口.md
+      - 供电与充电: SwiftWing R1-G RTK基站/供电与充电.md
+      - QGC地面站参数修改: SwiftWing R1-G RTK基站/QGC地面站参数修改.md
+      - 设备网页后台: SwiftWing R1-G RTK基站/设备后台参数修改.md
+      - 基站模式与参数: SwiftWing R1-G RTK基站/基站模式与参数.md
+      - USB与地面站输出差分: SwiftWing R1-G RTK基站/USB与地面站输出差分.md
+      - Wi-Fi与TCP输出差分: SwiftWing R1-G RTK基站/Wifi输出差分.md
+      - 日志升级与恢复: SwiftWing R1-G RTK基站/日志升级与恢复.md
+      - 详细使用说明与排查: SwiftWing R1-G RTK基站/详细使用说明.md
     - 迅翼 P1无人机分电板:
       - 使用说明: 分电板/P1分电板/使用说明.md
       - 配置指南（AP）: 分电板/P1分电板/配置指南（AP）.md

@@ -1,3 +1,5 @@
+<div class="rtk-guide" aria-hidden="true"></div>
+
 # ArduPilot/APM 飞控参数
 
 本板单台 UM982 经 CAN 发送已校正的机头航向（Heading 20002），按普通 DroneCAN GPS 类型 9 接收；不是双接收机 moving-base pair，不套 GPS 类型 22/23 或串口 UM982 类型 25。[S5][S6]
@@ -30,8 +32,9 @@
 - 正常安装 RTK 偏角 0，不用 GPS1_MB_TYPE/OFS 或另一层偏角再次旋转机头角。
 - GPS_AUTO_CONFIG 保留 1，不套 AP_Periph 的 2；本板自行配置 UM982，不提供那套 GPS_TYPE/GPS1_TYPE 外设参数流程。[S6]
 - 多 GPS 先核对本 RTK 的实例、主用 GPS 和活动 EKF 源，不覆盖其他 GPS，也不写死偶然分配的 CAN 节点。
+- 差分经 QGC 注入时，核对 `GPS_INJECT_TO` 包含本板所在的 GPS 实例，再看移动端 RTCM 计数和龄期；此参数控制飞控内部接收对象，不是基站站号。
 
-保存后重启飞控与移动端，让 AUTO 重新识别。确认目标 CAN GPS 已发现，再查飞控 GPS yaw 与 EKF3 融合；地图图标、卫星数或 RTK Fixed 不能代替航向融合证据。
+保存后重启飞控与移动端，让 AUTO 重新识别。确认目标 CAN GPS 已发现，先看[卫星与定位](差分与Wi-Fi后台.md#qgc-gps)，再按[RTK 航向确认](起飞前检查.md#rtk-heading)查看 `GPS_RAW_INT.yaw`，对照机头与 `GLOBAL_POSITION_INT.hdg`。
 
 <div class="admonition warning">
 <p class="admonition-title">注意</p>
@@ -39,6 +42,8 @@
 </div>
 
 ## 参考资料
+
+可参考[零一 OneRTK UM982 的 ArduPilot 教程](https://docs.01aero.cn/docs/um982_doc/)了解 CAN 接入、天线固定和转向核验顺序。本板 profile2 直接输出已修正机头航向，不照搬其 `GPS1_MB_TYPE=1` 和 `GPS1_MB_OFS_*` 基线向量配置；正常直接 Heading 路线保持相应 MB 类型为 0（若该参数存在），物理基线填在本板 `HDG_LEN_CM`，重心杆臂仍填飞控 `GPS1_POS_*`。旧参数名以目标固件定义为准，不能由第三方截图猜测。
 
 - [S5：ArduPilot GPS for Yaw 说明](https://ardupilot.org/copter/docs/common-gps-for-yaw.html)
 - [S6：Copter 4.6.3 DroneCAN GPS 接收与配置源码](https://github.com/ArduPilot/ardupilot/blob/Copter-4.6.3/libraries/AP_GPS/AP_GPS_DroneCAN.cpp)
