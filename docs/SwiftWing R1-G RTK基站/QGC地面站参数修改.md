@@ -24,15 +24,15 @@
 
 ![顶部基站弹窗与 SwiftWing RTK配置 按钮](image/QGC地面站参数修改/1794562705818.png)
 
-4. 在 **RTK 设备** 列表选择基站，核对硬件短码、完整序列号、版本和角色。单根 USB 提供配置与原始 RTCM 两个接口，软件自动分辨。
+4. 在 **使用方式** 列表选择“基站：自动测量”，核对硬件短码、完整序列号、版本和角色。
 
 ![RTK 设备列表，基站自动测量模式](image/QGC地面站参数修改/1794563016339.png)
 
-5. 同时接着移动端时，每次提交前检查当前设备；配置设备选择与基站差分会话分开。
+5. 同时连接移动端时，每次提交前检查当前设备；配置设备选择与基站差分会话分开。
 
 [![实机 QGC 已通过 USB 连接基站](../RTK通用/image/实机操作/qgc-usb-base.png)](../RTK通用/image/实机操作/qgc-usb-base.png)
 
-<div class="rtk-fineprint">2026-11-13 实机：配置页显示 <strong>设备已自动连接</strong>、<strong>管理链路：USB</strong>。灰块隐藏现场设备身份；当前 Wi-Fi 关闭，打开网页前需先启用无线后台。</div>
+
 
 <a id="rtk-indicator"></a>
 
@@ -73,7 +73,7 @@
 
 图中已有 **11923 个有效帧**，说明 UDP 差分已到 QGC；**13 / 3D RTK GPS Lock (fixed)**是当前飞控的 GPS 报告。基站身份尚未关联，所以基站卫星、温度和后台地址仍未知，"目标飞控RTK反馈"也尚未确认。这些字段分别判断，不把未知直接当作差分中断。
 
-要查看完整基站信息，点击 **SwiftWing RTK配置**，选择匹配的 USB 基站；无线使用时，在 **同网设备 IPv4 或 http://IPv4[:端口]**输入基站实际 LAN 地址，点 **连接局域网设备**并核对身份。确认该设备与当前差分来源关联后，再检查弹窗；不要选另一台设备代替未知来源。
+要查看完整基站信息，点击 **SwiftWing RTK配置**，选择匹配的 USB 基站；无线使用时，在 **同网设备 IPv4 或 http://IPv4[:端口]** 输入基站实际 LAN 地址，点 **连接局域网设备**并核对身份。确认该设备与当前差分来源关联后，再检查弹窗；不要选另一台设备代替未知来源。
 
 此图标用于查看差分与设备状态。RTK 航向按移动端的[航向确认](../SwiftWing_R1_RTK_移动端/起飞前检查.md#rtk-heading)另看。
 
@@ -85,7 +85,7 @@
 
 [![实机基站测量、端口和温控参数](../RTK通用/image/实机操作/qgc-base-parameters.png)](../RTK通用/image/实机操作/qgc-base-parameters.png)
 
-<div class="rtk-fineprint">截图拍摄时编号 0、测量时间 120 秒、UDP 13320、TCP 2101；图内温控是旧设置。当前教程请填写 <strong>FAN_ON_C=35、FAN_OFF_C=30</strong> 并 <strong>应用并保存 → 重新读取</strong>。此图展示参数所在位置，角色和坐标应按现场建站方式选择。</div>
+<div class="rtk-fineprint">此图展示参数所在位置，角色和坐标应按现场建站方式选择。</div>
 
 ## 配置局域网和差分路由
 
@@ -95,7 +95,8 @@
 4. 路由可保留 **AUTO · QGC USB 优先，否则 UDP**，点击 **保存局域网设置**。配置完成后断开主板数据 USB，日常使用 UDP；网络和设备参数使用不同保存按钮。
 5. 要在 USB 优先时持续访问网页，点 **启用无线后台**，它会保存开启"无线高级维护"；维护完再关闭并保存。短时查看可长按 BOOT 约 2 秒，开启约 30 分钟临时窗口。取得 LAN IP 后点 **用默认浏览器打开后台**；只有设备热点时连接热点后手动访问 192.168.4.1，完整条件见[基站后台规则](设备后台参数修改.md#wireless-rules)。
 
-<div class="rtk-fineprint">USB 数据会话有效时 AUTO 实际优先 USB，可能关闭 Wi-Fi；这是自动路由规则，日常仍推荐 UDP。配置完成后开启 SW1，确认电池或供电板 USB 输入经 XT30 供电，再拔主板数据 USB；若必须保留 USB 管理同时使用 UDP，则明确选择手动路由与 UDP 出口。TCP 也需手动启用，不属于 AUTO 路线。具体见[Wi-Fi 输出差分](Wifi输出差分.md)。</div>
+<div class="rtk-fineprint">USB 数据会话有效时 AUTO 实际优先 USB，可能关闭 Wi-Fi；这是自动路由规则，日常仍推荐 UDP。配置完成后开启 SW1，确认电池或供电板 USB 输入经 XT30 供电，再拔主板数据 USB；若必须保留 USB 管理同时使用 UDP，则明确选择手动路由与 UDP 出口。TCP 也需手动启用，不属于 AUTO 路线。具体见<a href="../Wifi输出差分/">Wi-Fi 输出差分</a>。</div>
+
 
 ## 验证接收与转发
 
@@ -105,7 +106,6 @@
 
 [![实机差分出口、注入飞控及应用保存入口](../RTK通用/image/实机操作/qgc-rtcm-output-save.png)](../RTK通用/image/实机操作/qgc-rtcm-output-save.png)
 
-<div class="rtk-fineprint">图中已勾选向已连接飞控注入差分。AUTO 下出口复选框不可编辑：保存的 UDP 勾选不代表运行中正在走 UDP，实际 USB / UDP 路线以接收状态为准。下方 <strong>应用并保存</strong> 用于设备参数；仅查看或截图无需提交。</div>
 
 网页操作入口见[设备后台参数修改](设备后台参数修改.md)，全部参数见[设备参数参考](../RTK通用/设备参数参考.md)。
 
@@ -117,5 +117,5 @@
 
 <div class="admonition tip">
 <p class="admonition-title">建议</p>
-<p>如果同时断开移动端 USB，仍须保留 <strong>飞控 → QGC 的 USB / 遥测连接</strong> 以及 <strong>移动端 → 飞控的 CAN 与供电</strong>。移动端的 USB 配置完成项见[移动端 USB 配置教程](../SwiftWing_R1_RTK_移动端/QGC配置移动端.md)。</p>
+<p>如果同时断开移动端 USB，仍须保留 <strong>飞控 → QGC 的 USB / 遥测连接</strong> 以及 <strong>移动端 → 飞控的 CAN 与供电</strong>。移动端的 USB 配置完成详见<a href="../../SwiftWing_R1_RTK_移动端/QGC配置移动端/">移动端 USB 配置教程</a>。</p>
 </div>
