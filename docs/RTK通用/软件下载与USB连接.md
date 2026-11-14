@@ -6,8 +6,8 @@
 
 ## 从百度网盘下载安装
 
-**百度网盘下载链接：待补充。**  
-**提取码：待补充。**
+**百度网盘下载链接：** [https://pan.baidu.com/s/1CAqwyC05L5_-I7qV0qO-yg?pwd=m5x6](https://pan.baidu.com/s/1CAqwyC05L5_-I7qV0qO-yg?pwd=m5x6)  
+**提取码：** `m5x6`
 
 1. 打开上述百度网盘链接，输入提取码，将 **SwiftWing QGC Windows x64 完整安装包**下载到电脑。
 2. 若下载的是压缩包，先完整解压，再运行其中的安装器。本教程对应文件名为 `SwiftWing-QGC-Setup-0.1.0-b8-Windows-x64.exe`；下载区以后更新时，按随包版本说明选择配套版本。
