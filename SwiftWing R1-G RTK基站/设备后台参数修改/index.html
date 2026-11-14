@@ -245,7 +245,7 @@
                 <div class="rtk-guide" aria-hidden="true"></div>
 
 <h1 id="_1">设备后台参数修改</h1>
-<p>本文按“打开网页 → 查看基站状态 → 修改并保存参数”的顺序操作。设备可通过自身热点或外部局域网管理；本页基站网页截图为实机 0.1.24，现场身份和网络信息已遮盖，点击图片可放大。</p>
+<p>本文按"打开网页 → 查看基站状态 → 修改并保存参数"的顺序操作。设备可通过自身热点或外部局域网管理；本页基站网页截图为实机 0.1.24，现场身份和网络信息已遮盖，点击图片可放大。</p>
 <p><a id="wireless-rules"></a></p>
 <h2 id="usb">先选连接方式：什么时候先接 USB</h2>
 <p><strong>首次使用、外部网络没配好，或热点 / LAN 网页都找不到时，推荐先接主板 USB，用 QGC 保存设备与网络配置。</strong> 网页后台已内置在固件中，USB 用来改配置，不是安装后台。已能连接热点或实际 LAN 地址时，也可以直接在网页配置。</p>
@@ -284,18 +284,24 @@
 <td>短时网页维护；到期后恢复自动策略</td>
 </tr>
 <tr>
-<td>QGC 点击“启用无线后台”，或保存“无线高级维护”为开启</td>
+<td>QGC 点击"启用无线后台"，或保存"无线高级维护"为开启</td>
 <td>保存持续维护模式，无线和热点保持开启</td>
 <td>完成维护后关闭该项并保存，恢复自动策略</td>
 </tr>
 </tbody>
 </table>
-<p>手动路由启用 UDP / TCP 时也需要无线；热点是否出现，仍按“有无实际 LAN IP、是否处于临时 / 持续维护”判断。<strong>设备热点和外部路由器不是始终同时在线；保存过 Wi-Fi 也不保证当前已经联网。</strong> 进行中的网页升级会保持无线，避免中途因策略切换断开。</p>
-<p>普通查看状态、修改常规参数、下载日志和只读诊断，不要求“无线高级维护”；前提是无线已经开启、网页可达。无线升级和发送原始 UM982 指令才另外需要高级维护权限。BOOT 临时窗口与保存的高级维护是两种独立状态。</p>
+<p>手动路由启用 UDP / TCP 时也需要无线；热点是否出现，仍按"有无实际 LAN IP、是否处于临时 / 持续维护"判断。<strong>设备热点和外部路由器不是始终同时在线；保存过 Wi-Fi 也不保证当前已经联网。</strong> 进行中的网页升级会保持无线，避免中途因策略切换断开。</p>
+<div class="rtk-fineprint">普通查看状态、修改常规参数、下载日志和只读诊断，不要求"无线高级维护"；前提是无线已经开启、网页可达。无线升级和发送原始 UM982 指令才另外需要高级维护权限。BOOT 临时窗口与保存的高级维护是两种独立状态。</div>
+
 <h2 id="_2">一、首次连接设备</h2>
 <h3 id="1">1. 基站模块供电</h3>
 <p><strong>RTK 主板 USB-C</strong>：提供 5 V 供电及 USB 数据连接。使用电脑连接时，线缆需支持数据传输，充电线可能只能供电。</p>
-<p><strong>供电板（选配）</strong>：2S 18650 经 SW1 船型开关接 RTK 主板 XT30（SYS_SW_OUT）。供电板 USB-C 用于供电 / 充电，开启 SW1 时可同时给主板供电，不是 QGC 数据口；RTK 的 CAN_5V 不能接 2S 电池或快充 12 V。供电板低压报警点约 7.0 V，与主板 <code>BEEP_ENABLE</code> 控制的蜂鸣器分开。</p>
+<p><strong>供电板（选配）</strong>：2S 18650 经 SW1 船型开关接 RTK 主板 XT30（SYS_SW_OUT）。供电板 USB-C 用于供电 / 充电，开启 SW1 时可同时给主板供电，不是 QGC 数据口。</p>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>RTK 的 CAN_5V 不能接 2S 电池或快充 12 V。供电板低压报警点约 7.0 V，与主板 <code>BEEP_ENABLE</code> 控制的蜂鸣器分开。</p>
+</div>
+
 <h3 id="2-wi-fi">2. 连接设备 Wi-Fi 热点</h3>
 <p><strong>仅在上表所述热点已开启时执行本节。</strong> 若基站已加入路由器且有 IP，直接使用该 LAN IP；若正在 USB 配置而无线关闭，先看第五节。</p>
 <p>基站热点名称为 <code>SwiftWing R1-G RTK-XXXXXX</code>，其中 <code>XXXXXX</code> 为设备序列号末六位大写短码；默认密码为 <code>12345678</code>。</p>
@@ -322,21 +328,28 @@
 <h3 id="3">3. 访问后台地址</h3>
 <p>打开浏览器，输入后台地址 <a href="http://192.168.4.1/">http://192.168.4.1/</a>。</p>
 <p><a href="../image/%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/1794275714665.png"><img alt="在浏览器地址栏输入设备热点后台地址" src="../image/%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/1794275714665.png" /></a></p>
-<p>这张原有截图只说明浏览器输入地址的位置，页面样式来自旧版；下文使用当前版本实机页面。</p>
+<div class="rtk-fineprint">这张原有截图只说明浏览器输入地址的位置，页面样式来自旧版；下文使用当前版本实机页面。</div>
+
 <h3 id="4">4. 连接外部局域网（可选）</h3>
 <ol>
 <li>打开外部 2.4 GHz 手机热点或路由器，并让接收差分的电脑也接入该网络。</li>
 </ol>
 <p><a href="../image/%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/1794389629693.png"><img alt="打开外部手机热点供基站和电脑连接" src="../image/%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/1794389629693.png" /></a></p>
 <ol start="2">
-<li>在后台点击 <strong>局域网 → 读取网络设置</strong>，填写外部热点名称、密码，以及运行 QGC 的电脑 IPv4。点击 <strong>保存并连接</strong>。QGC 对应按钮叫“保存局域网设置”。</li>
+<li>在后台点击 <strong>局域网 → 读取网络设置</strong>，填写外部热点名称、密码，以及运行 QGC 的电脑 IPv4。点击 <strong>保存并连接</strong>。QGC 对应按钮叫"保存局域网设置"。</li>
 </ol>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/web-base-network-save.png"><img alt="网页填写Wi-Fi、UDP目标与保存并连接" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/web-base-network-save.png" /></a></p>
 <ol start="3">
-<li>等顶部显示 <strong>已连接</strong>与实际 LAN 地址后，将电脑 / 手机接回同一外部局域网，使用该地址打开后台。正常模式取得 LAN IP 后设备热点可能关闭，这是预期切换；处于 BOOT 临时窗口或高级维护时可保留热点。UDP 目标是 QGC 电脑地址，不是基站自身地址；端口在基站页配置为 13320。<code>192.168.4.1</code>只用于设备自身热点。</li>
+<li>等顶部显示 <strong>已连接</strong>与实际 LAN 地址后，将电脑 / 手机接回同一外部局域网，使用该地址打开后台。</li>
 </ol>
+<div class="admonition tip">
+<p class="admonition-title">建议</p>
+<p>正常模式取得 LAN IP 后设备热点可能关闭，这是预期切换；处于 BOOT 临时窗口或高级维护时可保留热点。UDP 目标是 QGC 电脑地址，不是基站自身地址；端口在基站页配置为 13320。<code>192.168.4.1</code> 只用于设备自身热点。</p>
+</div>
+
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/web-base-network-state.png"><img alt="实际联网状态、UDP路由与已保存网络列表" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/web-base-network-state.png" /></a></p>
-<p>可保存最多 5 组网络；同名网络密码留空保留，新网络需密码或明确选择开放网络。清空当前 SSID 只断开当前连接，不删除已存历史；移除凭据须在列表中明确删除。完整网络设置见<a href="../Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/">Wi-Fi 输出差分</a>。</p>
+<div class="rtk-fineprint">可保存最多 5 组网络；同名网络密码留空保留，新网络需密码或明确选择开放网络。清空当前 SSID 只断开当前连接，不删除已存历史；移除凭据须在列表中明确删除。完整网络设置见[Wi-Fi 输出差分](Wifi输出差分.md)。</div>
+
 <h2 id="_3">二、后台菜单</h2>
 <p>进入后台后，左侧菜单如下：</p>
 <ul>
@@ -349,7 +362,8 @@
 <li><strong>固件升级</strong>：应用镜像上传和升级状态。</li>
 </ul>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/web-base-overview.png"><img alt="当前基站网页设备总览与实际工作角色" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/web-base-overview.png" /></a></p>
-<p>先核对顶部产品名、设备身份和“设备在线”。总览中的角色是实际工作状态；工作模式下拉框选择其他角色只是预览，点击“应用并保存”才会切换。</p>
+<div class="rtk-fineprint">先核对顶部产品名、设备身份和"设备在线"。总览中的角色是实际工作状态；工作模式下拉框选择其他角色只是预览，点击"应用并保存"才会切换。</div>
+
 <p><a id="base-status"></a></p>
 <h2 id="_4">三、查看基站差分与输出状态</h2>
 <p>点击左侧 <strong>基站</strong>，重点看上方状态卡片与 <strong>RTCM 输出通道</strong>。</p>
@@ -384,31 +398,46 @@
 </tr>
 </tbody>
 </table>
-<p>本图为 UDP 出口工作状态，QGC 反馈卡片仍显示“未识别 QGC”，因此只用于说明基站生成和发送。是否到达地面站，继续按<a href="../Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/#qgc-udp-check">Wi-Fi 输出差分</a>在 QGC 查看有效帧。USB/CAN 电压卡片不测量 XT30 电池电压。</p>
+<div class="rtk-fineprint">本图为 UDP 出口工作状态，QGC 反馈卡片仍显示"未识别 QGC"，因此只用于说明基站生成和发送。是否到达地面站，继续按[Wi-Fi 输出差分](Wifi输出差分.md#qgc-udp-check)在 QGC 查看有效帧。USB/CAN 电压卡片不测量 XT30 电池电压。</div>
+
 <h2 id="_5">四、修改参数并确认生效</h2>
 <h3 id="1_1">1. 基站测量与差分出口</h3>
 <p>在 <strong>基站</strong>页填写站号、自动测量时长或固定坐标，按<a href="../%E5%9F%BA%E7%AB%99%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%8F%82%E6%95%B0/">基站模式与参数</a>选择适合的方式；差分分发区域选择出口与端口。</p>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/web-base-parameters.png"><img alt="网页基站测量参数、差分出口以及保存读回按钮" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/web-base-parameters.png" /></a></p>
-<p>图中为站号 0、测量 120 秒、UDP 13320；固定坐标应填写自己的参考点，不能复制示例坐标。</p>
+<div class="rtk-fineprint">图中为站号 0、测量 120 秒、UDP 13320。</div>
+
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>固定坐标应填写自己的参考点，不能复制示例坐标。</p>
+</div>
+
 <h3 id="2">2. 温控与蜂鸣器</h3>
 <p>点击 <strong>设备设置</strong>，将风扇开启温度设为 <strong>35 °C（FAN_ON_C=35）</strong>，关闭温度设为 <strong>30 °C（FAN_OFF_C=30）</strong>；关闭温度应低于开启温度。点击 <strong>应用并保存</strong>后再 <strong>重新读取</strong>，确认新值已生效。</p>
-<p>达到 35 °C 后启动散热，降至 30 °C 或以下停止；中间保持原状态。例如 36 °C 开启后，33 °C 仍转，降至 30 °C 才停。此值是主板温度，不是电池温度，完整接线与逻辑见<a href="../%E4%BE%9B%E7%94%B5%E4%B8%8E%E5%85%85%E7%94%B5/#cooling">温控风扇说明</a>。</p>
+<div class="rtk-fineprint">达到 35 °C 后启动散热，降至 30 °C 或以下停止；中间保持原状态。例如 36 °C 开启后，33 °C 仍转，降至 30 °C 才停。此值是主板温度，不是电池温度，完整接线与逻辑见[温控风扇说明](供电与充电.md#cooling)。</div>
+
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/web-base-device.png"><img alt="网页温控、蜂鸣器与读取按钮" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/web-base-device.png" /></a></p>
-<p>截图为旧设置的操作素材；本页按 <strong>35 / 30 °C</strong>配置。修改手册或正常保参升级不会替已有设备改参，须保存并核对读回。</p>
+<div class="rtk-fineprint">截图为旧设置的操作素材；本页按 <strong>35 / 30 °C</strong> 配置。修改手册或正常保参升级不会替已有设备改参，须保存并核对读回。</div>
+
 <h3 id="3_1">3. 保存并重新读取</h3>
 <p>设备参数改完后，点击底部 <strong>应用并保存</strong>，等显示 <strong>参数已生效并保存</strong>，再点 <strong>重新读取</strong>核对。修改角色或接收机配置后，等待 RTCM 重新就绪。</p>
-<p>网络、UDP 目标、AUTO / MANUAL 路由使用网络区的 <strong>保存并连接</strong>，与设备参数分开保存。超时先读回实际值，不连续提交。</p>
+<div class="rtk-fineprint">网络、UDP 目标、AUTO / MANUAL 路由使用网络区的 <strong>保存并连接</strong>，与设备参数分开保存。超时先读回实际值，不连续提交。</div>
+
 <p>全部参数见<a href="../../RTK%E9%80%9A%E7%94%A8/%E8%AE%BE%E5%A4%87%E5%8F%82%E6%95%B0%E5%8F%82%E8%80%83/">设备参数参考</a>。<strong>日志记录、UM982 工具和固件升级</strong>的操作与配图，继续看本产品的<a href="../%E6%97%A5%E5%BF%97%E5%8D%87%E7%BA%A7%E4%B8%8E%E6%81%A2%E5%A4%8D/">日志升级与恢复</a>。</p>
 <h2 id="qgc">五、从 QGC 打开后台</h2>
 <ol>
 <li>用<strong>基站主板数据 USB</strong>连接 QGC，在 <strong>NTRIP/RTK</strong>选中基站并核对身份。需要外部 LAN 时先填写 Wi-Fi 名称与密码，点 <strong>保存局域网设置</strong>。</li>
-<li>点击 <strong>启用无线后台</strong>。这个按钮会把“无线高级维护”保存为开启，使 USB 优先时也保留无线及热点；不会代替上一步保存 Wi-Fi 草稿，也不是只打开浏览器。</li>
+<li>点击 <strong>启用无线后台</strong>。这个按钮会把"无线高级维护"保存为开启，使 USB 优先时也保留无线及热点；不会代替上一步保存 Wi-Fi 草稿，也不是只打开浏览器。</li>
 <li>等实际 LAN 地址出现，再点 <strong>用默认浏览器打开后台</strong>（或 <strong>打开后台</strong>）。只有设备热点时按钮可能仍为灰色；电脑 / 手机连接基站热点后，手动打开 192.168.4.1。</li>
 <li>若只短时查看，也可不用持续维护模式：正常运行时长按 <strong>BOOT 约 2 秒</strong>，开启约 30 分钟临时窗口，再连接热点。不要同时按 EN/RESET 进入下载模式。</li>
-<li>完成后在网页 <strong>局域网</strong>关闭“无线高级维护”并点 <strong>保存并连接</strong>；若仍有 BOOT 临时窗口，热点会保留到窗口结束。不要沿用另一台设备的旧 IP。</li>
+<li>完成后在网页 <strong>局域网</strong>关闭"无线高级维护"并点 <strong>保存并连接</strong>；若仍有 BOOT 临时窗口，热点会保留到窗口结束。</li>
 </ol>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>不要沿用另一台设备的旧 IP。</p>
+</div>
+
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-usb-base.png"><img alt="QGC基站设备识别与网页后台入口" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-usb-base.png" /></a></p>
-<p>QGC 中 Wi-Fi 信号约 ≥−60 dBm 显示绿色，−75 至 −60 dBm 显示黄色，更弱显示白色；该颜色表示信号强度，不是数据到达和厘米定位的保证。</p>
+<div class="rtk-fineprint">QGC 中 Wi-Fi 信号约 ≥−60 dBm 显示绿色，−75 至 −60 dBm 显示黄色，更弱显示白色；该颜色表示信号强度，不是数据到达和厘米定位的保证。</div>
               
             </div>
           </div><footer>

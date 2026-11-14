@@ -237,8 +237,18 @@
 <h1 id="swiftwing-r1-g-rtk">SwiftWing R1-G RTK 基站快速上手</h1>
 <h2 id="_1">快速使用流程</h2>
 <p><a href="../image/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/%E5%9F%BA%E7%AB%99%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B.svg"><img alt="基站快速使用流程：USB首次配置，开启供电后拔数据线，日常优先UDP，检查数据与温控后结束关机" src="../image/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/%E5%9F%BA%E7%AB%99%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B.svg" /></a></p>
-<p>点击流程图可放大。<strong>主板 USB 用于配置，日常优先无线 UDP；电池或供电板 USB 都可给基站供电。</strong> 下方按相同使用顺序展开操作。</p>
-<p>**先认清搭配：**地面使用本基站时，前四步都适用。机载为 SwiftWing 移动端，第五步按配套教程设置；机载为其他厂家 CAN / 串口 RTK 时，第五步改按<a href="../USB%E4%B8%8E%E5%9C%B0%E9%9D%A2%E7%AB%99%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/#third-party-rover">第三方移动端路线</a>，不套用 SwiftWing 移动端参数。若地面使用的是其他厂家基站，请转到<a href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E5%B7%AE%E5%88%86%E4%B8%8EWi-Fi%E5%90%8E%E5%8F%B0/#third-party-base">SwiftWing 移动端的第三方基站接入</a>。</p>
+<div class="rtk-caption">点击流程图可放大</div>
+
+<div class="admonition tip">
+<p class="admonition-title">提示</p>
+<p>主板 USB 用于配置，日常优先无线 UDP；电池或供电板 USB 都可给基站供电。下方按相同使用顺序展开操作。</p>
+</div>
+
+<div class="admonition note">
+<p class="admonition-title">说明</p>
+<p>先认清搭配：地面使用本基站时，前四步都适用。机载为 SwiftWing 移动端，第五步按配套教程设置；机载为其他厂家 CAN / 串口 RTK 时，第五步改按<a href="USB与地面站输出差分.md#third-party-rover">第三方移动端路线</a>，不套用 SwiftWing 移动端参数。若地面使用的是其他厂家基站，请转到<a href="../SwiftWing_R1_RTK_移动端/差分与Wi-Fi后台.md#third-party-base">SwiftWing 移动端的第三方基站接入</a>。</p>
+</div>
+
 <p>更新日期：2026-11-13。首次使用按本页从第一步走到第七步；已完成配置的日常使用，准备天线和电源后，直接从第四步接入 UDP，再完成第五至七步。</p>
 <p><strong>完整顺序：安装软件 → 接天线与电源 → USB 首次配置 → 拔数据线使用 UDP → 检查移动端 → 查看温控 → 结束关机。</strong></p>
 <h3 id="_2">开始前先选场景</h3>
@@ -275,27 +285,37 @@
 </table>
 <p>全部支持功能及前置条件见<a href="../SwiftWing%20R1-G%20RTK%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/#features">产品功能清单</a>。主板数据 USB 和供电板 USB 用途不同；不能按电池有电 / 没电决定差分入口，日常均优先 UDP。</p>
 <h2 id="swiftwing-qgc">一、下载并安装 SwiftWing QGC</h2>
-<p><strong>百度网盘下载链接：待补充；提取码：待补充。</strong> 从网盘下载 Windows x64 完整安装包，若为压缩包先完整解压，运行安装器并打开 <strong>SwiftWing QGC</strong>。本文使用 0.1.0 build8。详细安装及 USB 自动识别见<a href="../../RTK%E9%80%9A%E7%94%A8/%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%B8%8EUSB%E8%BF%9E%E6%8E%A5/">软件下载与 USB 连接</a>。</p>
+<div class="admonition note">
+<p class="admonition-title">说明</p>
+<p>百度网盘下载链接：<a href="https://pan.baidu.com/s/1CAqwyC05L5_-I7qV0qO-yg?pwd=m5x6">SwiftWing-QGC-Setup-0.1.0-b8-Windows-x64.exe</a>，提取码：<code>m5x6</code>。</p>
+</div>
+
+<p>从网盘下载 Windows x64 完整安装包，若为压缩包先完整解压，运行安装器并打开 <strong>SwiftWing QGC</strong>。本文使用 0.1.0 build8。详细安装及 USB 自动识别见<a href="../../RTK%E9%80%9A%E7%94%A8/%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%B8%8EUSB%E8%BF%9E%E6%8E%A5/">软件下载与 USB 连接</a>。</p>
 <h2 id="_3">二、准备天线和电源</h2>
 <ol>
 <li>将匹配约 3.3 V 馈电的有源 GNSS 天线接 <strong>ANT1</strong>，固定在室外开阔处，建站与作业期间保持不动；基站不需要 ANT2。</li>
-<li>初次接线先将供电板 <strong>SW1 船型电源开关关闭</strong>。配套两节 18650 串联供电，供电板输出按极性接主板 XT30。</li>
+<li>初次接线先将供电板 <strong>SW1 电源开关关闭</strong>。配套两节 18650 串联供电，供电板输出按极性接主板 XT30。</li>
 <li>认清两个 USB：<strong>主板 USB-C 接电脑，负责 RTCM 数据和主板供电；供电板 USB-C 接充电器，负责给电池充电</strong>。只接电脑数据线不会给电池充电。</li>
 <li>可使用电池供电，也可将支持 <strong>12 V 档位</strong>的匹配 PD 快充电源接供电板 USB-C，给基站供电并补电。使用供电板向主板供电时均需开启 SW1，日常 RTCM 都优先用 UDP。</li>
 </ol>
+<p><img alt="基站整体外观：天线、PD快充口、调试口、脚架" src="../image/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/1794560640586.png" /></p>
 <p>接口、线序和风扇见<a href="../%E7%A1%AC%E4%BB%B6%E5%8A%9F%E8%83%BD%E4%B8%8E%E6%8E%A5%E5%8F%A3/">基站硬件</a>，充电、开关和低压报警见<a href="../%E4%BE%9B%E7%94%B5%E4%B8%8E%E5%85%85%E7%94%B5/">供电与充电</a>。</p>
 <h2 id="usb">三、用主板 USB 完成首次配置</h2>
 <ol>
-<li>用数据 USB 线将 <strong>RTK 主板原生 USB-C</strong> 接电脑，正常松开 BOOT；供电板充电口不用于连接 QGC。</li>
+<li>用 USB 数据线将 <strong>RTK调试口</strong> 连接接电脑；供电板充电口不用于连接 QGC。</li>
 <li>打开 SwiftWing QGC，进入 <strong>应用设置 → NTRIP/RTK → SwiftWing R1 / R1-G RTK</strong>，选择基站并核对序列号。</li>
-<li>没有可靠已知坐标时选 <strong>基站：自动测量</strong>（<code>RTK_ROLE=1</code>），<code>BASE_SURVEY_S=120</code> 秒，站号 <code>BASE_ID</code> 可先保留 0；温控设置 <strong><code>FAN_ON_C=35</code>、<code>FAN_OFF_C=30</code></strong>。</li>
-<li>点 <strong>应用并保存</strong>，等待保存并读回确认。网络区路由选 <strong>AUTO · QGC USB 优先，否则 UDP</strong>，点 <strong>保存局域网设置</strong>。</li>
+<li>没有可靠已知坐标时选 <strong>基站：自动测量</strong>（<code>RTK_ROLE=1</code>），<code>BASE_SURVEY_S=120</code> 秒，站号 <code>BASE_ID</code> 可先保留 0；温控设置 <strong><code>FAN_ON_C=35</code>、<code>FAN_OFF_C=30</code></strong>。(保持默认即可)
+4.网络区路由选 <strong>“AUTO · QGC USB 优先，否则 UDP”</strong>，点 <strong>保存局域网设置</strong>。 点 <strong>应用并保存</strong>，等待保存并读回确认。</li>
 <li>保持天线不动，等 <strong>基站 RTCM 已就绪</strong>，再看 <strong>QGC 实收</strong>有效帧增长、CRC 和帧龄。120 秒不是保证建站完成的倒计时。</li>
 </ol>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-base-survey-ports.png"><img alt="实机 AUTO 路由、自动测量及端口配置" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-base-survey-ports.png" /></a></p>
 <p>读图重点：路由为 <strong>AUTO</strong>，基站编号 0、测量时间 120 秒，UDP / TCP 端口分别为 13320 / 2101。网络区与设备参数区使用各自的保存按钮；图中灰色的网络保存按钮表示当前没有待保存的网络修改。</p>
 <p>有可靠已知坐标时用 <code>RTK_ROLE=2</code>，按<a href="../%E5%9F%BA%E7%AB%99%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%8F%82%E6%95%B0/">基站模式与参数</a>填写坐标与椭球高，不直接复制地图海拔。</p>
-<p><strong>此时要同时看网页？</strong> AUTO 正在使用有效 QGC USB 会话时，基站通常关闭无线；先点 <strong>启用无线后台</strong>（保存持续高级维护），或长按 BOOT 约 2 秒开约 30 分钟临时窗口。已取得 LAN IP 用实际地址，只有热点时连接热点后用 192.168.4.1。日常拔数据线转 UDP 后会自动启用所需无线，不要求一直开启高级维护。</p>
+<div class="admonition tip">
+<p class="admonition-title">建议</p>
+<p>AUTO 正在使用有效 QGC USB 会话时，基站通常关闭无线；此时要同时看网页，先点 <strong>启用无线后台</strong>（保存持续高级维护），或长按 BOOT 约 2 秒开约 30 分钟临时窗口。已取得 LAN IP 用实际地址，只有热点时连接热点后用 192.168.4.1。日常拔数据线转 UDP 后会自动启用所需无线，不要求一直开启高级维护。</p>
+</div>
+
 <p><a id="choose-link"></a></p>
 <h2 id="udp">四、配置完成后，日常使用无线 UDP</h2>
 <ol>
@@ -308,8 +328,13 @@
 </ol>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-network-settings.png"><img alt="保存基站Wi-Fi和运行QGC的电脑地址" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-network-settings.png" /></a></p>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-udp-input.png"><img alt="开启QGC的UDP RTCM接收及13320端口" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-udp-input.png" /></a></p>
-<p>无线时基站与电脑之间无需数据线，便于固定天线。电脑地址变化后重新核对 UDP 目标；使用中不要搬动已建站的基站。供电板 USB 接着充电器不会被 QGC 当成 USB 数据会话。</p>
-<p><strong>USB 也能获取 RTCM</strong>，用于配置、调试或无线暂不可用时备用；日常仍优先 UDP。主板 USB 保持有效 QGC 会话时，AUTO 会优先 USB，所以配置完成后拔掉这根数据线。方式对比见<a href="../USB%E4%B8%8E%E5%9C%B0%E9%9D%A2%E7%AB%99%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/#link-comparison">USB / UDP 说明</a>。</p>
+<div class="rtk-fineprint">无线时基站与电脑之间无需数据线，便于固定天线。电脑地址变化后重新核对 UDP 目标；使用中不要搬动已建站的基站。供电板 USB 接着充电器不会被 QGC 当成 USB 数据会话。</div>
+
+<div class="admonition note">
+<p class="admonition-title">说明</p>
+<p><strong>USB 也能获取 RTCM</strong>，用于配置、调试或无线暂不可用时备用；日常仍优先 UDP。主板 USB 保持有效 QGC 会话时，AUTO 会优先 USB，所以配置完成后拔掉这根数据线。方式对比见<a href="USB与地面站输出差分.md#link-comparison">USB / UDP 说明</a>。</p>
+</div>
+
 <h2 id="_4">五、将差分送到移动端并确认定位</h2>
 <ol>
 <li>飞控通过 USB / 遥测连接 QGC；移动端按自身型号使用 CAN 或飞控 GPS 串口连接，先完成厂家要求的定位驱动配置。</li>
@@ -328,12 +353,17 @@
 </ol>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/web-base-device.png"><img alt="基站温度、风扇阈值和保存读取入口" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/web-base-device.png" /></a></p>
 <p>截图保留拍摄时的旧设置，用于辨认操作位置；温控数值按本页 <strong>35 / 30 °C</strong>填写并保存。</p>
-<p>这里检测的是 RTK 板温，不是电池温度。风扇接 FAN+ / FAN−，FAN− 不再搭接 GND，否则会绕过温控。</p>
+<p>这里检测的是 RTK 板温，不是电池温度。</p>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>风扇接 FAN+ / FAN−，FAN− 不再搭接 GND，否则会绕过温控。</p>
+</div>
+
 <h2 id="_6">七、结束使用、关机和补电</h2>
 <ol>
 <li>结束差分作业；需要的日志先导出。</li>
-<li>将供电板 <strong>SW1 关闭</strong>。要让基站完全停止，还应断开主板 USB 和带电 CAN 等其他供电；只关 SW1 不会切断电脑供电。</li>
-<li>电量不足时接供电板充电口补电，SW1 关闭也可给电池充电；按充电指示确认状态。</li>
+<li>将供电板 <strong>SW1 关闭</strong>只关 SW1 不会切断主板 USB 或带电 CAN 提供的外电。要让基站完全停止，还应断开这些其他供电。</li>
+<li>电量不足时将SW1关闭接供电板充电口也可给电池充电；按充电指示确认状态。</li>
 <li>运行时间先参考历史样机 <strong>约 4.5 小时至低压报警</strong>，外场安排可提前约 4 小时检查电量并准备补电；这不是所有电池的保底续航。</li>
 <li>关机存放仍有电池管理电路消耗。现有无负载记录超过 <strong>7 天</strong>，但尚未测得严格 SW1 关闭时的待机上限；长期存放按电池说明隔离并定期检查，不据此承诺数月免充电。</li>
 </ol>

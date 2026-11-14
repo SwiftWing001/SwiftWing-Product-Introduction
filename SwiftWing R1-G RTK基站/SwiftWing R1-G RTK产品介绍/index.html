@@ -74,8 +74,6 @@
     <ul class="current">
     <li class="toctree-l3"><a class="reference internal" href="#_1">支持的功能与前置条件</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#usb">什么时候先用 USB 配置后台</a>
-    </li>
     <li class="toctree-l3"><a class="reference internal" href="#_2">搭配哪一种移动端</a>
     </li>
     </ul>
@@ -303,14 +301,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="usb">什么时候先用 USB 配置后台</h2>
-<ol>
-<li><strong>第一次使用、网络没配好或实际角色不清楚</strong>：先接主板 USB，用 QGC 保存基站角色、建站参数、外部 Wi-Fi 和 UDP 目标。</li>
-<li><strong>配置后日常作业</strong>：先开启 SW1 并确认供电，再拔掉主板数据 USB，使用 UDP。接供电板 USB 充电不会变成 USB 数据链路。</li>
-<li><strong>需要打开网页</strong>：无线 UDP 工作且已连上路由器时，直接访问实际 LAN IP；没有可用 LAN 时，可连接设备热点。热点和 LAN 的显示取决于当前网络状态，不要求同时存在。</li>
-<li><strong>USB 配置时热点消失</strong>：AUTO 的有效 QGC USB 会话可能关闭无线；可在 QGC 点“启用无线后台”，或使用 BOOT 临时窗口。具体条件见<a href="../%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/#wireless-rules">本产品后台说明</a>。</li>
-</ol>
-<p><a id="mixed-vendors"></a></p>
 <h2 id="_2">搭配哪一种移动端</h2>
 <table>
 <thead>

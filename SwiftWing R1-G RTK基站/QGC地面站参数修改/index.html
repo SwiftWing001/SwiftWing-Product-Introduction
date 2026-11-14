@@ -92,7 +92,7 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#_5">三个按钮</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_6">图中“收到差分，但身份未确认”怎么处理</a>
+    <li class="toctree-l4"><a class="reference internal" href="#_6">图中"收到差分，但身份未确认"怎么处理</a>
     </li>
         </ul>
     </li>
@@ -240,16 +240,34 @@
 
 <h1 id="qgc">QGC 地面站参数修改</h1>
 <h2 id="_1">下载并安装</h2>
-<p><strong>百度网盘下载链接、提取码待补充。</strong> 按<a href="../../RTK%E9%80%9A%E7%94%A8/%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%B8%8EUSB%E8%BF%9E%E6%8E%A5/">软件下载与 USB 连接</a>下载完整 Windows x64 安装包、解压并安装。本文使用 <strong>SwiftWing QGC 0.1.0 build8</strong>。</p>
+<p>按<a href="../../RTK%E9%80%9A%E7%94%A8/%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%B8%8EUSB%E8%BF%9E%E6%8E%A5/">软件下载与 USB 连接</a>下载完整 Windows x64 安装包、解压并安装。本文使用 <strong>SwiftWing QGC 0.1.0 build8</strong>。</p>
 <h2 id="usb">USB 连接和选择基站</h2>
 <ol>
-<li>用数据线将 <strong>RTK 主板原生 USB-C</strong> 接电脑，松开 BOOT，关闭占用其串口的程序。供电板 USB-C 是充电口。</li>
-<li>打开 SwiftWing QGC，进入 <strong>应用设置 → NTRIP/RTK → SwiftWing R1 / R1-G RTK</strong>。</li>
+<li>用 USB 数据线将 <strong>RTK调试口</strong> 接电脑。</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>供电板充电口只用于电池充电，不用于连接 QGC。</p>
+</div>
+
+<ol start="2">
+<li>打开 SwiftWing QGC，点击右上角红色图标。</li>
+</ol>
+<p><img alt="QGC 右上角红色图标位置" src="../image/QGC%E5%9C%B0%E9%9D%A2%E7%AB%99%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/1794562870188.png" /></p>
+<ol start="3">
+<li>在弹窗底部点击 <strong>SwiftWing RTK配置</strong>。</li>
+</ol>
+<p><img alt="顶部基站弹窗与 SwiftWing RTK配置 按钮" src="../image/QGC%E5%9C%B0%E9%9D%A2%E7%AB%99%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/1794562705818.png" /></p>
+<ol start="4">
 <li>在 <strong>RTK 设备</strong> 列表选择基站，核对硬件短码、完整序列号、版本和角色。单根 USB 提供配置与原始 RTCM 两个接口，软件自动分辨。</li>
+</ol>
+<p><img alt="RTK 设备列表，基站自动测量模式" src="../image/QGC%E5%9C%B0%E9%9D%A2%E7%AB%99%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/1794563016339.png" /></p>
+<ol start="5">
 <li>同时接着移动端时，每次提交前检查当前设备；配置设备选择与基站差分会话分开。</li>
 </ol>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-usb-base.png"><img alt="实机 QGC 已通过 USB 连接基站" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-usb-base.png" /></a></p>
-<p>2026-11-13 实机：配置页显示 <strong>设备已自动连接</strong>、<strong>管理链路：USB</strong>。灰块隐藏现场设备身份；当前 Wi-Fi 关闭，打开网页前需先启用无线后台。</p>
+<div class="rtk-fineprint">2026-11-13 实机：配置页显示 <strong>设备已自动连接</strong>、<strong>管理链路：USB</strong>。灰块隐藏现场设备身份；当前 Wi-Fi 关闭，打开网页前需先启用无线后台。</div>
+
 <p><a id="rtk-indicator"></a></p>
 <h2 id="_2">顶部基站图标：状态查看与配置入口</h2>
 <p>飞行页面顶部的<strong>三脚架形图标</strong>是基站 / RTCM 状态入口，点击可展开下图弹窗。它与旁边的 GPS / 卫星图标不同；QGC 识别到基站，或收到过差分后才会显示。</p>
@@ -271,11 +289,11 @@
 <tbody>
 <tr>
 <td>顶部设备名称</td>
-<td>已关联基站时显示名称；只收到原始差分、尚未关联设备时显示“RTCM来源（设备身份未确认）”</td>
+<td>已关联基站时显示名称；只收到原始差分、尚未关联设备时显示"RTCM来源（设备身份未确认）"</td>
 </tr>
 <tr>
 <td>接入方式</td>
-<td>前半是设备管理方式，后半是差分入口。如“HTTP管理 / udp差分”；“未知管理 / udp差分”仍可正常收到 UDP</td>
+<td>前半是设备管理方式，后半是差分入口。如"HTTP管理 / udp差分"；"未知管理 / udp差分"仍可正常收到 UDP</td>
 </tr>
 <tr>
 <td>差分接收</td>
@@ -283,7 +301,7 @@
 </tr>
 <tr>
 <td>基站就绪</td>
-<td>对应基站是否报告参考与观测就绪；“未就绪或未确认”也可能是尚未取得设备状态</td>
+<td>对应基站是否报告参考与观测就绪；"未就绪或未确认"也可能是尚未取得设备状态</td>
 </tr>
 <tr>
 <td>基站卫星 / 跟踪</td>
@@ -309,34 +327,41 @@
 <li><strong>复制地址</strong>：复制该基站后台地址，便于在其他浏览器打开。</li>
 <li><strong>SwiftWing RTK配置</strong>：进入 <strong>应用设置 → NTRIP/RTK</strong>。已确认身份时定位到对应基站；身份未确认时，进入后自行选择正确设备。</li>
 </ul>
-<h3 id="_6">图中“收到差分，但身份未确认”怎么处理</h3>
-<p>图中已有 <strong>11923 个有效帧</strong>，说明 UDP 差分已到 QGC；**13 / 3D RTK GPS Lock (fixed)**是当前飞控的 GPS 报告。基站身份尚未关联，所以基站卫星、温度和后台地址仍未知，“目标飞控RTK反馈”也尚未确认。这些字段分别判断，不把未知直接当作差分中断。</p>
+<p><img alt="1794566104123" src="../image/QGC%E5%9C%B0%E9%9D%A2%E7%AB%99%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/1794566104123.png" /></p>
+<h3 id="_6">图中"收到差分，但身份未确认"怎么处理</h3>
+<p>图中已有 <strong>11923 个有效帧</strong>，说明 UDP 差分已到 QGC；**13 / 3D RTK GPS Lock (fixed)**是当前飞控的 GPS 报告。基站身份尚未关联，所以基站卫星、温度和后台地址仍未知，"目标飞控RTK反馈"也尚未确认。这些字段分别判断，不把未知直接当作差分中断。</p>
 <p>要查看完整基站信息，点击 <strong>SwiftWing RTK配置</strong>，选择匹配的 USB 基站；无线使用时，在 **同网设备 IPv4 或 http://IPv4[:端口]**输入基站实际 LAN 地址，点 <strong>连接局域网设备</strong>并核对身份。确认该设备与当前差分来源关联后，再检查弹窗；不要选另一台设备代替未知来源。</p>
 <p>此图标用于查看差分与设备状态。RTK 航向按移动端的<a href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E8%B5%B7%E9%A3%9E%E5%89%8D%E6%A3%80%E6%9F%A5/#rtk-heading">航向确认</a>另看。</p>
 <h2 id="_7">配置基站工作方式</h2>
-<p>在使用方式中选 <strong>基站：自动测量</strong> 或 <strong>基站：固定坐标</strong>，展开 <strong>基站坐标与测量</strong>，填写站号、时间或已知坐标。首次无控制坐标可用 <code>RTK_ROLE=1</code>、<code>BASE_SURVEY_S=120</code>。</p>
+<p>在使用方式中选 <strong>“基站：自动测量”</strong> 或 <strong>”基站：固定坐标“</strong>，展开 <strong>”基站坐标与测量”</strong>，填写站号、时间或已知坐标。首次无控制坐标可用 <code>RTK_ROLE=1</code>、<code>BASE_SURVEY_S=120</code>。</p>
 <p>点 <strong>应用并保存</strong>，等待 <strong>参数已实时生效、保存并读回确认</strong>，再核对实际值。自动测量与已知坐标的完整参数、单位和天线高度要求见<a href="../%E5%9F%BA%E7%AB%99%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%8F%82%E6%95%B0/">基站模式与参数</a>。</p>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-base-parameters.png"><img alt="实机基站测量、端口和温控参数" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-base-parameters.png" /></a></p>
-<p>截图拍摄时编号 0、测量时间 120 秒、UDP 13320、TCP 2101；图内温控是旧设置。当前教程请填写 <strong>FAN_ON_C=35、FAN_OFF_C=30</strong>并 <strong>应用并保存 → 重新读取</strong>。此图展示参数所在位置，角色和坐标应按现场建站方式选择。</p>
+<div class="rtk-fineprint">截图拍摄时编号 0、测量时间 120 秒、UDP 13320、TCP 2101；图内温控是旧设置。当前教程请填写 <strong>FAN_ON_C=35、FAN_OFF_C=30</strong> 并 <strong>应用并保存 → 重新读取</strong>。此图展示参数所在位置，角色和坐标应按现场建站方式选择。</div>
+
 <h2 id="_8">配置局域网和差分路由</h2>
 <ol>
 <li>准备外部 2.4 GHz 路由器 / 手机热点，QGC 电脑也接入同一网络。</li>
 <li>在所选基站的网络区填写 SSID / 密码；新增网络须输入密码或明确选开放网络，同 SSID 只改其他项时密码留空保留原值。</li>
 <li>UDP 目标填 <strong>QGC 电脑实际 IPv4</strong>，端口默认 13320。基站自己的 LAN IP 用于管理与 TCP 服务，不填到 UDP 目标里。</li>
 <li>路由可保留 <strong>AUTO · QGC USB 优先，否则 UDP</strong>，点击 <strong>保存局域网设置</strong>。配置完成后断开主板数据 USB，日常使用 UDP；网络和设备参数使用不同保存按钮。</li>
-<li>要在 USB 优先时持续访问网页，点 <strong>启用无线后台</strong>，它会保存开启“无线高级维护”；维护完再关闭并保存。短时查看可长按 BOOT 约 2 秒，开启约 30 分钟临时窗口。取得 LAN IP 后点 <strong>用默认浏览器打开后台</strong>；只有设备热点时连接热点后手动访问 192.168.4.1，完整条件见<a href="../%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/#wireless-rules">基站后台规则</a>。</li>
+<li>要在 USB 优先时持续访问网页，点 <strong>启用无线后台</strong>，它会保存开启"无线高级维护"；维护完再关闭并保存。短时查看可长按 BOOT 约 2 秒，开启约 30 分钟临时窗口。取得 LAN IP 后点 <strong>用默认浏览器打开后台</strong>；只有设备热点时连接热点后手动访问 192.168.4.1，完整条件见<a href="../%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/#wireless-rules">基站后台规则</a>。</li>
 </ol>
-<p>USB 数据会话有效时 AUTO 实际优先 USB，可能关闭 Wi-Fi；这是自动路由规则，日常仍推荐 UDP。配置完成后开启 SW1，确认电池或供电板 USB 输入经 XT30 供电，再拔主板数据 USB；若必须保留 USB 管理同时使用 UDP，则明确选择手动路由与 UDP 出口。TCP 也需手动启用，不属于 AUTO 路线。具体见<a href="../Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/">Wi-Fi 输出差分</a>。</p>
+<div class="rtk-fineprint">USB 数据会话有效时 AUTO 实际优先 USB，可能关闭 Wi-Fi；这是自动路由规则，日常仍推荐 UDP。配置完成后开启 SW1，确认电池或供电板 USB 输入经 XT30 供电，再拔主板数据 USB；若必须保留 USB 管理同时使用 UDP，则明确选择手动路由与 UDP 出口。TCP 也需手动启用，不属于 AUTO 路线。具体见[Wi-Fi 输出差分](Wifi输出差分.md)。</div>
+
 <h2 id="_9">验证接收与转发</h2>
 <p>等 <strong>基站 RTCM 已就绪</strong>，查看 <strong>QGC 实收：…帧 · CRC 错误… · 帧龄…ms</strong>，确认持续更新。设备已识别、已联网或参数保存成功，都不代表已有有效差分。</p>
 <p>飞控连接 QGC 后勾选 <strong>将 QGC 收到的差分注入已连接飞控</strong>，按<a href="../USB%E4%B8%8E%E5%9C%B0%E9%9D%A2%E7%AB%99%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/">USB 与地面站输出差分</a>核对转发。若需观察固定反馈，可绑定当前飞控，但此绑定不限制差分注入对象。</p>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rtcm-output-save.png"><img alt="实机差分出口、注入飞控及应用保存入口" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rtcm-output-save.png" /></a></p>
-<p>图中已勾选向已连接飞控注入差分。AUTO 下出口复选框不可编辑：保存的 UDP 勾选不代表运行中正在走 UDP，实际 USB / UDP 路线以接收状态为准。下方 <strong>应用并保存</strong>用于设备参数；仅查看或截图无需提交。</p>
+<div class="rtk-fineprint">图中已勾选向已连接飞控注入差分。AUTO 下出口复选框不可编辑：保存的 UDP 勾选不代表运行中正在走 UDP，实际 USB / UDP 路线以接收状态为准。下方 <strong>应用并保存</strong> 用于设备参数；仅查看或截图无需提交。</div>
+
 <p>网页操作入口见<a href="../%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/">设备后台参数修改</a>，全部参数见<a href="../../RTK%E9%80%9A%E7%94%A8/%E8%AE%BE%E5%A4%87%E5%8F%82%E6%95%B0%E5%8F%82%E8%80%83/">设备参数参考</a>。</p>
 <h2 id="usb-udp">USB 配置阶段结束后切换 UDP</h2>
 <p>确认基站角色、站号与测量 / 坐标参数已保存并读回；外部 Wi-Fi、QGC 主机 IPv4、端口 13320 与计划使用的路由也已单独保存。基站继续固定放置，切换数据路线不需要搬站或恢复出厂。</p>
 <p>准备独立供电后，可按<a href="../Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/">Wi-Fi 输出差分</a>切换：AUTO 模式断开主板数据 USB 后回到 UDP；保留 USB 管理时则明确选择手动路由与 UDP 出口。两种方法选一种，并核对 QGC 当前实际差分来源，不能只看 USB 阶段留下的历史计数。</p>
-<p>如果同时断开移动端 USB，仍须保留 <strong>飞控 → QGC 的 USB / 遥测连接</strong>以及 <strong>移动端 → 飞控的 CAN 与供电</strong>。移动端的 USB 配置完成项见<a href="../../SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/QGC%E9%85%8D%E7%BD%AE%E7%A7%BB%E5%8A%A8%E7%AB%AF/">移动端 USB 配置教程</a>。</p>
+<div class="admonition tip">
+<p class="admonition-title">建议</p>
+<p>如果同时断开移动端 USB，仍须保留 <strong>飞控 → QGC 的 USB / 遥测连接</strong> 以及 <strong>移动端 → 飞控的 CAN 与供电</strong>。移动端的 USB 配置完成项见[移动端 USB 配置教程](../SwiftWing_R1_RTK_移动端/QGC配置移动端.md)。</p>
+</div>
               
             </div>
           </div><footer>
