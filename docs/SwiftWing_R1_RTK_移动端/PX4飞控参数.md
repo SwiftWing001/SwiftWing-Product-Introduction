@@ -21,27 +21,26 @@
 | EKF2_GPS_POS_Y | ANT1 相对重心 Y，米 | 右方为正 |
 | EKF2_GPS_POS_Z | ANT1 相对重心 Z，米 | 下方为正 |
 
-EKF2_GPS_CTRL 是位掩码。15 适用于原值为 7 且需要增加 GPS 航向的本项目配置；若原来启用不同组合，应在原位掩码上增加 bit3，先核对所用版本定义，不机械覆盖其他选项。[S3]
-
-例如 ANT1 在重心前 0.30 m、左 0.05 m、上 0.10 m，则 X=+0.30、Y=-0.05、Z=-0.10。这里不是两天线间距；ANT2 在后 60 cm 不能写成 X=0.60。此版本不要求存在 SENS_GNSS0_HDG，也不应为找不到该参数而套用其他版本名称。已有 UAVCAN_SUB_GPS_R=1 可保留，但相对位置订阅本身不是航向融合开关。[S3]
-
-本项目是单颗双天线 UM982 加固定地面基站，正常差分使用 `RTCMStream`，不需要为此机械启用双接收机移动基线用的 `UAVCAN_PUB_MBD`。板载终端 R69 由硬件装配决定，也不使用其他节点的 `CANNODE_TERM` 参数控制。[S2]
+<a id="rtk-heading"></a>
 
 ## 二、保存与验证顺序
 
 1. 保存飞控参数，按 QGC 提示重启飞控；建议本次配置完成后飞控和移动端一起正常重新上电。
-2. 在 QGC 确认移动端的卫星数与定位数据持续更新，操作见[差分与 Wi-Fi 后台](差分与Wi-Fi后台.md#qgc-gps)。
-3. 按[RTK 航向确认](起飞前检查.md#rtk-heading)在 MAVLink 检测中查看 `GPS_RAW_INT.yaw`，对照实际机头，再比较 `GLOBAL_POSITION_INT.hdg`。
+2. 在 QGC 确认移动端的卫星数与定位数据持续更新，操作见[差分接入与数据检查](差分与Wi-Fi后台.md#qgc-gps)。
+3. 在 MAVLink 检测中查看 `GPS_RAW_INT.yaw`和`GLOBAL_POSITION_INT.hdg`是否一致。一致则说明飞控使用了RTK航向。
+
+![1794725474444](image/PX4飞控参数/1794725474444.png)
+
+![1794725606537](image/PX4飞控参数/1794725606537.png)
+
 4. 无桨地面整体缓慢转动机体与双天线，再回正，核对方向一致，没有 180° 反向或 90° 错装。
 
 <div class="admonition warning">
 <p class="admonition-title">注意</p>
-<p>本板没有外置磁罗盘。保留并校准实际使用的内置磁罗盘，不照抄 CUAV 带外置罗盘产品的禁磁步骤。启用 GPS yaw 与选择磁罗盘是两件事；保留罗盘并不能保证任意 GNSS 航向异常都无缝回退，须通过当前 PX4 版本和实机日志验证。</p>
+<p>本板没有外置磁罗盘，可保留并校准实际使用的内置磁罗盘。</p>
 </div>
 
 ## 参考资料
-
-阅读顺序参考了[零一 OneRTK UM982 的 PX4 教程](https://docs.01aero.cn/docs/0NcgNwij)：先启用 CAN、设置安装位置，再确认航向。本板使用独立的 ESP32 固件与参数定义，板端安装角用 `GPS_YAW_OFFSET`，经典 PX4 飞控端核对 `EKF2_GPS_YAW_OFF=0`；不要套用零一外设固件、UART 命令或把参数写入错误的 Component。
 
 - [S1：PX4 v1.17.0 DroneCAN GNSS 接收源码](https://github.com/PX4/PX4-Autopilot/blob/v1.17.0/src/drivers/uavcan/sensors/gnss.cpp)
 - [S2：PX4 v1.17 DroneCAN 配置说明](https://docs.px4.io/v1.17/en/dronecan/index)

@@ -62,7 +62,7 @@ SSID、网络密码、静态 IP、UDP 目标和 AUTO / 手动路由属于网络�
 
 访问方式：已连接外部 Wi-Fi 且实际取得 LAN IP 时，同一局域网使用该 IP，或点 **用默认浏览器打开后台**；只有设备热点时，按钮可能仍灰色，连接热点后手动打开 [设备热点后台](http://192.168.4.1/)。移动端热点为 `SwiftWing R1 RTK-XXXXXX`，基站为 `SwiftWing R1-G RTK-XXXXXX`，默认密码 `12345678`；旧固件可能显示旧名称。
 
-没有临时窗口或高级维护时，设备取得 LAN IP 后通常自动关闭自身热点。两种产品何时启用 / 关闭整个无线不同，分别按[移动端规则](../SwiftWing_R1_RTK_移动端/差分与Wi-Fi后台.md#wireless-rules)和[基站规则](../SwiftWing%20R1-G%20RTK基站/设备后台参数修改.md#wireless-rules)操作。
+没有临时窗口或高级维护时，设备取得 LAN IP 后通常自动关闭自身热点。两种产品何时启用 / 关闭整个无线不同，分别按[移动端规则](../SwiftWing_R1_RTK_移动端/设备后台参数修改.md#wireless-rules)和[基站规则](../SwiftWing%20R1-G%20RTK基站/设备后台参数修改.md#wireless-rules)操作。
 
 ## 下一步
 

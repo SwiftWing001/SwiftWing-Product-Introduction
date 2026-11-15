@@ -30,20 +30,31 @@
 - 若存在 EK2_ENABLE，按该版官方 GPS yaw 流程设 0，使用 EKF3；不存在不强套。[S5]
 - CAN2 接线查 CAN_P2_DRIVER/CAN_P2_BITRATE；CAN_D1_PROTOCOL 的 D1 是逻辑驱动，不随物理端口机械改 D2。
 - 正常安装 RTK 偏角 0，不用 GPS1_MB_TYPE/OFS 或另一层偏角再次旋转机头角。
-- GPS_AUTO_CONFIG 保留 1，不套 AP_Periph 的 2；本板自行配置 UM982，不提供那套 GPS_TYPE/GPS1_TYPE 外设参数流程。[S6]
+- GPS_AUTO_CONFIG 保留 1，不套 AP_Periph 的 2。[S6]
 - 多 GPS 先核对本 RTK 的实例、主用 GPS 和活动 EKF 源，不覆盖其他 GPS，也不写死偶然分配的 CAN 节点。
 - 差分经 QGC 注入时，核对 `GPS_INJECT_TO` 包含本板所在的 GPS 实例，再看移动端 RTCM 计数和龄期；此参数控制飞控内部接收对象，不是基站站号。
 
-保存后重启飞控与移动端，让 AUTO 重新识别。确认目标 CAN GPS 已发现，先看[卫星与定位](差分与Wi-Fi后台.md#qgc-gps)，再按[RTK 航向确认](起飞前检查.md#rtk-heading)查看 `GPS_RAW_INT.yaw`，对照机头与 `GLOBAL_POSITION_INT.hdg`。
+
+<a id="rtk-heading"></a>
+
+## 三、保存与验证顺序
+
+1. 保存飞控参数，按 QGC 提示重启飞控；建议本次配置完成后飞控和移动端一起正常重新上电。
+2. 在 QGC 确认移动端的卫星数与定位数据持续更新，操作见[差分接入与数据检查](差分与Wi-Fi后台.md#qgc-gps)。
+3. 在 MAVLink 检测中查看 `GPS_RAW_INT.yaw`和`GLOBAL_POSITION_INT.hdg`是否一致。一致则说明飞控使用了RTK航向。
+
+![1794725474444](image/PX4飞控参数/1794725474444.png)
+
+![1794725606537](image/PX4飞控参数/1794725606537.png)
+
+4. 无桨地面整体缓慢转动机体与双天线，再回正，核对方向一致，没有 180° 反向或 90° 错装。
 
 <div class="admonition warning">
 <p class="admonition-title">注意</p>
-<p>本板没有外置磁罗盘，「优先外置罗盘」不适用。使用 GPS with Compass Fallback 仍需健康、安装正确且已校准的内置罗盘。</p>
+<p>本板没有外置磁罗盘，可保留并校准实际使用的内置磁罗盘。</p>
 </div>
 
 ## 参考资料
-
-可参考[零一 OneRTK UM982 的 ArduPilot 教程](https://docs.01aero.cn/docs/um982_doc/)了解 CAN 接入、天线固定和转向核验顺序。本板 profile2 直接输出已修正机头航向，不照搬其 `GPS1_MB_TYPE=1` 和 `GPS1_MB_OFS_*` 基线向量配置；正常直接 Heading 路线保持相应 MB 类型为 0（若该参数存在），物理基线填在本板 `HDG_LEN_CM`，重心杆臂仍填飞控 `GPS1_POS_*`。旧参数名以目标固件定义为准，不能由第三方截图猜测。
 
 - [S5：ArduPilot GPS for Yaw 说明](https://ardupilot.org/copter/docs/common-gps-for-yaw.html)
 - [S6：Copter 4.6.3 DroneCAN GPS 接收与配置源码](https://github.com/ArduPilot/ardupilot/blob/Copter-4.6.3/libraries/AP_GPS/AP_GPS_DroneCAN.cpp)

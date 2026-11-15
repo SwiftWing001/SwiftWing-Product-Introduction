@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="540" viewBox="0 0 900 540" role="img" aria-labelledby="title desc">
+  <title id="title">GPS_YAW_OFFSET 四种安装方向</title>
+  <desc id="desc">所有图中的机头均向上，绿色箭头固定从 ANT2 指向 ANT1。ANT1 在前、右、后、左时，GPS_YAW_OFFSET 分别填写 0、90、180、270 度。参数只接受 0 到 360 的整数，不填负值。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#217351"/></marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #20364a; text-anchor: middle; }
+      .title { font-size: 26px; font-weight: 700; }
+      .label { font-size: 21px; font-weight: 700; }
+      .detail { font-size: 18px; }
+      .small { font-size: 17px; fill: #4f6578; }
+      .panel { fill: #f7fafc; stroke: #dce6ef; }
+      .line { stroke: #217351; stroke-width: 3; fill: none; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="898" height="538" rx="18" fill="#fff" stroke="#dce6ef"/>
+  <text x="450" y="36" class="title">安装偏角怎么填</text>
+  <text x="450" y="65" class="detail">↑ 机头始终向上；绿色箭头始终为 ANT2 → ANT1</text>
+  <rect x="25" y="85" width="410" height="180" rx="12" class="panel"/>
+  <rect x="465" y="85" width="410" height="180" rx="12" class="panel"/>
+  <rect x="25" y="285" width="410" height="180" rx="12" class="panel"/>
+  <rect x="465" y="285" width="410" height="180" rx="12" class="panel"/>
+  <text x="230" y="116" class="label">ANT1 在前：填 0</text>
+  <circle cx="200" cy="150" r="8" fill="#217351"/><text x="263" y="156" class="detail">ANT1</text>
+  <circle cx="200" cy="235" r="8" fill="#81afd3"/><text x="263" y="241" class="detail">ANT2</text>
+  <path d="M200 223 V163" class="line" marker-end="url(#arrow)"/>
+  <text x="670" y="116" class="label">ANT1 在右：填 90</text>
+  <circle cx="585" cy="182" r="8" fill="#81afd3"/><text x="585" y="224" class="detail">ANT2</text>
+  <circle cx="755" cy="182" r="8" fill="#217351"/><text x="755" y="224" class="detail">ANT1</text>
+  <path d="M598 182 H742" class="line" marker-end="url(#arrow)"/>
+  <text x="230" y="316" class="label">ANT1 在后：填 180</text>
+  <circle cx="200" cy="350" r="8" fill="#81afd3"/><text x="263" y="356" class="detail">ANT2</text>
+  <circle cx="200" cy="435" r="8" fill="#217351"/><text x="263" y="441" class="detail">ANT1</text>
+  <path d="M200 363 V422" class="line" marker-end="url(#arrow)"/>
+  <text x="670" y="316" class="label">ANT1 在左：填 270</text>
+  <circle cx="585" cy="382" r="8" fill="#217351"/><text x="585" y="424" class="detail">ANT1</text>
+  <circle cx="755" cy="382" r="8" fill="#81afd3"/><text x="755" y="424" class="detail">ANT2</text>
+  <path d="M742 382 H598" class="line" marker-end="url(#arrow)"/>
+  <rect x="25" y="485" width="850" height="36" rx="9" fill="#fff7e9" stroke="#d8b469"/>
+  <text x="450" y="509" class="small">只填 0～360 的整数；逆时针 45°填 315，不填 −45；安装角只补偿一次</text>
+</svg>

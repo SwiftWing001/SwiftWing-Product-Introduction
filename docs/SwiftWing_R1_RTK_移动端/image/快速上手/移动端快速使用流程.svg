@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="760" viewBox="0 0 900 760" role="img" aria-labelledby="title desc">
+  <title id="title">SwiftWing R1 RTK 移动端快速使用流程</title>
+  <desc id="desc">先接双天线并测量基线，通过移动端USB保存基线、偏角与CAN参数，配置飞控后保留CAN和供电，QGC接入基站或网络差分并注入飞控，再检查卫星、定位和航向。需要网页时单独开启无线管理，结束后导出日志并断电。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#61758a" />
+    </marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", "PingFang SC", sans-serif; fill: #20364a; text-anchor: middle; }
+      .title { font-size: 28px; font-weight: 700; }
+      .node { font-size: 23px; font-weight: 700; }
+      .detail { font-size: 19px; }
+      .small { font-size: 17px; fill: #4f6578; }
+      .line { fill: none; stroke: #61758a; stroke-width: 2.5; stroke-linejoin: round; }
+      .panel { fill: #eef6fd; stroke: #81afd3; stroke-width: 1.8; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="898" height="758" rx="20" fill="#ffffff" stroke="#dce6ef" />
+  <text x="450" y="43" class="title">移动端快速使用</text>
+  <text x="450" y="68" class="small">USB 首次配置，日常 CAN 定位与差分</text>
+
+  <rect x="165" y="86" width="570" height="57" rx="12" class="panel" />
+  <text x="450" y="122" class="node">① 接好 ANT1 / ANT2，测量基线</text>
+  <path d="M450 143 V162" class="line" marker-end="url(#arrow)" />
+
+  <rect x="165" y="171" width="570" height="73" rx="12" class="panel" />
+  <text x="450" y="201" class="node">② USB 配置移动端基线与偏角</text>
+  <text x="450" y="229" class="detail">按实物填写，保存后重新读取</text>
+  <path d="M450 244 V262" class="line" marker-end="url(#arrow)" />
+
+  <rect x="165" y="272" width="570" height="83" rx="12" fill="#eef9f3" stroke="#7db99a" stroke-width="1.8" />
+  <text x="450" y="302" class="node" style="fill:#217351">③ 配好飞控 → 保留 CAN 与供电</text>
+  <text x="450" y="329" class="detail">启用 CAN GPS、差分转发与所需航向</text>
+  <text x="450" y="349" class="small">确认独立供电后，可拔掉移动端 USB</text>
+  <path d="M450 355 V373" class="line" marker-end="url(#arrow)" />
+
+  <rect x="165" y="383" width="570" height="66" rx="12" class="panel" />
+  <text x="450" y="411" class="node">④ QGC 接入差分 → 注入飞控</text>
+  <text x="450" y="437" class="detail">基站 UDP 或 CORS，经飞控 CAN 到移动端</text>
+  <path d="M450 449 V467" class="line" marker-end="url(#arrow)" />
+
+  <rect x="165" y="477" width="570" height="66" rx="12" class="panel" />
+  <text x="450" y="505" class="node">⑤ 检查卫星、定位与航向</text>
+  <text x="450" y="531" class="detail">核对 GPS_RAW_INT 与实际机头方向</text>
+  <path d="M450 543 V561" class="line" marker-end="url(#arrow)" />
+
+  <rect x="165" y="571" width="570" height="66" rx="12" fill="#f4f7fa" stroke="#a3b4c5" stroke-width="1.8" />
+  <text x="450" y="599" class="node">⑥ 作业结束 → 导出日志并断电</text>
+  <text x="450" y="625" class="small">需要网页时再启用无线后台</text>
+
+  <rect x="50" y="662" width="800" height="76" rx="12" fill="#fff7e9" stroke="#d8b469" stroke-width="1.5" />
+  <text x="450" y="692" class="detail">网页后台：USB 启用无线，或 BOOT 长按约 2 秒</text>
+  <text x="450" y="719" class="small">Wi-Fi 用于管理；日常差分从飞控 CAN 接收</text>
+</svg>

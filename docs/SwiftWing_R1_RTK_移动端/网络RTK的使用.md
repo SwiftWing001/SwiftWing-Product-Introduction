@@ -1,10 +1,12 @@
-# 网络RTK的使用
+<div class="rtk-guide" aria-hidden="true"></div>
 
-网络RTK通过互联网从CORS服务商获取差分数据，地面站接收后经数传链路转发给飞控，从而实现高精度（厘米级）定位。
+# 网络 RTK 的使用
 
-数据流向：**飞机 ←数传链路→ 地面站（QGC） ←互联网→ CORS服务器**。
+网络 RTK 通过互联网从 CORS 服务获取 RTCM 差分，地面站接收后经数传链路与飞控 CAN 送到移动端，进行 RTK 位置解算。
 
-## 准备工作
+数据流向：**CORS 服务 → QGC → 飞控 MAVLink → CAN → 移动端**。
+
+## 一、准备工作
 
 * 已在CORS服务商处（如千寻位置）购买账号，并获取以下信息：
   * 服务器地址（Host address）
@@ -16,7 +18,11 @@
   * **数传链路**：用于连接飞机、转发差分数据。
 * 飞机已与地面站连接，地面站能正常收到飞机上报的GPS位置（连接后页面中"GGA Source"应显示为"Vehicle GPS"）。
 
-## QGC地面站使用
+<div class="admonition tip">
+<p>使用网络差分时不需要现场 SwiftWing 基站。移动端仍需完成基线与飞控配置，操作顺序见<a href="../快速上手/">快速上手</a>；停止不使用的手动串口 / TCP 输入，避免抢占差分来源。</p>
+</div>
+
+## 二、QGC 地面站使用
 
 1. 点击QGC图标，打开设置选项
 
@@ -36,9 +42,23 @@
 2. **Server port**：服务器端口（如 `8003`）
 3. **Username**：账号用户名
 4. **Password**：账号密码
-5. **Mount Point**：挂载点，即基准站数据源。填 `AUTO` 表示由服务器自动匹配距离最近的基准站；也可点击"Browse"查看并手动选择挂载点。
+5. **Mount Point**：挂载点，即基准站数据源。本页示例服务使用 `AUTO`，实际名称按服务商提供的挂载点填写；也可点击"Browse"查看并手动选择，不要求所有服务都支持 AUTO。
 
-> "Use TLS encryption"开关按服务商要求设置，本示例中为关闭状态。
+<div class="rtk-fineprint">TLS 按服务商要求设置。图片为填写位置与状态示例，服务地址、账号和挂载点以自己的授权资料为准。</div>
+
+### 当前 SwiftWing QGC B8 的配置位置
+
+在左侧 **Server Settings**填写服务器与账号，在 **Mountpoint Browser**填写挂载点；需要上报 GGA 的服务还需在 **GGA Position Reporting**选择有效位置来源与发送周期。
+
+[![B8的NTRIP服务器与账号设置](../RTK通用/image/实机操作/qgc-ntrip-server.png)](../RTK通用/image/实机操作/qgc-ntrip-server.png)
+
+[![B8的NTRIP挂载点设置](../RTK通用/image/实机操作/qgc-ntrip-mountpoint.png)](../RTK通用/image/实机操作/qgc-ntrip-mountpoint.png)
+
+[![B8的GGA位置来源与发送周期](../RTK通用/image/实机操作/qgc-ntrip-gga.png)](../RTK通用/image/实机操作/qgc-ntrip-gga.png)
+
+<div class="rtk-caption">以上三图是留空账号的操作入口，没有连接第三方服务。不同界面版本字段位置可能不同，按对应名称填写。</div>
+
+### 连接与查看定位状态
 
 4. 点击"Connect"连接
 
@@ -62,7 +82,7 @@
 
 ![1790492830712](image/网络RTK的使用/1790492830712.png)
 
-* 最终收敛为"3D RTK GPS Lock"（无float字样），即固定解，达到厘米级，可以作业。
+* 最终收敛为"3D RTK GPS Lock"（无float字样），即固定解；仍需完成本机安装、航向与任务所需的检查。
 
 各状态对应关系如下：
 
@@ -71,7 +91,7 @@
 | 3D Lock | 3 | 普通3D卫星定位 |
 | 3D DGPS Lock | 4 | 已收到差分数据，尚未进入RTK解算 |
 | 3D RTK GPS Lock (float) | 5 | RTK浮点解，分米级，收敛过程中 |
-| 3D RTK GPS Lock | 6 | RTK固定解，厘米级，可正常作业 |
+| 3D RTK GPS Lock | 6 | RTK固定解；精度与任务要求另行确认 |
 
 7. 通过MAVLink消息确认fix_type
 
@@ -81,12 +101,12 @@
 
 ![1790492601463](image/网络RTK的使用/1790492601463.png)
 
-## 常见问题
+## 三、常见问题
 
 * **点击Connect后无法连接**：检查互联网是否正常；确认服务器地址、端口、用户名、密码是否正确；确认账号未在其他设备上登录被挤下线。
 * **显示Connected但定位状态长时间不变**：检查"Data Received"/"To Vehicle"流量是否增长；确认数传链路正常、飞机已向地面站上报GPS位置。
 * **长时间停留在float，无法收敛到固定解**：将飞机移到视野开阔、无遮挡的场地；确认所选Mount Point覆盖作业地区；查看卫星数量是否充足。收敛通常需要几十秒到数分钟，状态也可能反复波动，属正常现象。
 
-## MissionPlanner地面站使用
+## 四、Mission Planner 地面站使用
 
-> MissionPlanner的NTRIP配置步骤待补充。
+<div class="admonition note"><p>Mission Planner 的 NTRIP 配置步骤待补充；本页先按配套 QGC 流程使用。</p></div>

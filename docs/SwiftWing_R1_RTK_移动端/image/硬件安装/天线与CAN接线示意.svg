@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="460" viewBox="0 0 900 460" role="img" aria-labelledby="title desc">
+  <title id="title">移动端双天线与 CAN 接线示意</title>
+  <desc id="desc">正常安装 ANT1 在机头前方、ANT2 在后，测量两天线相位中心间距 L，单位厘米。CAN 连接器按电气针号连接：1 为 5V、2 为 CANH、3 为 CANL、4 为 GND。图示不表示连接器观察面的左右方向。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#61758a"/></marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #20364a; text-anchor: middle; }
+      .title { font-size: 25px; font-weight: 700; }
+      .label { font-size: 20px; font-weight: 700; }
+      .detail { font-size: 18px; }
+      .small { font-size: 16px; fill: #4f6578; }
+      .wire { fill: none; stroke: #61758a; stroke-width: 2; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="898" height="458" rx="18" fill="#fff" stroke="#dce6ef"/>
+  <text x="450" y="38" class="title">移动端天线与 CAN 接线</text>
+  <rect x="25" y="60" width="405" height="320" rx="14" fill="#f7fafc" stroke="#dce6ef"/>
+  <rect x="470" y="60" width="405" height="320" rx="14" fill="#f7fafc" stroke="#dce6ef"/>
+  <text x="227" y="91" class="label">双天线前后安装</text>
+  <path d="M227 129 V105" class="wire" marker-end="url(#arrow)"/>
+  <text x="325" y="120" class="small">机头前方</text>
+  <rect x="112" y="143" width="230" height="65" rx="10" fill="#eef9f3" stroke="#7db99a"/>
+  <text x="227" y="171" class="label">ANT1 主天线</text>
+  <text x="227" y="194" class="small">位置参考点</text>
+  <path d="M227 214 V281" class="wire" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="332" y="245" class="detail">实测基线 L</text>
+  <text x="332" y="268" class="small">填写厘米数</text>
+  <rect x="112" y="293" width="230" height="57" rx="10" fill="#eef6fd" stroke="#81afd3"/>
+  <text x="227" y="328" class="label">ANT2 从天线</text>
+  <text x="672" y="91" class="label">CAN 接口按针号连接</text>
+  <rect x="492" y="118" width="155" height="230" rx="10" fill="#eef6fd" stroke="#81afd3"/>
+  <rect x="723" y="118" width="130" height="230" rx="10" fill="#eef9f3" stroke="#7db99a"/>
+  <text x="570" y="149" class="label">移动端 CAN</text>
+  <text x="788" y="149" class="label">飞控 CAN</text>
+  <text x="570" y="188" class="detail">1 · 5 V</text><path d="M647 182 H723" class="wire"/><text x="788" y="188" class="detail">5 V</text>
+  <text x="570" y="232" class="detail">2 · CANH</text><path d="M647 226 H723" class="wire"/><text x="788" y="232" class="detail">CANH</text>
+  <text x="570" y="276" class="detail">3 · CANL</text><path d="M647 270 H723" class="wire"/><text x="788" y="276" class="detail">CANL</text>
+  <text x="570" y="320" class="detail">4 · GND</text><path d="M647 314 H723" class="wire"/><text x="788" y="320" class="detail">GND</text>
+  <text x="672" y="371" class="small">1 Mbps；总线主干两端各 120 Ω</text>
+  <rect x="25" y="397" width="850" height="42" rx="10" fill="#fff7e9" stroke="#d8b469"/>
+  <text x="450" y="424" class="small">示意连接关系，不表示连接器观察面或实物比例；供电针只接 5 V</text>
+</svg>
