@@ -1,7 +1,7 @@
 # 目录
 
 **产品信息：**  
-***SwiftWing R1 RTK 移动端***<br>
+***迅翼 R1 RTK 移动端***<br>
 &emsp;&emsp;[产品介绍](./SwiftWing_R1_RTK_移动端/产品介绍.md)<br>
 &emsp;&emsp;[快速上手](./SwiftWing_R1_RTK_移动端/快速上手.md)<br>
 &emsp;&emsp;[天线安装与天线基线](./SwiftWing_R1_RTK_移动端/硬件安装.md)<br>
@@ -12,7 +12,7 @@
 &emsp;&emsp;[基站RTK的使用](./SwiftWing_R1_RTK_移动端/差分与Wi-Fi后台.md)<br>
 &emsp;&emsp;[网络RTK的使用](./SwiftWing_R1_RTK_移动端/网络RTK的使用.md)<br>
 &emsp;&emsp;[日志升级与恢复](./SwiftWing_R1_RTK_移动端/日志与常见问题.md)<br>
-***SwiftWing R1-G RTK 基站***<br>
+***迅翼 R1-G RTK 基站***<br>
 &emsp;&emsp;[产品介绍](./SwiftWing%20R1-G%20RTK基站/SwiftWing%20R1-G%20RTK产品介绍.md)<br>
 &emsp;&emsp;[快速上手](./SwiftWing%20R1-G%20RTK基站/快速上手.md)<br>
 &emsp;&emsp;[硬件功能与接口](./SwiftWing%20R1-G%20RTK基站/硬件功能与接口.md)<br>
