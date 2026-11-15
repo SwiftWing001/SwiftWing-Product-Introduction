@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SwiftWing 团队" /><link rel="canonical" href="https://swiftwing001.github.io/SwiftWing-Product-Introduction/SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/QGC%E9%85%8D%E7%BD%AE%E7%A7%BB%E5%8A%A8%E7%AB%AF/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>QGC配置移动端 - SwiftWing 产品介绍 文档</title>
+    <title>QGC地面站参数修改 - SwiftWing 产品介绍 文档</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "QGC\u914d\u7f6e\u79fb\u52a8\u7aef";
+        var mkdocs_page_name = "QGC\u5730\u9762\u7ad9\u53c2\u6570\u4fee\u6539";
         var mkdocs_page_input_path = "SwiftWing_R1_RTK_\u79fb\u52a8\u7aef\\QGC\u914d\u7f6e\u79fb\u52a8\u7aef.md";
         var mkdocs_page_url = "/SwiftWing-Product-Introduction/SwiftWing_R1_RTK_%E7%A7%BB%E5%8A%A8%E7%AB%AF/QGC%E9%85%8D%E7%BD%AE%E7%A7%BB%E5%8A%A8%E7%AB%AF/";
       </script>
@@ -52,37 +52,39 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">快速上手</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E5%AE%89%E8%A3%85/">硬件安装与天线基线</a>
+                <li class="toctree-l2"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E5%AE%89%E8%A3%85/">天线安装与天线基线</a>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">QGC配置移动端</a>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">QGC地面站参数修改</a>
     <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#_1">一、安装、自动识别和选对设备</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_1">下载并安装</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_2">二、移动端必查参数</a>
+    <li class="toctree-l3"><a class="reference internal" href="#usb">USB 连接和选择移动端</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_2">移动端配置说明</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#60-cm">实例：把基线改成实际 60 cm</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_3">三、保存并读回</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">参数保存</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_4">四、安装角与重心杆臂分别配置</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">配置局域网（按需）</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_5">五、移动端局域网是可选管理功能</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#usb">六、USB 配置完成后，什么时候可以拔线</a>
+    <li class="toctree-l3"><a class="reference internal" href="#usb_1">USB 配置完成后拔线</a>
     </li>
     </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/">设备网页后台</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../PX4%E9%A3%9E%E6%8E%A7%E5%8F%82%E6%95%B0/">PX4飞控参数</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../ArduPilot%E9%A3%9E%E6%8E%A7%E5%8F%82%E6%95%B0/">ArduPilot（APM）飞控参数</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%AE%E5%88%86%E4%B8%8EWi-Fi%E5%90%8E%E5%8F%B0/">差分、卫星与网页后台</a>
+                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%AE%E5%88%86%E4%B8%8EWi-Fi%E5%90%8E%E5%8F%B0/">基站RTK的使用</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../%E8%B5%B7%E9%A3%9E%E5%89%8D%E6%A3%80%E6%9F%A5/">航向确认与起飞前检查</a>
+                <li class="toctree-l2"><a class="reference internal" href="../%E7%BD%91%E7%BB%9CRTK%E7%9A%84%E4%BD%BF%E7%94%A8/">网络RTK的使用</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../%E6%97%A5%E5%BF%97%E4%B8%8E%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">日志与常见问题</a>
+                <li class="toctree-l2"><a class="reference internal" href="../%E6%97%A5%E5%BF%97%E4%B8%8E%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">日志升级与恢复</a>
                 </li>
     </ul>
                   </li>
@@ -100,15 +102,13 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/">设备网页后台</a>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/">无线输出差分</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/USB%E4%B8%8E%E5%9C%B0%E9%9D%A2%E7%AB%99%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/">有线USB与地面站输出差分</a>
+                </li>
                 <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/%E5%9F%BA%E7%AB%99%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%8F%82%E6%95%B0/">基站模式与参数</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/USB%E4%B8%8E%E5%9C%B0%E9%9D%A2%E7%AB%99%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/">USB与地面站输出差分</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/">Wi-Fi与TCP输出差分</a>
-                </li>
                 <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/%E6%97%A5%E5%BF%97%E5%8D%87%E7%BA%A7%E4%B8%8E%E6%81%A2%E5%A4%8D/">日志升级与恢复</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/%E8%AF%A6%E7%BB%86%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">详细使用说明与排查</a>
                 </li>
     </ul>
                   </li>
@@ -219,7 +219,7 @@
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">产品介绍</li>
           <li class="breadcrumb-item">SwiftWing R1 RTK 移动端</li>
-      <li class="breadcrumb-item active">QGC配置移动端</li>
+      <li class="breadcrumb-item active">QGC地面站参数修改</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -230,9 +230,15 @@
               
                 <div class="rtk-guide" aria-hidden="true"></div>
 
-<h1 id="qgc">QGC 配置移动端</h1>
-<h2 id="_1">一、安装、自动识别和选对设备</h2>
-<p>先按<a href="../../RTK%E9%80%9A%E7%94%A8/%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%B8%8EUSB%E8%BF%9E%E6%8E%A5/">软件下载与 USB 连接</a>从预留的百度网盘入口取得完整安装包并安装，本文界面以 Windows 0.1.0 build8 为例。安装后打开 <strong>SwiftWing QGC</strong>。</p>
+<h1 id="qgc">QGC 地面站参数修改</h1>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>本页面修改移动端自身参数。两天线基线和安装偏角按实物填写；飞控 GPS、航向融合与重心杆臂在对应飞控参数页另行设置。</p>
+</div>
+
+<h2 id="_1">下载并安装</h2>
+<p>先按<a href="../../RTK%E9%80%9A%E7%94%A8/%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%B8%8EUSB%E8%BF%9E%E6%8E%A5/">软件下载与 USB 连接</a>从百度网盘入口取得完整安装包并安装，本文界面以 Windows 0.1.0 build8 为例。安装后打开 <strong>SwiftWing QGC</strong>。</p>
+<h2 id="usb">USB 连接和选择移动端</h2>
 <ol>
 <li>关闭占用 RTK 配置串口的其他串口软件或 USB 代理。</li>
 <li>将移动端原生 USB 接电脑，保持 BOOT 松开；当前固件改参不需要长按 BOOT，也不需要进入下载模式。</li>
@@ -241,8 +247,11 @@
 <li>设备使用配置与 RTCM 两个 USB 接口，QGC 自动分辨，不按 COM 号大小猜测。单独连接移动端时，不保证出现基站三脚架图标；始终可走上述设置入口。基站图标弹窗中的快捷按钮名为「SwiftWing RTK配置」。</li>
 </ol>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rover-usb.png"><img alt="实机 QGC 通过 USB 管理移动端" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rover-usb.png" /></a></p>
-<p>读图重点：当前产品为 <strong>SwiftWing R1 RTK</strong>，状态为 <strong>设备已自动连接</strong>，<strong>管理链路：USB</strong>。图中移动端已保存外部网络并显示后台地址，灰块遮盖身份和现场地址；这与 USB 管理是两个连接。仅插 USB 不代表无线必然开启，也不代表 CAN 已接入。</p>
-<h2 id="_2">二、移动端必查参数</h2>
+<h2 id="_2">移动端配置说明</h2>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>除了天线安装方向和基线长度，其他参数默认不变即可。</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -279,8 +288,8 @@
 </tr>
 <tr>
 <td>GPS_YAW_OFFSET</td>
-<td>0</td>
-<td>ANT1 在前、ANT2 在后，单位度</td>
+<td>按安装填写；前后正常安装为 0</td>
+<td>整数 0～360°，不填负值；ANT1 在右填 90、在后填 180、在左填 270</td>
 </tr>
 <tr>
 <td>CAN_NODE_ID</td>
@@ -311,7 +320,6 @@
 </table>
 <p>GPS1_RATE_MS 出厂默认是 200 ms。本次实机截图读回也是 200 ms（5 Hz）；其他设备按实际保存值核对。可先用默认值完成配置，不能将提高频率当作提高精度。Flash 外场日志仍约 1 Hz。</p>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rover-heading-baseline.png"><img alt="实机移动端航向、基线和更新频率" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rover-heading-baseline.png" /></a></p>
-<p>本图为已有参数的只读截图：5 Hz、偏角 0°、AUTO、双天线航向启用、基线 50 cm、容差 10 cm。<strong>50 cm 只是图中设备当前保存值，不代替实测安装间距</strong>；下面以实际安装 60 cm 说明怎样填写。AUTO 选项已选中也不等于已识别飞控或已融合航向。</p>
 <p>完整默认值、允许范围和基站共用字段见<a href="../../RTK%E9%80%9A%E7%94%A8/%E8%AE%BE%E5%A4%87%E5%8F%82%E6%95%B0%E5%8F%82%E8%80%83/">全部 23 项设备参数参考</a>。</p>
 <h3 id="60-cm">实例：把基线改成实际 60 cm</h3>
 <ol>
@@ -321,38 +329,31 @@
 <li>点 <strong>应用并保存</strong>并核对读回；在室外查看实际基线、有效固定航向及有效 CAN 模式。</li>
 </ol>
 <p>已知长度时，解算长度超出配置范围会标记 <code>baseline_mismatch</code>。还需满足固定解、新鲜度等条件，不是落在长度范围内就一定有效。长度 0 是自动 / 无物理长度约束模式，首次安装优先填写实测值。</p>
-<h2 id="_3">三、保存并读回</h2>
+<h2 id="_3">参数保存</h2>
 <p>只修改必要字段，点击 <strong>应用并保存</strong>，等待 <strong>参数已实时生效、保存并读回确认</strong>。确认读回的基线、角色和协议与输入一致；超时先重新读取，不连续点击保存或恢复出厂。网络设置使用单独的「保存局域网设置」。</p>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rover-can-save.png"><img alt="实机移动端 CAN 参数、应用保存与重新读取按钮" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rover-can-save.png" /></a></p>
-<p>图中 <code>CAN_NODE_ID=0</code> 是自动分配的<strong>配置值</strong>，实际分配到的运行节点号在状态区查看；<code>CAN_BITRATE=1 Mbps</code>，<code>RTCM_SRC_ID=0</code> 自动选择来源。保存完成后点击 <strong>重新读取</strong>，再次核对基线、偏角、协议、CAN 速率和差分来源。截图展示按钮位置，本轮采集没有为拍照改写参数或触发保存。</p>
+<div class="rtk-caption"><p>图中 <code>CAN_NODE_ID=0</code> 是自动分配的<strong>配置值</strong>，实际分配到的运行节点号在状态区查看；<code>CAN_BITRATE=1 Mbps</code>，<code>RTCM_SRC_ID=0</code> 自动选择来源。保存完成后点击 <strong>重新读取</strong>，再次核对基线、偏角、协议、CAN 速率和差分来源。截图展示按钮位置，本轮采集没有为拍照改写参数或触发保存。</p></div>
+
 <p>设备 AUTO 按本次启动绑定飞控。更换 PX4/APM 后，给移动端正常断电重启一次；不用重烧、不按 BOOT。若未知飞控名称或版本无法适配，可按兼容范围手动选 1 或 2 并重新核对实际接收。</p>
-<h2 id="_4">四、安装角与重心杆臂分别配置</h2>
-<p>设备的 <code>GPS_YAW_OFFSET</code> 修正双天线安装角，默认 ANT1 在前、ANT2 在后为 0；横向安装实例见<a href="../%E7%A1%AC%E4%BB%B6%E5%AE%89%E8%A3%85/">硬件安装</a>。飞控收到的是板端已修正的机头方向，不能再重复加同一个安装角。</p>
-<p>重心到 ANT1 的前 / 右 / 下距离则在飞控参数中填写，单位米，不能写到 <code>HDG_LEN_CM</code>。按<a href="../PX4%E9%A3%9E%E6%8E%A7%E5%8F%82%E6%95%B0/">PX4</a>或<a href="../ArduPilot%E9%A3%9E%E6%8E%A7%E5%8F%82%E6%95%B0/">ArduPilot</a>教程配置后，整体转动机体与双天线验证方向。</p>
-<h2 id="_5">五、移动端局域网是可选管理功能</h2>
-<p>只需 CAN 定位与航向时，可以不配置移动端 Wi-Fi。需要网页管理时，按以下顺序准备：</p>
+<h2 id="_4">配置局域网（按需）</h2>
 <ol>
-<li>需要 LAN 访问才填写外部 <strong>2.4 GHz</strong> Wi-Fi，点 <strong>保存局域网设置</strong>；只通过设备热点访问可不填。</li>
-<li>已确认飞控正常 CAN 交互时，设备通常会关闭整个 Wi-Fi，<strong>已保存 SSID 也不能保证后台在线</strong>。想持续访问，点 <strong>启用无线后台</strong>，它会把“无线高级维护”保存为开启；短时访问可长按 BOOT 约 2 秒，开启约 30 分钟临时窗口。</li>
-<li>等实际 LAN IP 后从同一局域网打开；只有热点时连接移动端热点，手动访问 192.168.4.1，QGC 打开按钮可能仍为灰色。</li>
-<li>维护后关闭“无线高级维护”并保存，恢复自动策略；BOOT 窗口到期或重启后结束。</li>
+<li>需要 LAN 网页管理时，在网络区填写外部 <strong>2.4 GHz</strong> Wi-Fi，点击 <strong>保存局域网设置</strong>。</li>
+<li>正常 CAN 交互时通常关闭无线，需要持续查看后台则点击 <strong>启用无线后台</strong>；只短时查看可长按 BOOT 约 2 秒。</li>
+<li>取得实际 LAN IP 后打开网页；只有设备热点时连接热点并访问 192.168.4.1。维护结束后关闭保存的“无线高级维护”。</li>
 </ol>
-<p>尚未确认飞控时会启用恢复无线；已连上外部网络并取得 IP 时热点可能关闭，改用 LAN 地址即可。完整条件见<a href="../%E5%B7%AE%E5%88%86%E4%B8%8EWi-Fi%E5%90%8E%E5%8F%B0/#wireless-rules">移动端热点规则</a>。这里不是差分 UDP 输入，日常差分仍经飞控 CAN 注入。</p>
-<h2 id="usb">六、USB 配置完成后，什么时候可以拔线</h2>
-<ol>
-<li>基线按实物填写，角色为移动端；设备参数已保存并重新读取确认。</li>
-<li>飞控所需 CAN、GPS 航向和 ANT1 杆臂参数按对应飞控章节设置，保存及重启要求已经处理。这里与 RTK 自身参数分开确认。</li>
-<li>移动端 CAN 与飞控保持连接，CAN 5 V / 对应独立电源能在拔 USB 后继续给主板供电。只连 CANH / CANL 而没有供电，不能靠拔线验证正常工作。</li>
-<li>若下一步还要打开移动端网页，按上一节准备热点或 LAN；需要正常 CAN 工作时持续查看，就保存开启无线高级维护，短时查看用 BOOT 临时窗口。只保存 Wi-Fi 与 IP 不足以让后台保持在线。</li>
-<li>此时可以拔掉<strong>移动端主板 USB</strong>，保留 CAN。QGC 的 USB 设备列表中该移动端消失是预期现象；飞控连接、CAN 节点、RTCM 接收与航向状态应从飞控或可用网页另行核查。</li>
-</ol>
-<p>拔掉移动端 USB 不会把差分路径改为移动端 Wi-Fi。下一阶段链路仍是 <strong>基站 UDP → QGC → 飞控 MAVLink → CAN → 移动端</strong>；此阶段的实际接收检查见<a href="../%E5%B7%AE%E5%88%86%E4%B8%8EWi-Fi%E5%90%8E%E5%8F%B0/">差分与 Wi-Fi 后台</a>。</p>
+<div class="admonition tip">
+<p>只需 CAN 定位与航向时，可以不配置移动端 Wi-Fi。保存网络不等于后台一直在线；临时窗口、持续维护及自动热点条件见<a href="../设备后台参数修改/#wireless-rules">设备网页后台</a>。</p>
+</div>
+
+<p><a id="usb"></a></p>
+<h2 id="usb_1">USB 配置完成后拔线</h2>
+<p>拔掉移动端 USB 不会把差分路径改为移动端 Wi-Fi。下一阶段链路仍是 <strong>基站 UDP → QGC → 飞控 MAVLink → CAN → 移动端</strong>；此阶段的实际接收检查见<a href="../%E5%B7%AE%E5%88%86%E4%B8%8EWi-Fi%E5%90%8E%E5%8F%B0/">差分接入与数据检查</a>。</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../%E7%A1%AC%E4%BB%B6%E5%AE%89%E8%A3%85/" class="btn btn-neutral float-left" title="硬件安装与天线基线"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../PX4%E9%A3%9E%E6%8E%A7%E5%8F%82%E6%95%B0/" class="btn btn-neutral float-right" title="PX4飞控参数">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../%E7%A1%AC%E4%BB%B6%E5%AE%89%E8%A3%85/" class="btn btn-neutral float-left" title="天线安装与天线基线"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/" class="btn btn-neutral float-right" title="设备网页后台">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -379,7 +380,7 @@
       <span><a href="../%E7%A1%AC%E4%BB%B6%E5%AE%89%E8%A3%85/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../PX4%E9%A3%9E%E6%8E%A7%E5%8F%82%E6%95%B0/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

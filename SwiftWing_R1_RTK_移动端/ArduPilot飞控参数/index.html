@@ -52,9 +52,11 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">快速上手</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E5%AE%89%E8%A3%85/">硬件安装与天线基线</a>
+                <li class="toctree-l2"><a class="reference internal" href="../%E7%A1%AC%E4%BB%B6%E5%AE%89%E8%A3%85/">天线安装与天线基线</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../QGC%E9%85%8D%E7%BD%AE%E7%A7%BB%E5%8A%A8%E7%AB%AF/">QGC配置移动端</a>
+                <li class="toctree-l2"><a class="reference internal" href="../QGC%E9%85%8D%E7%BD%AE%E7%A7%BB%E5%8A%A8%E7%AB%AF/">QGC地面站参数修改</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/">设备网页后台</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../PX4%E9%A3%9E%E6%8E%A7%E5%8F%82%E6%95%B0/">PX4飞控参数</a>
                 </li>
@@ -64,15 +66,17 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#_2">二、版本名、配置边界与重启</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_3">参考资料</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">三、保存与验证顺序</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">参考资料</a>
     </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%AE%E5%88%86%E4%B8%8EWi-Fi%E5%90%8E%E5%8F%B0/">差分、卫星与网页后台</a>
+                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%AE%E5%88%86%E4%B8%8EWi-Fi%E5%90%8E%E5%8F%B0/">基站RTK的使用</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../%E8%B5%B7%E9%A3%9E%E5%89%8D%E6%A3%80%E6%9F%A5/">航向确认与起飞前检查</a>
+                <li class="toctree-l2"><a class="reference internal" href="../%E7%BD%91%E7%BB%9CRTK%E7%9A%84%E4%BD%BF%E7%94%A8/">网络RTK的使用</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../%E6%97%A5%E5%BF%97%E4%B8%8E%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">日志与常见问题</a>
+                <li class="toctree-l2"><a class="reference internal" href="../%E6%97%A5%E5%BF%97%E4%B8%8E%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">日志升级与恢复</a>
                 </li>
     </ul>
                   </li>
@@ -90,15 +94,13 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/">设备网页后台</a>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/">无线输出差分</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/USB%E4%B8%8E%E5%9C%B0%E9%9D%A2%E7%AB%99%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/">有线USB与地面站输出差分</a>
+                </li>
                 <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/%E5%9F%BA%E7%AB%99%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%8F%82%E6%95%B0/">基站模式与参数</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/USB%E4%B8%8E%E5%9C%B0%E9%9D%A2%E7%AB%99%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/">USB与地面站输出差分</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/">Wi-Fi与TCP输出差分</a>
-                </li>
                 <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/%E6%97%A5%E5%BF%97%E5%8D%87%E7%BA%A7%E4%B8%8E%E6%81%A2%E5%A4%8D/">日志升级与恢复</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/%E8%AF%A6%E7%BB%86%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">详细使用说明与排查</a>
                 </li>
     </ul>
                   </li>
@@ -297,18 +299,28 @@
 <li>若存在 EK2_ENABLE，按该版官方 GPS yaw 流程设 0，使用 EKF3；不存在不强套。[S5]</li>
 <li>CAN2 接线查 CAN_P2_DRIVER/CAN_P2_BITRATE；CAN_D1_PROTOCOL 的 D1 是逻辑驱动，不随物理端口机械改 D2。</li>
 <li>正常安装 RTK 偏角 0，不用 GPS1_MB_TYPE/OFS 或另一层偏角再次旋转机头角。</li>
-<li>GPS_AUTO_CONFIG 保留 1，不套 AP_Periph 的 2；本板自行配置 UM982，不提供那套 GPS_TYPE/GPS1_TYPE 外设参数流程。[S6]</li>
+<li>GPS_AUTO_CONFIG 保留 1，不套 AP_Periph 的 2。[S6]</li>
 <li>多 GPS 先核对本 RTK 的实例、主用 GPS 和活动 EKF 源，不覆盖其他 GPS，也不写死偶然分配的 CAN 节点。</li>
 <li>差分经 QGC 注入时，核对 <code>GPS_INJECT_TO</code> 包含本板所在的 GPS 实例，再看移动端 RTCM 计数和龄期；此参数控制飞控内部接收对象，不是基站站号。</li>
 </ul>
-<p>保存后重启飞控与移动端，让 AUTO 重新识别。确认目标 CAN GPS 已发现，先看<a href="../%E5%B7%AE%E5%88%86%E4%B8%8EWi-Fi%E5%90%8E%E5%8F%B0/#qgc-gps">卫星与定位</a>，再按<a href="../%E8%B5%B7%E9%A3%9E%E5%89%8D%E6%A3%80%E6%9F%A5/#rtk-heading">RTK 航向确认</a>查看 <code>GPS_RAW_INT.yaw</code>，对照机头与 <code>GLOBAL_POSITION_INT.hdg</code>。</p>
+<p><a id="rtk-heading"></a></p>
+<h2 id="_3">三、保存与验证顺序</h2>
+<ol>
+<li>保存飞控参数，按 QGC 提示重启飞控；建议本次配置完成后飞控和移动端一起正常重新上电。</li>
+<li>在 QGC 确认移动端的卫星数与定位数据持续更新，操作见<a href="../%E5%B7%AE%E5%88%86%E4%B8%8EWi-Fi%E5%90%8E%E5%8F%B0/#qgc-gps">差分接入与数据检查</a>。</li>
+<li>在 MAVLink 检测中查看 <code>GPS_RAW_INT.yaw</code>和<code>GLOBAL_POSITION_INT.hdg</code>是否一致。一致则说明飞控使用了RTK航向。</li>
+</ol>
+<p><img alt="1794725474444" src="../image/PX4%E9%A3%9E%E6%8E%A7%E5%8F%82%E6%95%B0/1794725474444.png" /></p>
+<p><img alt="1794725606537" src="../image/PX4%E9%A3%9E%E6%8E%A7%E5%8F%82%E6%95%B0/1794725606537.png" /></p>
+<ol start="4">
+<li>无桨地面整体缓慢转动机体与双天线，再回正，核对方向一致，没有 180° 反向或 90° 错装。</li>
+</ol>
 <div class="admonition warning">
 <p class="admonition-title">注意</p>
-<p>本板没有外置磁罗盘，「优先外置罗盘」不适用。使用 GPS with Compass Fallback 仍需健康、安装正确且已校准的内置罗盘。</p>
+<p>本板没有外置磁罗盘，可保留并校准实际使用的内置磁罗盘。</p>
 </div>
 
-<h2 id="_3">参考资料</h2>
-<p>可参考<a href="https://docs.01aero.cn/docs/um982_doc/">零一 OneRTK UM982 的 ArduPilot 教程</a>了解 CAN 接入、天线固定和转向核验顺序。本板 profile2 直接输出已修正机头航向，不照搬其 <code>GPS1_MB_TYPE=1</code> 和 <code>GPS1_MB_OFS_*</code> 基线向量配置；正常直接 Heading 路线保持相应 MB 类型为 0（若该参数存在），物理基线填在本板 <code>HDG_LEN_CM</code>，重心杆臂仍填飞控 <code>GPS1_POS_*</code>。旧参数名以目标固件定义为准，不能由第三方截图猜测。</p>
+<h2 id="_4">参考资料</h2>
 <ul>
 <li><a href="https://ardupilot.org/copter/docs/common-gps-for-yaw.html">S5：ArduPilot GPS for Yaw 说明</a></li>
 <li><a href="https://github.com/ArduPilot/ardupilot/blob/Copter-4.6.3/libraries/AP_GPS/AP_GPS_DroneCAN.cpp">S6：Copter 4.6.3 DroneCAN GPS 接收与配置源码</a></li>
@@ -319,7 +331,7 @@
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../PX4%E9%A3%9E%E6%8E%A7%E5%8F%82%E6%95%B0/" class="btn btn-neutral float-left" title="PX4飞控参数"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../%E5%B7%AE%E5%88%86%E4%B8%8EWi-Fi%E5%90%8E%E5%8F%B0/" class="btn btn-neutral float-right" title="差分、卫星与网页后台">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../%E5%B7%AE%E5%88%86%E4%B8%8EWi-Fi%E5%90%8E%E5%8F%B0/" class="btn btn-neutral float-right" title="基站RTK的使用">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
