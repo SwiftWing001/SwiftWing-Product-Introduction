@@ -23,6 +23,7 @@
 &emsp;&emsp;[USB与地面站输出差分](./SwiftWing%20R1-G%20RTK基站/USB与地面站输出差分.md)<br>
 &emsp;&emsp;[基站模式与参数](./SwiftWing%20R1-G%20RTK基站/基站模式与参数.md)<br>
 &emsp;&emsp;[日志升级与恢复](./SwiftWing%20R1-G%20RTK基站/日志升级与恢复.md)<br>
+&emsp;&emsp;[日志下载与分析](./SwiftWing%20R1-G%20RTK基站/日志下载与分析.md)<br>
 ***迅翼 P1无人机分电板***  
 &emsp;&emsp;[使用说明](./分电板/P1分电板/使用说明.md)   
 &emsp;&emsp;[配置指南（AP）](./分电板/P1分电板/配置指南（AP）.md)   
