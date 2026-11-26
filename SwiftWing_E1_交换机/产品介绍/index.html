@@ -104,9 +104,11 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#_2">产品参数</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_3">典型连接</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">产品各视角</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_4">从哪里开始</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">典型连接</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_5">从哪里开始</a>
     </li>
     </ul>
                 </li>
@@ -234,14 +236,17 @@
               
                 <h1 id="swiftwing-e1">SwiftWing E1 四口百兆以太网交换机模块</h1>
 <p>SwiftWing E1 是面向无人机、机器人及嵌入式设备内部网络的四口百兆以太网交换机模块。采用 Realtek RTL8306MB-CG 交换芯片，通过 4 路 GH1.25 4Pin 以太网接口连接机载计算机、具备以太网接口的飞控、图传或传感器，实现设备之间的有线网络通信。</p>
-<p>PCB 模块尺寸 <strong>30 × 30 × 8.3 mm</strong>，重量 <strong>5.6 g</strong>，使用 <strong>5 V 直流供电</strong>，待机功耗 <strong>0.18 W</strong>。</p>
+<p>裸板 PCB 模块尺寸 <strong>30 × 30 × 8.3 mm</strong>，重量 <strong>5.6 g</strong>；带外壳整机尺寸 <strong>33 × 33 × 13.3 mm</strong>，重量 <strong>11.4 g</strong>。使用 <strong>5 V 直流供电</strong>，四个网口接入时静态功耗 <strong>0.32 W</strong>，四口全负载运行时本轮实测最大功耗 <strong>0.58 W</strong>。</p>
+<p><a href="../image/%E4%BA%A7%E5%93%81%E5%9B%BE/%E7%89%88%E6%9C%AC%E5%AF%B9%E7%85%A7.png"><img alt="E1 同比例渲染图，左侧为裸板，右侧为黑色 3D 打印外壳整机" src="../image/%E9%A2%84%E8%A7%88/%E7%89%88%E6%9C%AC%E5%AF%B9%E7%85%A7.webp" /></a></p>
+<p>左侧为裸板版，右侧为带壳版，两者按同一比例展示。</p>
 <h2 id="_1">产品特点</h2>
 <ul>
 <li><strong>四路百兆网口</strong>：4 个 10/100 Mbps 以太网端口，适合多设备集中接入。</li>
-<li><strong>小体积、轻重量</strong>：30 × 30 mm 板面，适合机载设备和小型机箱内部安装。</li>
+<li><strong>四口并发实测</strong>：每个数据方向目标 90 Mbps 的 UDP 测试中，四方向实收合计约 <strong>360 Mbps</strong>；三种配对的 12 个方向均记录为零丢包。</li>
+<li><strong>小体积、轻重量</strong>：裸板模块 <strong>5.6 g</strong>，带外壳整机 <strong>11.4 g</strong>；带壳尺寸 <strong>33 × 33 × 13.3 mm</strong>，适合机载设备和小型机箱集成。</li>
 <li><strong>GH1.25 线束连接</strong>：网络和电源均采用 GH1.25 4Pin 连接器，便于设备内部布线；两者线序与用途不同。</li>
-<li><strong>独立 5 V 供电</strong>：通过电源接口给模块供电，连接的计算机、图传等设备分别按自身要求供电。</li>
-<li><strong>端口状态指示</strong>：配备 4 颗黄色端口指示灯，可辅助检查连接；具体亮灭、闪烁含义需结合设备链路状态判断。</li>
+<li><strong>5 V 低功耗供电</strong>：四口接入静态 <strong>0.32 W / 64 mA</strong>，四口全负载实测最大 <strong>0.58 W / 116 mA</strong>。通过电源接口给模块供电，连接的终端分别按自身要求供电。</li>
+<li><strong>端口状态指示</strong>：每个网口对应一颗黄色链路与活动指示灯，带壳版从顶面的导光柱观察。灯态说明见<a href="../%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/#e1-link-act">使用说明</a>。</li>
 <li><strong>接口保护设计</strong>：各以太网端口配置 TVS 防护器件。</li>
 </ul>
 <h2 id="_2">产品参数</h2>
@@ -282,8 +287,12 @@
 <td>5 V DC</td>
 </tr>
 <tr>
-<td>待机功耗</td>
-<td>0.18 W</td>
+<td>四口接入静态功耗 / 电流</td>
+<td>0.32 W / 0.064 A（64 mA），5 V 输入</td>
+</tr>
+<tr>
+<td>四口全负载实测最大功耗 / 电流</td>
+<td>0.58 W / 0.116 A（116 mA），5 V 输入</td>
 </tr>
 <tr>
 <td>PCB 模块尺寸</td>
@@ -292,6 +301,14 @@
 <tr>
 <td>PCB 模块重量</td>
 <td>5.6 g</td>
+</tr>
+<tr>
+<td>带外壳整机尺寸</td>
+<td>33 × 33 × 13.3 mm（长 × 宽 × 高）</td>
+</tr>
+<tr>
+<td>带外壳整机重量</td>
+<td>11.4 g</td>
 </tr>
 <tr>
 <td>端口指示灯</td>
@@ -307,12 +324,56 @@
 </tr>
 </tbody>
 </table>
-<p>尺寸和重量为 PCB 模块数据；安装时另行预留线束插头、弯线和固定结构的空间。0.18 W 为待机功耗，不代表四端口通信时的最大功耗。</p>
-<h2 id="_3">典型连接</h2>
+<p>尺寸和重量分别按裸板 PCB 模块与带外壳整机列出，安装时按对应形态预留空间，并另行预留线束插头、弯线和固定结构的空间。功耗和电流为用户提供的本轮 5 V 输入实测数据，分别对应四口接入静态和四口全负载工况；电源选型需另行为启动及线缆压降留出余量。</p>
+<p>四口并发数据来自 2026-11-26 的端到端测试：四台设备直接接入，UDP 负载 1400 字节，四条独立数据流，三种配对各统计约 20 秒。约 360 Mbps 为四方向接收吞吐之和，各端口链路为 100 Mbps。实际应用性能按终端、驱动、线束、协议和负载确定。</p>
+<h2 id="_3">产品各视角</h2>
+<p>点击对应版本可放大查看高清原图。</p>
+<table>
+<thead>
+<tr>
+<th>视角</th>
+<th>带壳版</th>
+<th>裸板版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>双网口斜前视</td>
+<td><a href="../image/%E4%BA%A7%E5%93%81%E5%9B%BE/%E5%B8%A6%E5%A3%B3_01.png">带壳图</a></td>
+<td><a href="../image/%E4%BA%A7%E5%93%81%E5%9B%BE/%E8%A3%B8%E6%9D%BF_01.png">裸板图</a></td>
+</tr>
+<tr>
+<td>供电侧斜视</td>
+<td><a href="../image/%E4%BA%A7%E5%93%81%E5%9B%BE/%E5%B8%A6%E5%A3%B3_02.png">带壳图</a></td>
+<td><a href="../image/%E4%BA%A7%E5%93%81%E5%9B%BE/%E8%A3%B8%E6%9D%BF_02.png">裸板图</a></td>
+</tr>
+<tr>
+<td>顶面与接口分布</td>
+<td><a href="../image/%E4%BA%A7%E5%93%81%E5%9B%BE/%E5%B8%A6%E5%A3%B3_03.png">带壳图</a></td>
+<td><a href="../image/%E4%BA%A7%E5%93%81%E5%9B%BE/%E8%A3%B8%E6%9D%BF_03.png">裸板图</a></td>
+</tr>
+<tr>
+<td>底面结构</td>
+<td><a href="../image/%E4%BA%A7%E5%93%81%E5%9B%BE/%E5%B8%A6%E5%A3%B3_04.png">带壳图</a></td>
+<td><a href="../image/%E4%BA%A7%E5%93%81%E5%9B%BE/%E8%A3%B8%E6%9D%BF_04.png">裸板图</a></td>
+</tr>
+<tr>
+<td>网口近景</td>
+<td><a href="../image/%E4%BA%A7%E5%93%81%E5%9B%BE/%E5%B8%A6%E5%A3%B3_05.png">带壳图</a></td>
+<td><a href="../image/%E4%BA%A7%E5%93%81%E5%9B%BE/%E8%A3%B8%E6%9D%BF_05.png">裸板图</a></td>
+</tr>
+<tr>
+<td>五根线套装</td>
+<td><a href="../image/%E4%BA%A7%E5%93%81%E5%9B%BE/%E5%B8%A6%E5%A3%B3_06.png">带壳图</a></td>
+<td><a href="../image/%E4%BA%A7%E5%93%81%E5%9B%BE/%E8%A3%B8%E6%9D%BF_06.png">裸板图</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">典型连接</h2>
 <p><a href="../image/E1%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E7%A4%BA%E6%84%8F.svg"><img alt="SwiftWing E1 连接计算机、以太网飞控、图传和传感器的网络拓扑" src="../image/E1%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E7%A4%BA%E6%84%8F.svg" /></a></p>
-<p>图中四个端口分别连接四台以太网设备；连接路由器、电脑或其他交换机时，同样占用一个端口。图中的 ETH1～ETH4 仅为说明编号，实物位置以板卡丝印为准。</p>
+<p>图中四个端口分别连接四台以太网设备；连接路由器、电脑或其他交换机时，同样占用一个端口。ETH1～ETH4 为本手册的端口编号，实际位置见<a href="../%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8E%A5%E7%BA%BF/#e1-port-map">带壳接口与导光柱图</a>。</p>
 <p>E1 负责设备之间的以太网数据交换。设备的 IP 地址、通信协议、服务端口和应用程序仍需分别配置；E1 不提供 Wi-Fi、路由、NAT 或 DHCP 地址分配。</p>
-<h2 id="_4">从哪里开始</h2>
+<h2 id="_5">从哪里开始</h2>
 <ol>
 <li>首次接线先看<a href="../%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8E%A5%E7%BA%BF/">硬件接口与接线</a>，确认电源和网口针脚。</li>
 <li>按<a href="../%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">使用说明</a>完成上电、组网、IP 配置与通信检查。</li>

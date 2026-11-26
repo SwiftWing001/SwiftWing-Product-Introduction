@@ -107,6 +107,10 @@
     <li class="toctree-l3"><a class="reference internal" href="#_1">一、准备设备</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#_2">二、接线并上电</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_3">观察对应网口的黄灯</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#ip">三、配置设备 IP</a>
         <ul>
@@ -116,7 +120,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_3">四、检查连接是否正常</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">四、检查连接是否正常</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#1">1. 看有线链路</a>
     </li>
@@ -126,17 +130,17 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_4">五、增加设备与安装使用</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_5">五、增加设备与安装使用</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_5">六、常见问题</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_6">六、常见问题</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#_6">上电后所有设备都没有链路</a>
+    <li class="toctree-l4"><a class="reference internal" href="#_7">上电后所有设备都没有链路</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_7">只有一个端口不通</a>
+    <li class="toctree-l4"><a class="reference internal" href="#_8">只有一个端口不通</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_8">电脑显示网线已连接，但找不到设备</a>
+    <li class="toctree-l4"><a class="reference internal" href="#_9">电脑显示网线已连接，但找不到设备</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_9">自动获取不到地址</a>
+    <li class="toctree-l4"><a class="reference internal" href="#_10">自动获取不到地址</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#10-mbps">链路只有 10 Mbps，或者传输速度偏低</a>
     </li>
@@ -274,6 +278,11 @@
 <li>至少两台以太网设备，例如电脑和以太网传感器。各设备按自身要求供电。</li>
 <li>记录设备原有 IP、子网掩码和通信端口，确认需要使用的应用程序。</li>
 </ul>
+<p>两种版本各配 <strong>5 根双头 4 针 GH1.25 反向线</strong>。下图按版本展示随附配线。连接外设前，先按<a href="../%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8E%A5%E7%BA%BF/">硬件接口与接线</a>核对板端、电源极性和对端定义。</p>
+<p><a href="../image/%E4%BA%A7%E5%93%81%E5%9B%BE/%E5%B8%A6%E5%A3%B3_06.png"><img alt="带壳版套装，黑色整机旁是五根各自回折的双头 GH1.25 反向线" src="../image/%E9%A2%84%E8%A7%88/%E5%B8%A6%E5%A3%B3_06.webp" /></a></p>
+<p>带壳版配线。</p>
+<p><a href="../image/%E4%BA%A7%E5%93%81%E5%9B%BE/%E8%A3%B8%E6%9D%BF_06.png"><img alt="裸板版套装，绿色 PCB 旁是五根各自回折的双头 GH1.25 反向线" src="../image/%E9%A2%84%E8%A7%88/%E8%A3%B8%E6%9D%BF_06.webp" /></a></p>
+<p>裸板版配线。</p>
 <h2 id="_2">二、接线并上电</h2>
 <ol>
 <li><strong>全部断电</strong>，按<a href="../%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8E%A5%E7%BA%BF/">硬件接口与接线</a>核对电源口、网络口和 Pin 1 方向。</li>
@@ -282,7 +291,36 @@
 <li>检查无短路和误插后，给 E1 及各网络设备上电。</li>
 <li>在电脑或对端设备的网络状态中确认有线链路已连接；同时观察相应端口指示灯。</li>
 </ol>
-<p>端口指示灯用于辅助检查，不单凭亮灯认定设备已经互通。灯的具体亮灭、闪烁和速率含义以该版硬件实际状态为准。</p>
+<p><a id="e1-link-act"></a></p>
+<h3 id="_3">观察对应网口的黄灯</h3>
+<p>带壳版从顶壳的导光柱观察，位置见<a href="../%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8E%A5%E7%BA%BF/#e1-port-map">接口俯视图</a>。在 E1 和对端正常供电时，按本版芯片的 LINK/ACT 配置判读对应端口。</p>
+<table>
+<thead>
+<tr>
+<th>黄灯状态</th>
+<th>对应网口</th>
+<th>接下来检查什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>熄灭</td>
+<td>尚未建立物理链路</td>
+<td>检查对端供电、插头是否到位及线序。</td>
+</tr>
+<tr>
+<td>常亮</td>
+<td>链路已建立，当前空闲</td>
+<td>核对两端 IP，再发起通信测试。</td>
+</tr>
+<tr>
+<td>闪烁</td>
+<td>正常通信时，该端口正在收发以太网数据</td>
+<td>在目标应用确认数据到达。</td>
+</tr>
+</tbody>
+</table>
+<p>黄灯显示链路与活动。协商速率在终端网卡上查看，应用是否互通按下文测试。</p>
 <h2 id="ip">三、配置设备 IP</h2>
 <p>E1 不分配 IP 地址。首次联调可先只接电脑与目标设备，确认互通后再加入其他设备。</p>
 <h3 id="a-dhcp">方式 A：已有路由器或 DHCP 服务器</h3>
@@ -329,7 +367,7 @@
 <li>保存后，用 <code>ipconfig</code>核对该网卡的实际 IPv4。不要误改用于其他业务的网卡；测试结束后按需恢复原设置。</li>
 </ol>
 <p>E1 本身无需填写上述 IP；这些地址配置在电脑、传感器、图传等终端上。</p>
-<h2 id="_3">四、检查连接是否正常</h2>
+<h2 id="_4">四、检查连接是否正常</h2>
 <h3 id="1">1. 看有线链路</h3>
 <p>在 Windows <strong>网络连接</strong>中双击对应以太网网卡，查看链路状态和协商速率。连接 E1 时按实际结果确认 10 Mbps 或 100 Mbps；协商速率不等于应用实际吞吐量。</p>
 <h3 id="2">2. 测试目标设备</h3>
@@ -341,24 +379,24 @@ ping 192.168.10.20
 <h3 id="3">3. 测试实际应用</h3>
 <p>按目标设备手册打开网页、连接控制软件或读取数据流，填写正确的目标 IP 和服务端口。确认数据持续更新后，再逐台加入其他设备测试。</p>
 <p>使用 UDP 时，还需核对发送端填写的<strong>接收设备 IP 和端口</strong>；以太网交换机不会替应用修改目标地址。连接飞控或图传时，也需在对应软件中配置通信协议与端口。</p>
-<h2 id="_4">五、增加设备与安装使用</h2>
+<h2 id="_5">五、增加设备与安装使用</h2>
 <ol>
 <li>每增加一台设备，先确认它的地址不与现有设备重复，再接入剩余网络口。</li>
 <li>四个端口共用来连接终端和上级网络，连接路由器或另一台交换机也会占用一个端口。</li>
 <li>首次组网使用树形连接，不将 E1 的两个端口互相接回，也不与另一台交换机形成重复回路。</li>
 <li>完成实际应用通信测试后，再固定模块与线束；结束调试按需恢复电脑网卡原有设置。</li>
 </ol>
-<h2 id="_5">六、常见问题</h2>
-<h3 id="_6">上电后所有设备都没有链路</h3>
+<h2 id="_6">六、常见问题</h2>
+<h3 id="_7">上电后所有设备都没有链路</h3>
 <p>先检查 E1 电源口实测电压是否为 5 V、正负极是否正确，各终端是否已供电。确认电源线没有误插进网络口，再使用一条已核对的线束和两台设备进行最小连接测试。</p>
-<h3 id="_7">只有一个端口不通</h3>
+<h3 id="_8">只有一个端口不通</h3>
 <p>将同一台设备、同一条已验证的线束换到其他端口，分别排查线束、对端设备和模块端口。GH1.25 插头插到位不代表线序正确，需检查差分对与极性。</p>
-<h3 id="_8">电脑显示网线已连接，但找不到设备</h3>
+<h3 id="_9">电脑显示网线已连接，但找不到设备</h3>
 <p>先看电脑有线网卡和目标设备的 IP、子网掩码是否匹配，是否有重复地址。有多个网卡时，确认访问走的是连接 E1 的网卡。再检查目标服务是否开启、端口是否正确；按应用需要配置对应防火墙规则。</p>
-<h3 id="_9">自动获取不到地址</h3>
+<h3 id="_10">自动获取不到地址</h3>
 <p>检查网络中是否有可用 DHCP 服务器。独立连接 E1 与终端设备时，按第三节手动设置静态 IP。</p>
 <h3 id="10-mbps">链路只有 10 Mbps，或者传输速度偏低</h3>
-<p>先检查两端设备是否支持百兆、差分对接线是否正确、线束是否损伤，再查看协商结果。实际传输速度还受终端性能、协议和多设备同时传输影响；待机 0.18 W 也不代表通信时的功耗。</p>
+<p>先检查两端设备是否支持百兆、差分对接线是否正确、线束是否损伤，再查看协商结果。实际传输速度还受终端性能、协议和多设备同时传输影响。供电检查可参考本轮实测：5 V 输入下，四口接入静态为 0.32 W / 64 mA，四口全负载最大为 0.58 W / 116 mA，并为启动和线缆压降留出余量。</p>
 <h3 id="e1">是否需要给 E1 配置飞控参数或安装软件</h3>
 <p>本教程的使用方式是以太网交换连接，无需在 E1 上配置 IP 或飞控参数。具备以太网接口的飞控、图传或传感器，仍按各自教程设置网络地址与应用协议；普通 CAN / UART 接口不能接到 E1 网口。</p>
               
