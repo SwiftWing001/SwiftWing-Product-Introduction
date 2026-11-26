@@ -114,6 +114,18 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/%E6%97%A5%E5%BF%97%E5%8D%87%E7%BA%A7%E4%B8%8E%E6%81%A2%E5%A4%8D/">日志升级与恢复</a>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/%E6%97%A5%E5%BF%97%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%88%86%E6%9E%90/">日志下载与分析</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >迅翼 E1 以太网交换机</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_E1_%E4%BA%A4%E6%8D%A2%E6%9C%BA/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/">产品介绍</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_E1_%E4%BA%A4%E6%8D%A2%E6%9C%BA/%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8E%A5%E7%BA%BF/">硬件接口与接线</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_E1_%E4%BA%A4%E6%8D%A2%E6%9C%BA/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">使用说明</a>
+                </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" >迅翼 P1无人机分电板</a>
@@ -244,8 +256,15 @@
 <p><a id="web-backend"></a></p>
 <h2 id="qgc">从 QGC 打开网页后台</h2>
 <ol>
-<li>用<strong>移动端自己的 USB 调试口</strong>连接电脑，在 QGC <strong>应用设置 → NTRIP/RTK</strong>选择移动端并核对身份。</li>
-<li>需要通过路由器访问时，填写外部 2.4 GHz Wi-Fi 名称与密码，点击 <strong>保存局域网设置</strong>。</li>
+<li>
+<p>用<strong>移动端自己的 USB 调试口</strong>连接电脑，在 QGC <strong>应用设置 → NTRIP/RTK</strong>选择移动端并核对身份。</p>
+</li>
+<li>
+<p>需要通过路由器访问时，填写外部 2.4 GHz Wi-Fi 名称与密码，点击 <strong>保存局域网设置</strong>。</p>
+</li>
+</ol>
+<p><img alt="1795341706379" src="../image/%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/1795341706379.png" /></p>
+<ol start="3">
 <li>点击 <strong>启用无线后台</strong>，等待实际 LAN IP 出现，再点击 <strong>用默认浏览器打开后台</strong>。</li>
 </ol>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rover-usb.png"><img alt="QGC中选中移动端、启用无线后台和打开网页的入口" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rover-usb.png" /></a></p>
@@ -259,6 +278,7 @@
 <h2 id="_2">未配置局域网时，通过设备热点打开</h2>
 <h3 id="1">1. 移动端上电并开启临时窗口</h3>
 <p>在QGC中点击<strong>启用无线后台</strong>，等待移动端热点出现。</p>
+<p><img alt="1795341850061" src="../image/%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/1795341850061.png" /></p>
 <h3 id="2">2. 连接移动端热点</h3>
 <p>在电脑 / 手机 Wi-Fi 列表连接 <strong>SwiftWing R1 RTK-XXXXXX</strong>，默认密码 <strong>12345678</strong>。末六位短码用于区分设备，先核对是本移动端。</p>
 <p><img alt="1794724618930" src="../image/%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/1794724618930.png" /></p>

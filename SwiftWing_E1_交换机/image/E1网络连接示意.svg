@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="550" viewBox="0 0 920 550" role="img" aria-labelledby="title desc">
+  <title id="title">SwiftWing E1 四端口网络连接示意</title>
+  <desc id="desc">E1 中央交换机的四个以太网端口分别连接电脑、具备以太网接口的飞控、图传和传感器。电源口独立接五伏直流电源，所有终端设备分别供电。此图仅表示网络拓扑，不表示板卡实际接口位置。</desc>
+  <defs>
+    <style>
+      text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#26384c}
+      .heading{font-size:26px;font-weight:700}.label{font-size:22px;font-weight:700}.body{font-size:18px}.small{font-size:16px}.port{font-size:16px;fill:#246b9f;font-weight:700}
+      .device{fill:#f3f8fc;stroke:#bcd4e5;stroke-width:2}.network{fill:none;stroke:#2e7ab0;stroke-width:4;stroke-linejoin:round}
+    </style>
+  </defs>
+  <rect x="1" y="1" width="918" height="548" rx="18" fill="#fff" stroke="#dce4ec"/>
+  <text x="460" y="43" text-anchor="middle" class="heading">SwiftWing E1 · 四路有线网络连接</text>
+  <text x="460" y="72" text-anchor="middle" class="small">网络拓扑示意，接口位置与针脚方向以实物为准</text>
+  <path class="network" d="M280 180H345V220H365 M280 340H345V290H365 M640 180H575V220H555 M640 340H575V290H555"/>
+  <rect x="35" y="132" width="245" height="96" rx="12" class="device"/>
+  <text x="157" y="170" text-anchor="middle" class="label">电脑 / 机载计算机</text>
+  <text x="157" y="201" text-anchor="middle" class="small">GH 转 RJ45 匹配线束</text>
+  <rect x="35" y="292" width="245" height="96" rx="12" class="device"/>
+  <text x="157" y="331" text-anchor="middle" class="label">以太网飞控</text>
+  <text x="157" y="361" text-anchor="middle" class="small">核对对端接口线序</text>
+  <rect x="640" y="132" width="245" height="96" rx="12" class="device"/>
+  <text x="762" y="171" text-anchor="middle" class="label">以太网图传</text>
+  <text x="762" y="201" text-anchor="middle" class="small">设置设备 IP 与应用端口</text>
+  <rect x="640" y="292" width="245" height="96" rx="12" class="device"/>
+  <text x="762" y="331" text-anchor="middle" class="label">以太网传感器</text>
+  <text x="762" y="361" text-anchor="middle" class="small">核对对端接口线序</text>
+  <rect x="365" y="158" width="190" height="190" rx="18" fill="#e8f2fa" stroke="#2e7ab0" stroke-width="3"/>
+  <text x="460" y="243" text-anchor="middle" class="label">SwiftWing E1</text>
+  <text x="460" y="276" text-anchor="middle" class="body">4 × 10/100 Mbps</text>
+  <text x="460" y="308" text-anchor="middle" class="small">GH1.25 4Pin 网口</text>
+  <text x="305" y="165" text-anchor="middle" class="port">ETH1</text>
+  <text x="305" y="326" text-anchor="middle" class="port">ETH2</text>
+  <text x="611" y="165" text-anchor="middle" class="port">ETH3</text>
+  <text x="611" y="326" text-anchor="middle" class="port">ETH4</text>
+  <path d="M460 418V348" fill="none" stroke="#df9944" stroke-width="4"/>
+  <rect x="325" y="418" width="270" height="58" rx="10" fill="#fff7ea" stroke="#df9944" stroke-width="2"/>
+  <text x="460" y="454" text-anchor="middle" class="label">5 V DC → 电源接口</text>
+  <text x="460" y="512" text-anchor="middle" class="body">终端设备分别供电 · 同一子网内 IP 唯一 · E1 不分配 IP</text>
+</svg>

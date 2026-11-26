@@ -104,6 +104,18 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../%E6%97%A5%E5%BF%97%E5%8D%87%E7%BA%A7%E4%B8%8E%E6%81%A2%E5%A4%8D/">日志升级与恢复</a>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E6%97%A5%E5%BF%97%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%88%86%E6%9E%90/">日志下载与分析</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >迅翼 E1 以太网交换机</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_E1_%E4%BA%A4%E6%8D%A2%E6%9C%BA/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/">产品介绍</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_E1_%E4%BA%A4%E6%8D%A2%E6%9C%BA/%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8E%A5%E7%BA%BF/">硬件接口与接线</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_E1_%E4%BA%A4%E6%8D%A2%E6%9C%BA/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">使用说明</a>
+                </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" >迅翼 P1无人机分电板</a>
@@ -285,6 +297,7 @@
 
 <h2 id="_4">三、路由、出口与局域网</h2>
 <p>推荐路由选择 <strong>“AUTO · QGC USB 优先，否则 UDP”</strong>，在网络区点 <strong>保存局域网设置</strong>。有效 QGC USB 会话时运行出口为 USB 4，否则为 UDP 1；已保存的出口掩码不会因此自动改写。</p>
+<p><img alt="1795335034925" src="../image/%E5%9F%BA%E7%AB%99%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%8F%82%E6%95%B0/1795335034925.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">建议</p>
 <p>日常使用建议是 <strong>UDP 优先</strong>：主板 USB 用于配置，配置后在独立供电保持正常时拔掉数据线，让 AUTO 回到 UDP。电池或供电板 USB 接充电器均可经 SW1 供电，不按电量选择差分路线。</p>
@@ -298,6 +311,12 @@
 </ul>
 <h2 id="_5">四、如何判断已建站</h2>
 <p>基站应收到新鲜、匹配站号的参考报文 1006 和 MSM4 观测。当前默认 1006 约每 5 秒、1033 约每 10 秒，1074 / 1084 / 1094 / 1124 各约 1 Hz。只看到一个旧报文、PPS 灯或总帧数，不说明当前差分仍可用。</p>
+<div class="admonition tip">
+<p class="admonition-title">提示</p>
+<p>基站图标变绿，说明已建站。</p>
+</div>
+
+<p><img alt="1795335622880" src="../image/%E5%9F%BA%E7%AB%99%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%8F%82%E6%95%B0/1795335622880.png" /></p>
 <div class="rtk-fineprint"><code>GPS1_RATE_MS</code> 是移动端更新周期，不能用它把基站 RTCM 改成 20 Hz。基站就绪后，还要确认 QGC 实收和移动端使用；基站发送计数不是接收端确认。</div>
 
 <h2 id="_6">五、修改与搬站</h2>

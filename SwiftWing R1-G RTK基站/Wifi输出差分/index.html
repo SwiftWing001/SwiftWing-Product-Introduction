@@ -114,6 +114,18 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../%E6%97%A5%E5%BF%97%E5%8D%87%E7%BA%A7%E4%B8%8E%E6%81%A2%E5%A4%8D/">日志升级与恢复</a>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E6%97%A5%E5%BF%97%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%88%86%E6%9E%90/">日志下载与分析</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >迅翼 E1 以太网交换机</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_E1_%E4%BA%A4%E6%8D%A2%E6%9C%BA/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/">产品介绍</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_E1_%E4%BA%A4%E6%8D%A2%E6%9C%BA/%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8E%A5%E7%BA%BF/">硬件接口与接线</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_E1_%E4%BA%A4%E6%8D%A2%E6%9C%BA/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">使用说明</a>
+                </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" >迅翼 P1无人机分电板</a>
@@ -239,7 +251,13 @@
 <h2 id="_2">一、接入局域网</h2>
 <ol>
 <li>使用USB连接基站调试口和电脑，打开 QGC 基站配置，填写外部 2.4 GHz 局域网热点 SSID 和密码，点 <strong>保存局域网设置</strong>。</li>
+</ol>
+<p><img alt="1795337648678" src="../image/Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/1795337648678.png" /></p>
+<ol start="2">
 <li>可保存最多 5 组网络，新增网络要输入密码或明确选择开放网络；同 SSID 改 UDP 目标时密码留空会保留，不必重填。容量满会拒绝新增，不覆盖旧账号。</li>
+</ol>
+<p><img alt="1795337699127" src="../image/Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/1795337699127.png" /></p>
+<ol start="3">
 <li>自动选网在启动/断线时优先可用首选，否则选已存网络中信号更强的；已连接时不主动漫游。手动选已存网络不用重输密码，通常会关闭自动选择，需要时再开启保存。</li>
 <li>填 <strong>UDP 目标 IPv4</strong> 为运行 QGC 的电脑地址。只改需要变更的字段，保存后等实际关联/IP 状态，不把已存 SSID 当作已联网。（不填目标UDP的IP，基站默认广播RTCM）</li>
 </ol>
@@ -285,7 +303,13 @@
 <h3 id="qgc-udp_1">在 QGC 确认 UDP 已收到</h3>
 <ol>
 <li>返回飞行页面，点击顶部 <strong>RTK / 三脚架图标</strong>。</li>
+</ol>
+<p><img alt="1795337818976" src="../image/Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/1795337818976.png" /></p>
+<ol start="2">
 <li>查看 <strong>接入方式</strong>，已关联基站时显示类似 <strong>HTTP 管理 / udp 差分</strong>；前者用于设备管理，后者是实际差分入口。只收到 UDP 尚未关联设备时，也可能显示 <strong>未知管理 / udp 差分</strong>。</li>
+</ol>
+<p><img alt="1795337856980" src="../image/Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/1795337856980.png" /></p>
+<ol start="3">
 <li>观察 <strong>差分接收</strong>：有效帧持续增加，帧龄持续刷新；已关联对应基站时，再检查参考与观测就绪。身份、颜色、各项数据和按钮用途见<a href="../QGC%E5%9C%B0%E9%9D%A2%E7%AB%99%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/#rtk-indicator">基站图标说明</a>。</li>
 </ol>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-udp-status.png"><img alt="QGC确认基站HTTP管理和UDP差分实收" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-udp-status.png" /></a></p>
@@ -302,9 +326,16 @@
 <h3 id="1">1. 基站设置</h3>
 <ol>
 <li>接入可用局域网，确认基站实际 LAN IP。</li>
+</ol>
+<p><img alt="1795341980443" src="../image/Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/1795341980443.png" /></p>
+<ol start="2">
 <li>路由选择 <strong>手动 · 使用下方 RTCM 出口配置</strong>，点 <strong>保存局域网设置</strong>。</li>
+</ol>
+<p><img alt="1795337997031" src="../image/Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/1795337997031.png" /></p>
+<ol start="3">
 <li>仅用 TCP 时取消 UDP、USB 和 CAN 出口，只勾 <strong>TCP → 等待接收端连接</strong>，端口 2101，点 <strong>应用并保存</strong>，读回 mask=2；若保留 UDP 则为 3。TCP 不在 AUTO 自动选择路径里。</li>
 </ol>
+<p><img alt="1795338297341" src="../image/Wifi%E8%BE%93%E5%87%BA%E5%B7%AE%E5%88%86/1795338297341.png" /></p>
 <table>
 <thead>
 <tr>

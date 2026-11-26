@@ -114,6 +114,18 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../%E6%97%A5%E5%BF%97%E5%8D%87%E7%BA%A7%E4%B8%8E%E6%81%A2%E5%A4%8D/">日志升级与恢复</a>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E6%97%A5%E5%BF%97%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%88%86%E6%9E%90/">日志下载与分析</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >迅翼 E1 以太网交换机</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_E1_%E4%BA%A4%E6%8D%A2%E6%9C%BA/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/">产品介绍</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_E1_%E4%BA%A4%E6%8D%A2%E6%9C%BA/%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8E%A5%E7%BA%BF/">硬件接口与接线</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_E1_%E4%BA%A4%E6%8D%A2%E6%9C%BA/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">使用说明</a>
+                </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" >迅翼 P1无人机分电板</a>
@@ -267,7 +279,7 @@
 <li>同时连接移动端时，每次提交前检查当前设备；配置设备选择与基站差分会话分开。</li>
 </ol>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-usb-base.png"><img alt="实机 QGC 已通过 USB 连接基站" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-usb-base.png" /></a></p>
-<p><a id="rtk-indicator"></a></p>
+<p><code>&lt;a id="rtk-indicator"&gt;&lt;/a&gt;</code></p>
 <h2 id="_2">顶部基站图标：状态查看与配置入口</h2>
 <p>飞行页面顶部的<strong>三脚架形图标</strong>是基站 / RTCM 状态入口，点击可展开下图弹窗。它与旁边的 GPS / 卫星图标不同；QGC 识别到基站，或收到过差分后才会显示。</p>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rtk-indicator-unknown.png"><img alt="顶部基站图标及UDP身份未确认时的状态弹窗" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rtk-indicator-unknown.png" /></a></p>
@@ -334,12 +346,22 @@
 <h2 id="_7">配置局域网和差分路由</h2>
 <ol>
 <li>准备外部 2.4 GHz 路由器 / 手机热点，QGC 电脑也接入同一网络。</li>
-<li>在所选基站的网络区填写 SSID / 密码；新增网络须输入密码或明确选开放网络，同 SSID 只改其他项时密码留空保留原值。</li>
-<li>UDP 目标填 <strong>QGC 电脑实际 IPv4</strong>，端口默认 13320。基站自己的 LAN IP 用于管理与 TCP 服务，不填到 UDP 目标里。</li>
-<li>路由可保留 <strong>AUTO · QGC USB 优先，否则 UDP</strong>，点击 <strong>保存局域网设置</strong>。配置完成后断开主板数据 USB，日常使用 UDP；网络和设备参数使用不同保存按钮。</li>
-<li>要在 USB 优先时持续访问网页，点 <strong>启用无线后台</strong>，它会保存开启"无线高级维护"；维护完再关闭并保存。短时查看可长按 BOOT 约 2 秒，开启约 30 分钟临时窗口。取得 LAN IP 后点 <strong>用默认浏览器打开后台</strong>；只有设备热点时连接热点后手动访问 192.168.4.1，完整条件见<a href="../%E8%AE%BE%E5%A4%87%E5%90%8E%E5%8F%B0%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/#wireless-rules">基站后台规则</a>。</li>
 </ol>
-<div class="rtk-fineprint">USB 数据会话有效时 AUTO 实际优先 USB，可能关闭 Wi-Fi；这是自动路由规则，日常仍推荐 UDP。配置完成后开启 SW1，确认电池或供电板 USB 输入经 XT30 供电，再拔主板数据 USB；若必须保留 USB 管理同时使用 UDP，则明确选择手动路由与 UDP 出口。TCP 也需手动启用，不属于 AUTO 路线。具体见<a href="../Wifi输出差分/">Wi-Fi 输出差分</a>。</div>
+<p><img alt="1795337217136" src="../image/QGC%E5%9C%B0%E9%9D%A2%E7%AB%99%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/1795337217136.png" /></p>
+<ol start="2">
+<li>在所选基站的网络区填写 SSID / 密码；新增网络须输入密码或明确选开放网络，同 SSID 只改其他项时密码留空保留原值。</li>
+</ol>
+<p><img alt="1795338482700" src="../image/QGC%E5%9C%B0%E9%9D%A2%E7%AB%99%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/1795338482700.png" /></p>
+<ol start="3">
+<li>
+<p>UDP 目标填 <strong>QGC 电脑实际 IPv4</strong>，端口默认 13320。基站自己的 LAN IP 用于管理与 TCP 服务，不填到 UDP 目标里。</p>
+</li>
+<li>
+<p>路由可保留 <strong>AUTO · QGC USB 优先，否则 UDP</strong>，点击 <strong>保存局域网设置</strong>。配置完成后断开主板数据 USB，日常使用 UDP；网络和设备参数使用不同保存按钮。</p>
+</li>
+</ol>
+<p><img alt="1795337323375" src="../image/QGC%E5%9C%B0%E9%9D%A2%E7%AB%99%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9/1795337323375.png" /></p>
+<div class="rtk-fineprint">USB 数据会话有效时 AUTO 实际优先 USB，可能关闭 Wi-Fi；这是自动路由规则，日常仍推荐 UDP。配置完成后开启 SW1，确认电池或供电板 USB 输入经 XT30 供电，再拔主板数据 USB；若必须保留 USB 管理同时使用 UDP，则明确选择‘手动路由与 UDP 出口’。TCP 也需手动启用，不属于 AUTO 路线。具体见<a href="../Wifi输出差分/">Wi-Fi 输出差分</a>。</div>
 
 <h2 id="_8">参数保存</h2>
 <ul>

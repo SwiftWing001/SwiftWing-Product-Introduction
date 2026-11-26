@@ -110,6 +110,18 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/%E6%97%A5%E5%BF%97%E5%8D%87%E7%BA%A7%E4%B8%8E%E6%81%A2%E5%A4%8D/">日志升级与恢复</a>
                 </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing%20R1-G%20RTK%E5%9F%BA%E7%AB%99/%E6%97%A5%E5%BF%97%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%88%86%E6%9E%90/">日志下载与分析</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >迅翼 E1 以太网交换机</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_E1_%E4%BA%A4%E6%8D%A2%E6%9C%BA/%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/">产品介绍</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_E1_%E4%BA%A4%E6%8D%A2%E6%9C%BA/%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8E%A5%E7%BA%BF/">硬件接口与接线</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../SwiftWing_E1_%E4%BA%A4%E6%8D%A2%E6%9C%BA/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">使用说明</a>
+                </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" >迅翼 P1无人机分电板</a>
@@ -241,9 +253,12 @@
 <h2 id="usb">USB 连接和选择移动端</h2>
 <ol>
 <li>关闭占用 RTK 配置串口的其他串口软件或 USB 代理。</li>
-<li>将移动端原生 USB 接电脑，保持 BOOT 松开；当前固件改参不需要长按 BOOT，也不需要进入下载模式。</li>
+<li>将移动端原生 USB 接电脑。</li>
 <li>打开 <strong>应用设置 → NTRIP/RTK → SwiftWing R1 / R1-G RTK</strong> 区域。</li>
 <li>在设备列表选择 <strong>SwiftWing R1 RTK</strong>，核对角色、完整序列号和固件版本。名称后的末 6 位编码用于区分多台设备，不是飞控 CAN 节点号。</li>
+</ol>
+<p><img alt="1795340274492" src="../image/QGC%E9%85%8D%E7%BD%AE%E7%A7%BB%E5%8A%A8%E7%AB%AF/1795340274492.png" /></p>
+<ol start="5">
 <li>设备使用配置与 RTCM 两个 USB 接口，QGC 自动分辨，不按 COM 号大小猜测。单独连接移动端时，不保证出现基站三脚架图标；始终可走上述设置入口。基站图标弹窗中的快捷按钮名为「SwiftWing RTK配置」。</li>
 </ol>
 <p><a href="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rover-usb.png"><img alt="实机 QGC 通过 USB 管理移动端" src="../../RTK%E9%80%9A%E7%94%A8/image/%E5%AE%9E%E6%9C%BA%E6%93%8D%E4%BD%9C/qgc-rover-usb.png" /></a></p>
@@ -337,10 +352,13 @@
 <p>设备 AUTO 按本次启动绑定飞控。更换 PX4/APM 后，给移动端正常断电重启一次；不用重烧、不按 BOOT。若未知飞控名称或版本无法适配，可按兼容范围手动选 1 或 2 并重新核对实际接收。</p>
 <h2 id="_4">配置局域网（按需）</h2>
 <ol>
-<li>需要 LAN 网页管理时，在网络区填写外部 <strong>2.4 GHz</strong> Wi-Fi，点击 <strong>保存局域网设置</strong>。</li>
-<li>正常 CAN 交互时通常关闭无线，需要持续查看后台则点击 <strong>启用无线后台</strong>；只短时查看可长按 BOOT 约 2 秒。</li>
-<li>取得实际 LAN IP 后打开网页；只有设备热点时连接热点并访问 192.168.4.1。维护结束后关闭保存的“无线高级维护”。</li>
+<li>使用USB连接移动端，点击 <strong>启用无线后台</strong>；</li>
 </ol>
+<p><img alt="1795341886119" src="../image/QGC%E9%85%8D%E7%BD%AE%E7%A7%BB%E5%8A%A8%E7%AB%AF/1795341886119.png" /></p>
+<ol start="2">
+<li>在网络区填写外部 <strong>2.4 GHz</strong> Wi-Fi，点击 <strong>保存局域网设置</strong>，并切换到所选 Wi-Fi 网络。</li>
+</ol>
+<p><img alt="1795340999851" src="../image/QGC%E9%85%8D%E7%BD%AE%E7%A7%BB%E5%8A%A8%E7%AB%AF/1795340999851.png" /></p>
 <div class="admonition tip">
 <p>只需 CAN 定位与航向时，可以不配置移动端 Wi-Fi。保存网络不等于后台一直在线；临时窗口、持续维护及自动热点条件见<a href="../设备后台参数修改/#wireless-rules">设备网页后台</a>。</p>
 </div>
