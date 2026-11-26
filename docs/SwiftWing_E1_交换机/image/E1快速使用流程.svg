@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="196" viewBox="0 0 920 196" role="img" aria-labelledby="title desc">
+  <title id="title">SwiftWing E1 快速使用流程</title>
+  <desc id="desc">第一步断电核对接口与线序，第二步连接五伏电源和网络设备，第三步在终端配置同网段且不重复的 IP，第四步检查有线链路和实际应用通信。</desc>
+  <defs>
+    <style>
+      text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#26384c}
+      .title{font-size:24px;font-weight:700}.step{font-size:20px;font-weight:700}.body{font-size:16px}.number{font-size:19px;font-weight:700;fill:#fff}
+    </style>
+  </defs>
+  <rect x="1" y="1" width="918" height="194" rx="16" fill="#f8fbfe" stroke="#dce4ec"/>
+  <text x="25" y="38" class="title">快速使用 · 按顺序完成四步</text>
+  <g>
+    <rect x="20" y="62" width="202" height="113" rx="12" fill="#eaf3fb" stroke="#bcd4e5"/>
+    <circle cx="49" cy="89" r="16" fill="#2e7ab0"/><text x="49" y="96" text-anchor="middle" class="number">1</text>
+    <text x="121" y="123" text-anchor="middle" class="step">核对接口与线序</text>
+    <text x="121" y="153" text-anchor="middle" class="body">断电检查 · 识别 Pin 1</text>
+    <path d="M229 118H241L235 112M241 118L235 124" fill="none" stroke="#2e7ab0" stroke-width="3"/>
+    <rect x="246" y="62" width="202" height="113" rx="12" fill="#eaf3fb" stroke="#bcd4e5"/>
+    <circle cx="275" cy="89" r="16" fill="#2e7ab0"/><text x="275" y="96" text-anchor="middle" class="number">2</text>
+    <text x="347" y="123" text-anchor="middle" class="step">连接电源与设备</text>
+    <text x="347" y="153" text-anchor="middle" class="body">5 V 供电 · 两台起测</text>
+    <path d="M455 118H467L461 112M467 118L461 124" fill="none" stroke="#2e7ab0" stroke-width="3"/>
+    <rect x="472" y="62" width="202" height="113" rx="12" fill="#eaf3fb" stroke="#bcd4e5"/>
+    <circle cx="501" cy="89" r="16" fill="#2e7ab0"/><text x="501" y="96" text-anchor="middle" class="number">3</text>
+    <text x="573" y="123" text-anchor="middle" class="step">配置终端 IP</text>
+    <text x="573" y="153" text-anchor="middle" class="body">同一子网 · 地址唯一</text>
+    <path d="M681 118H693L687 112M693 118L687 124" fill="none" stroke="#2e7ab0" stroke-width="3"/>
+    <rect x="698" y="62" width="202" height="113" rx="12" fill="#edf7f2" stroke="#b9d9c8"/>
+    <circle cx="727" cy="89" r="16" fill="#348362"/><text x="727" y="96" text-anchor="middle" class="number">4</text>
+    <text x="799" y="123" text-anchor="middle" class="step">检查通信</text>
+    <text x="799" y="153" text-anchor="middle" class="body">链路 → IP → 实际应用</text>
+  </g>
+</svg>

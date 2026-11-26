@@ -24,6 +24,10 @@
 &emsp;&emsp;[基站模式与参数](./SwiftWing%20R1-G%20RTK基站/基站模式与参数.md)<br>
 &emsp;&emsp;[日志升级与恢复](./SwiftWing%20R1-G%20RTK基站/日志升级与恢复.md)<br>
 &emsp;&emsp;[日志下载与分析](./SwiftWing%20R1-G%20RTK基站/日志下载与分析.md)<br>
+***迅翼 E1 以太网交换机***<br>
+&emsp;&emsp;[产品介绍](./SwiftWing_E1_交换机/产品介绍.md)<br>
+&emsp;&emsp;[硬件接口与接线](./SwiftWing_E1_交换机/硬件接口与接线.md)<br>
+&emsp;&emsp;[使用说明](./SwiftWing_E1_交换机/使用说明.md)<br>
 ***迅翼 P1无人机分电板***  
 &emsp;&emsp;[使用说明](./分电板/P1分电板/使用说明.md)   
 &emsp;&emsp;[配置指南（AP）](./分电板/P1分电板/配置指南（AP）.md)   
